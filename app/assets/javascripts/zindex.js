@@ -114,10 +114,29 @@ document.getElementById('save').addEventListener(
   function () {
     var json = stage.toJSON();
     console.log(json);
-    var send_data = new XMLHttpRequest();
-    send_data.open('POST', '/practices', false);
-    send_data.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-    send_data.send("data=" + json);
+
+    const form = document.createElement('form');
+    form.method = "post";
+    form.action = "/practices";
+
+    // for (const key in params) {
+    //   if (params.hasOwnProperty(key)) {
+    const hiddenField = document.createElement('input');
+    hiddenField.type = 'hidden';
+    hiddenField.name = "json_data";
+    hiddenField.value = json;
+
+    form.appendChild(hiddenField);
+    //   }
+    // }
+
+    document.body.appendChild(form);
+    form.submit();
+
+    // var send_data = new XMLHttpRequest();
+    // send_data.open('POST', '/practices', false);
+    // send_data.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    // send_data.send("data=" + json);
 
 
     // var form = document.createElement('form');
