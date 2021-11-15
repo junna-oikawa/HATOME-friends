@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_11_13_083542) do
 
-  create_table "data", force: :cascade do |t|
-    t.text "json_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "practices", force: :cascade do |t|
     t.text "json_data"
     t.datetime "created_at", null: false
