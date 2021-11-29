@@ -6,6 +6,7 @@ class PracticesController < ApplicationController
 
   def create
     @data = Practice.new(practice_params)
+    
     @data.save
     redirect_to practice_path(@data.id)
     
