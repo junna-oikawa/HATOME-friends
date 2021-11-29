@@ -33,19 +33,17 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('makeBox').addEventListener(
     'click',
     function () {
-      shapes[clickCount] = new Konva.Rect({
-        x: 200,
-        y: 200,
-        width: 100,
-        height: 100,
+
+      shapes[clickCount] = new Konva.Line({
+        points: [150,150,250,150,250,250,150,250],
         fill: colors[colorCount],
         stroke: 'black',
         strokeWidth: 4,
+        closed: true,
         draggable: true,
         name: "rect",
         id: "shape" + clickCount,
         eyelets: [],
-        offset: { x: 50, y: 50 },
       });
 
       shapes[clickCount].on('mouseover', function () {
@@ -55,6 +53,8 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.cursor = 'default';
       });
       layer.add(shapes[clickCount]);
+
+      
 
       clickCount += 1;
       colorCount += 1;
@@ -66,10 +66,11 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('makeCircle').addEventListener(
     'click',
     function () {
-      shapes[clickCount] = new Konva.Circle({
+      shapes[clickCount] = new Konva.Ellipse({
         x: 200,
         y: 200,
-        radius: 50,
+        radiusX: 50,
+        radiusY: 50,
         fill: colors[colorCount],
         stroke: 'black',
         strokeWidth: 4,
@@ -96,19 +97,16 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('makeTriangle').addEventListener(
     'click',
     function () {
-      shapes[clickCount] = new Konva.RegularPolygon({
-        x: 200,
-        y: 200,
-        sides: 3,
-        radius: 60,
+      shapes[clickCount] = new Konva.Line({
+        points: [200,163.4,150,250,250,250],
         fill: colors[colorCount],
         stroke: 'black',
         strokeWidth: 4,
+        closed: true,
         draggable: true,
-        name: "rectangle",
+        name: "rect",
         id: "shape" + clickCount,
         eyelets: [],
-        offset: { x: 0, y: -10 },
       });
       shapes[clickCount].on('mouseover', function () {
         document.body.style.cursor = 'pointer';
