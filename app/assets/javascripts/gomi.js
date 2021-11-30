@@ -4,18 +4,15 @@ let stage;
 let eyeletsArray = [{}];
 let save;
 
-//前ページの読み込み
+
+var width = 500;
+var height = 375;
+var centX = 0;
+var centY = 0;
+
 jsonLoad = document.getElementById('data').value
 stage = Konva.Node.create(jsonLoad, 'container');
 layer = stage.findOne('#layer');
-var children = layer.getChildren();
-for (let i = 0; i < children.length; i++) {
-  children[i].draggable(false);
-}
-let width = stage.getAttr('width');
-let height = stage.getAttr('height');
-console.log(width, height);
-//
 
 let polygons = layer.find('.rect, .circle, .triangle');
 let coord = [];
@@ -31,21 +28,16 @@ for (var i = 0; i < polygons.length; i++) {
   coord.push(array);
 }
 
-save = layer;
-layer.destroy();
-
-var calcLayer = new Konva.Layer({
-  id: 'layer2',
+var background = new Konva.Rect({
+  x: 0,
+  y: 0,
+  width: width,
+  height: height,
+  fill: 'white',
 });
-stage.add(calcLayer)
+// add the shape to the layer
+layer.add(background);
 
-// for (var i = 0; i < coord.length; i++) {
-//   for (var j = i+1; j < coord.length; j++) {
-//     if (i < j) {
-//       drawNewPolygon(coord[i], coord[j]);
-//     }
-//   }
-// }
 drawNewPolygon(coord[0], coord[1]);
 
 
@@ -73,11 +65,33 @@ function drawNewPolygon(pol1, pol2) {
       fill: 'rgb(0,0,255)',
       closed: true,
     });
-    calcLayer.add(poly);
+    layer.add(poly);
     
   });
-  calc();
 }
+
+// var poly = new Konva.Line({
+//   //points: [253,217,250,77],
+//   points: [20,20,30,250,140,100],
+//   fill: 'red',
+//   // stroke: 'black',
+//   // strokeWidth: 5,
+//   closed: true,
+// });
+
+// layer.add(poly);
+
+
+document.getElementById('gravity').addEventListener(
+  'click',
+  function () {
+    calc();
+  },
+  false
+);
+
+
+
 
 function drawCross(x, y,w,h){
   var redLine1 = new Konva.Line({
@@ -87,7 +101,7 @@ function drawCross(x, y,w,h){
     lineCap: 'round',
     lineJoin: 'round',
   });
-  calcLayer.add(redLine1);
+  layer.add(redLine1);
   var redLine2 = new Konva.Line({
     points: [x,0,x,h],
     stroke: 'red',
@@ -95,7 +109,7 @@ function drawCross(x, y,w,h){
     lineCap: 'round',
     lineJoin: 'round',
   });
-  calcLayer.add(redLine2);
+  layer.add(redLine2);
 }
 
 function calc() {
@@ -104,7 +118,6 @@ function calc() {
   var imgD = new Image();
   w = canvas.width;
   h = canvas.height;
-  console.log(w, h);
   imgD = g.getImageData(0, 0, w, h);
   var px = imgD.data;
   var k = 0;
@@ -118,24 +131,18 @@ function calc() {
   for(var j=0; j<h; j++) {
     for(var i=0; i<w; i++) {
       k = j*w + i;
-      if(px[k*4] == 0 && px[k*4+1] == 0) {
+      if(!(px[k*4] == 255 && px[k*4+1] == 255&& px[k*4+2]==255)) {
         centX += i;
         centY += j;
         n++;
-        var circle = new Konva.Circle({
-          x: i/2,
-          y: j/2,
-          radius: 1,
-          fill: 'orange',
-        });
-  
-        // add the shape to the layer
-        calcLayer.add(circle);
       }
     }
   }
-  console.log(w,h);
     centX /= n;
     centY /= n;
     drawCross(centX * ratio, centY * ratio, w,h);
+  
 }
+
+
+

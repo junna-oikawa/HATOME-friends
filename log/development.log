@@ -179,3 +179,1108 @@ Processing by PracticesController#show as HTML
 Completed 200 OK in 94ms (Views: 72.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/practices/3" for ::1 at 2021-11-30 16:45:03 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.7ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (878.6ms)
+Completed 200 OK in 1069ms (Views: 1039.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:45:31 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 130ms (Views: 125.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:45:32 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.7ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:45:55 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:46:03 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:46:22 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 81ms (Views: 76.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:49:03 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.7ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:49:17 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:49:20 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:49:45 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:59:18 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.5ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 96ms (Views: 92.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:59:20 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:59:21 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:59:42 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:59:44 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:59:58 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 17:04:59 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 178ms (Views: 175.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 17:05:21 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (1.0ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 93ms (Views: 89.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 17:06:31 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 17:09:09 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 99ms (Views: 95.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 17:11:39 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 17:12:51 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 95ms (Views: 80.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-11-30 17:14:00 +0900
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 147ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 17:14:09 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":-65,\"y\":-63},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-17,\"y\":-19},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (1.7ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":-65,\"y\":-63},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-17,\"y\":-19},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 08:14:09.679016"], ["updated_at", "2021-11-30 08:14:09.679016"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/4
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:14:09 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:15:10 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 161ms (Views: 159.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:16:47 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 87ms (Views: 83.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:16:49 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:17:07 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:17:37 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:19:15 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.8ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 252ms (Views: 230.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:21:44 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (1.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 128ms (Views: 117.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:22:27 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 124ms (Views: 106.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:24:24 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 284ms (Views: 280.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:24:27 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (1.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:25:11 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 73ms (Views: 68.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:26:35 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (1.9ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (122.0ms)
+Completed 200 OK in 423ms (Views: 383.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2021-11-30 17:28:13 +0900
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 235ms (Views: 216.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practice/3" for ::1 at 2021-11-30 17:28:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/practice/3"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/practices/3" for ::1 at 2021-11-30 17:28:21 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.5ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 92ms (Views: 85.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:28:47 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:29:57 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (1.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 99ms (Views: 94.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:30:51 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.6ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:30:52 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.5ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:30:53 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:30:54 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:30:55 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 173ms (Views: 168.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:31:39 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 92ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:32:51 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:33:26 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:33:59 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-11-30 17:38:49 +0900
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 198ms (Views: 193.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:38:51 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (1.8ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (374.9ms)
+Completed 200 OK in 442ms (Views: 436.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:38:56 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:39:13 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 107ms (Views: 105.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:39:17 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 119ms (Views: 115.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:40:43 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:41:22 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:41:26 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:41:46 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 82ms (Views: 77.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:42:25 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:42:54 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:42:56 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:43:14 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (1.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 105ms (Views: 100.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:44:06 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:44:26 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:44:35 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 68ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:44:39 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:44:46 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:45:15 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:46:38 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:47:22 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:47:25 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/4" for ::1 at 2021-11-30 17:47:43 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 131ms (Views: 127.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-11-30 17:48:15 +0900
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 17:48:20 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":105,\"y\":-57},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":73,\"y\":-14},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (4.4ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":105,\"y\":-57},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":73,\"y\":-14},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 08:48:20.479338"], ["updated_at", "2021-11-30 08:48:20.479338"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/5
+Completed 302 Found in 11ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/practices/5" for ::1 at 2021-11-30 17:48:20 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 17:48:34 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":105,\"y\":-57},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":94,\"y\":-46},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (0.6ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":105,\"y\":-57},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":94,\"y\":-46},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 08:48:34.335862"], ["updated_at", "2021-11-30 08:48:34.335862"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/6
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/practices/6" for ::1 at 2021-11-30 17:48:34 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 17:48:44 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-68,\"y\":15},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":-36,\"y\":-20},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (2.4ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-68,\"y\":15},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":-36,\"y\":-20},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 08:48:44.415877"], ["updated_at", "2021-11-30 08:48:44.415877"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/7
+Completed 302 Found in 8ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/practices/7" for ::1 at 2021-11-30 17:48:44 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 17:48:51 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-109,\"y\":16},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":-87,\"y\":-7},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (0.7ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-109,\"y\":16},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":-87,\"y\":-7},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 08:48:51.961517"], ["updated_at", "2021-11-30 08:48:51.961517"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/8
+Completed 302 Found in 6ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/practices/8" for ::1 at 2021-11-30 17:48:51 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/8" for ::1 at 2021-11-30 17:49:19 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/8" for ::1 at 2021-11-30 17:49:30 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 88ms (Views: 84.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/8" for ::1 at 2021-11-30 17:50:36 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 149ms (Views: 145.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 17:50:44 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":1,\"y\":-34},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-49,\"y\":21},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (1.4ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":500,\"height\":350,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"x\":1,\"y\":-34},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":-49,\"y\":21},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 08:50:44.482334"], ["updated_at", "2021-11-30 08:50:44.482334"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/9
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 17:50:44 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 17:51:04 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 17:51:12 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 78ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 17:52:01 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 17:53:50 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 81ms (Views: 77.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 17:54:24 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 120ms (Views: 117.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:00:03 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 139ms (Views: 135.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:09:11 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:09:16 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:10:35 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 79ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:11:04 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 130ms (Views: 126.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:11:21 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.5ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 88ms (Views: 84.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:11:47 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:15:47 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 119ms (Views: 115.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 18:16:09 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 146ms (Views: 143.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 19:38:14 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (1.1ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 292ms (Views: 265.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 19:39:19 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 19:40:39 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 146ms (Views: 136.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 19:40:44 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 70ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/practices/9" for ::1 at 2021-11-30 19:41:21 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPractice Load (0.3ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 107ms (Views: 101.9ms | ActiveRecord: 0.3ms)
+
+
