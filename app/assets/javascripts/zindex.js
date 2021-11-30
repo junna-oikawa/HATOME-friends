@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   // var width = window.innerWidth;
   // var height = window.innerHeight;
-  var width = 500;
-  var height = 350;
+  var width = window.innerWidth;
+  var height = window.innerHeight;
 
   var stage = new Konva.Stage({
     container: 'container',

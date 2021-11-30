@@ -5,8 +5,6 @@ let eyeletsArray = [{}];
 let save;
 
 
-var width = 500;
-var height = 375;
 var centX = 0;
 var centY = 0;
 
@@ -14,8 +12,12 @@ jsonLoad = document.getElementById('data').value
 stage = Konva.Node.create(jsonLoad, 'container');
 layer = stage.findOne('#layer');
 
+var width = stage.getAttr('width');
+var height = stage.getAttr('height');
+
 let polygons = layer.find('.rect, .circle, .triangle');
 let coord = [];
+
 for (var i = 0; i < polygons.length; i++) {
   let points = polygons[i].points();
   let position = polygons[i].getAbsolutePosition();
@@ -26,19 +28,47 @@ for (var i = 0; i < polygons.length; i++) {
   }
   array.shift();
   coord.push(array);
+  
+}
+// for (var i = 0; i < coord.length; i++){
+//   drawNewPolygon(coord[i % coord.length], coord[(i + 1)% coord.length]);
+//   console.log('a');
+// }
+
+// drawNewPolygon(coord[0 % coord.length], coord[(0 + 1)% coord.length]);
+// drawNewPolygon(coord[1 % coord.length], coord[(1 + 1) % coord.length]);
+// drawNewPolygon(coord[2 % coord.length], coord[(2 + 1) % coord.length]);
+// drawNewPolygon(coord[3 % coord.length], coord[(3 + 1) % coord.length]);
+
+// for (var i = 0; i < coord.length; i++){
+//   // let a = coord[i % coord.length];
+//   // let b = coord[(i + 1) % coord.length];
+//   // drawNewPolygon(a, b);
+//   //drawNewPolygon(coord[i % coord.length], coord[(i + 1)% coord.length]);
+//   drawNewPolygon(coord[i % coord.length], coord[(i+1) % coord.length]);
+//   console.log(coord.length);
+// }
+
+let z = 0;
+while (z < coord.length){
+  drawNewPolygon(coord[z % coord.length], coord[(z+1) % coord.length]);
+  z++;
 }
 
-var background = new Konva.Rect({
-  x: 0,
-  y: 0,
-  width: width,
-  height: height,
-  fill: 'white',
-});
-// add the shape to the layer
-layer.add(background);
 
-drawNewPolygon(coord[0], coord[1]);
+
+// var background = new Konva.Rect({
+//   x: 0,
+//   y: 0,
+//   width: width,
+//   height: height,
+//   fill: 'white',
+// });
+// // add the shape to the layer
+// layer.add(background);
+
+// drawNewPolygon(coord[0], coord[1]);
+
 
 
 
@@ -51,15 +81,6 @@ function drawNewPolygon(pol1, pol2) {
       polygon.push(p[i].x);
       polygon.push(p[i].y);
     }
-    // var background = new Konva.Rect({
-    //   x: 0,
-    //   y: 0,
-    //   width: width,
-    //   height: height,
-    //   fill: 'white',
-    // });
-
-    // calcLayer.add(background);
     var poly = new Konva.Line({
       points: polygon,
       fill: 'rgb(0,0,255)',
@@ -69,17 +90,6 @@ function drawNewPolygon(pol1, pol2) {
     calc(p);
   });
 }
-
-// var poly = new Konva.Line({
-//   //points: [253,217,250,77],
-//   points: [20,20,30,250,140,100],
-//   fill: 'red',
-//   // stroke: 'black',
-//   // strokeWidth: 5,
-//   closed: true,
-// });
-
-// layer.add(poly);
 
 
 document.getElementById('gravity').addEventListener(
@@ -136,7 +146,8 @@ function calc(polygon) {
   }
     centX /= n;
     centY /= n;
-    drawCross(centX, centY);
+  drawCross(centX, centY);
+  eyeletsArray.push({ x: centX, y: centY });
 }
 
 function cn(polygon, x, y){
