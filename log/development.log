@@ -106,3 +106,76 @@ Processing by PracticesController#show as HTML
 Completed 200 OK in 4054ms (Views: 4042.0ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/" for ::1 at 2021-11-30 16:24:19 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (1196.7ms)
+Completed 200 OK in 1381ms (Views: 1375.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-30 16:24:27 +0900
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 70ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 16:25:27 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":1396,\"height\":766,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (1.0ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":1396,\"height\":766,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 07:25:27.294212"], ["updated_at", "2021-11-30 07:25:27.294212"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:3000/practices/2
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/practices/2" for ::1 at 2021-11-30 16:25:27 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 74ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-11-30 16:29:25 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PracticesController#index as HTML
+  Rendering practices/index.html.erb within layouts/application
+  Rendered practices/index.html.erb within layouts/application (624.7ms)
+Completed 200 OK in 875ms (Views: 864.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/practices" for ::1 at 2021-11-30 16:29:45 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":1396,\"height\":766,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[200,163.4,150,250,250,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":29,\"y\":46},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[]},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape3\",\"eyelets\":[],\"x\":-49,\"y\":-41},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[36mPractice Create (5.9ms)[0m  [1m[32mINSERT INTO "practices" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":1396,\"height\":766,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[200,163.4,150,250,250,250],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"x\":29,\"y\":46},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[]},\"className\":\"Line\"},{\"attrs\":{\"points\":[150,150,250,150,250,250,150,250],\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape3\",\"eyelets\":[],\"x\":-49,\"y\":-41},\"className\":\"Line\"},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-11-30 07:29:45.428086"], ["updated_at", "2021-11-30 07:29:45.428086"]]
+  ↳ app/controllers/practices_controller.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/practices_controller.rb:10
+Redirected to http://localhost:8000/practices/3
+Completed 302 Found in 24ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/practices/3" for ::1 at 2021-11-30 16:29:45 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPractice Load (0.2ms)[0m  [1m[34mSELECT  "practices".* FROM "practices" WHERE "practices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:16
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 94ms (Views: 72.1ms | ActiveRecord: 0.2ms)
+
+
