@@ -336,7 +336,6 @@ function polygonate(edges) {
       }
     }    
   }
-  //console.log("polygonate: " + JSON.stringify(polygons));
   return polygons;
 }
 
@@ -378,7 +377,6 @@ function filterPolygons(polygons, fig1, fig2, mode) {
       filtered.push(bigPolygons[i]);
     }
   }
-  //console.log("filtered: " + JSON.stringify(filtered));
   return filtered;
 }
 
@@ -437,7 +435,6 @@ function getPointInsidePolygon(polygon) {
       point = undefined;
     }
   }
-  //console.log(point);
   return point;
 }
 

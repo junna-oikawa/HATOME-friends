@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <h1>Scenes#new</h1>
+    <p>シーン作成画面</p>
+    <%= link_to 'キャラ作成画面', new_character_path %>
+    <button id="save">セーブ</button>
+  </div>
+
+  <div class="rows">
+    <div id="char-container">
+        <% @characters.each do |char| %>
+          <div id="char<%= char.id %>" class="characters">
+            <div id="char<%= char.id %>-stage"></div>
+          </div>
+        <% end %>
+    </div>
+    <div id="scene-container">
+      <div class="scene">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hidden">
+  <% @characters.each do |char| %>
+    <input type="hidden" id="char<%= char.id %>-data" value="<%= char.json_data %>">
+  <% end %>
+</div>
+<script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
+<%= javascript_include_tag "scene-new.js" %>

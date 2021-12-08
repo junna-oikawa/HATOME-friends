@@ -1,0 +1,8 @@
+<h1>Charactors#name</h1>
+<p>Find me in app/views/charactors/name.html.erb</p>
+
+<%= form_with model:@character, local:true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :json_data, :value => @character.json_data %>
+  <%= f.submit '決定' %>
+<% end %>

@@ -1,0 +1,2 @@
+class TmpCharacter < ApplicationRecord
+end

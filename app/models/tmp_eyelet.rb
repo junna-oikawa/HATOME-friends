@@ -1,0 +1,2 @@
+class TmpEyelet < ApplicationRecord
+end
