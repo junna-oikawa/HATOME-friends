@@ -10,9 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_13_083542) do
+ActiveRecord::Schema.define(version: 2021_12_07_125239) do
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.text "json_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "practices", force: :cascade do |t|
+    t.text "json_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scenes", force: :cascade do |t|
+    t.text "json_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tmp_characters", force: :cascade do |t|
+    t.text "json_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tmp_eyelets", force: :cascade do |t|
+    t.text "json_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tmp_scenes", force: :cascade do |t|
     t.text "json_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

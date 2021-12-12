@@ -1,0 +1,2 @@
+class TmpScene < ApplicationRecord
+end

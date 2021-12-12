@@ -1,0 +1,2 @@
+module CharactorsHelper
+end

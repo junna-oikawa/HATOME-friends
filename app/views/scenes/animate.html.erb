@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <h1>Scenes#animate</h1>
+    <p>Find me in app/views/scenes/animate.html.erb</p>
+    <button id="save">---</button>
+    <button id="first">-</button>
+    <button id="second">-</button>
+    <button id="ff">１</button>
+    <button id="ss">２</button>
+    <button id="start">スタート</button>
+    <button id="stop">ストップ</button>
+  </div>
+
+  <div class="rows">
+    <div id="char-container">
+    </div>
+    <div id="scene-container">
+      <div class="scene">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="hidden">
+  <input type="hidden" id="data" value="<%= @scene.json_data %>">
+</div>
+<script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
+<%= javascript_include_tag "animate.js" %>
