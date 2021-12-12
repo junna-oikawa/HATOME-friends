@@ -11,6 +11,8 @@ var height = stage.getAttr('height');
 
 let isSecond = new Boolean(false);
 
+let targetGroup;
+
 
 
 //はとめ操作 show-thirsより
@@ -60,6 +62,7 @@ stage.on('mousemove', function () {
 stage.on('mouseup', function (e) {
   isDragging = false;
   targetShape = null;
+  targetGroup = null;
 });
 
 
@@ -267,114 +270,6 @@ document.getElementById('stop').addEventListener(
 );
 
 let initGroupAngle = 0;
-// function setRotateGroup(rotObj, target) {
-//   initGroupAngle = 0;
-//   let parent = target.getParent();
-//   let g = new Konva.Group({
-//     x: axis.x - parent.getAbsolutePosition().x,
-//     y: axis.y - parent.getAbsolutePosition().y,
-//     width: 600,
-//     height: 400,
-//     offsetX: axis.x - parent.getAbsolutePosition().x,
-//     offsetY: axis.y - parent.getAbsolutePosition().y,
-//     name: 'rotateGroup',
-//   });
-
-//   //targetがどのグループにも含まれていない 
-//   if (target.getDepth() == 3) {
-//     let c = 0;
-//     let nc = 0; // new count
-
-//     group.forEach(function (gr) {
-//       rotObj.forEach(function (o) {
-//         if (gr.getChildren().includes(o) == true) {
-//           nc++;
-//         }
-//       });
-//     });
-
-
-//     if (nc == 0) { // && 全要素新しい
-//       parent.add(g);
-//       rotObj.forEach(function (o) {
-//         o.moveTo(g);
-//       });
-//       group.push(g);
-//       return;
-//     } else {
-      
-
-//       let newRotObj;
-//       group.forEach(function (gr) {
-//         let nmc = 0; // not match count
-//         gr.getChildren().forEach(function (child) {
-//           if (!rotObj.includes(child)) {
-//             nmc++;
-//           }
-//         });
-//         if (nmc == 0) { // && 他グループの要素を全て持つ
-//           newRotObj.push(gr);
-//           for (let i = 0; i < rotObj.length; i++) {
-//             if (!newRotObj.includes(rotObj[i])) {
-//               newRotObj.push(rotObj[i]);
-//             }
-//           }
-//         }
-//       });
-//       parent.add(g);
-//       newRotObj.forEach(function (o) {
-//         o.moveTo(g);
-//       });
-//       group.push(g);
-//     }
-//   } else if (target.getDepth() >= 4) {
-//     let includeGroup; //全要素が入っているGroup
-//     group.forEach(function (gr) {
-//       let c = 0;
-//       rotObj.forEach(function (o) {
-//         if (gr.getChildren().includes(o) == true) {
-//           c++;
-//         }
-//       });
-//       if (c == rotObj.length) includeGroup = gr;
-//     });
-//     includeGroup.add(g)
-//     axis = { x: useEyelet.getAbsolutePosition(includeGroup).x, y:useEyelet.getAbsolutePosition(includeGroup).y };
-//     g.x(axis.x)
-//     g.y(axis.y)
-//     g.offsetX(axis.x)
-//     g.offsetY(axis.y)
-//     rotObj.forEach(function (o) {
-//       o.moveTo(g);
-//     });
-//     group.push(g);
-
-
-//     if (c == parent.getChildren().length) {　//グループが既にある時
-//       initGroupAngle = parent.rotation();
-//       return;
-//     } else if (c == rotObj.length) {
-//       target.getParent().add(g)
-//       axis = { x: useEyelet.getAbsolutePosition(target.getParent()).x, y:useEyelet.getAbsolutePosition(target.getParent()).y };
-//       g.x(axis.x)
-//       g.y(axis.y)
-//       g.offsetX(axis.x)
-//       g.offsetY(axis.y)
-//       group.push(g);
-
-//       rotObj.forEach(function (o) {
-//       o.moveTo(g);
-//       });
-//     } else {
-//       target.getParent().getParent().add(g)
-//       group.push(g);
-
-//       rotObj.forEach(function (o) {
-//       o.moveTo(g);
-//   });
-//     }
-//   }
-// }
 let group = [];
 let groupAllChildren = [];
 function setRotateGroup(rotObj, target) {
@@ -430,6 +325,7 @@ function setRotateGroup(rotObj, target) {
   switch (type) {
     case 'isAllMatch':
       initGroupAngle = group[existingGroup].rotation();
+      targetGroup = group[existingGroup];
       console.log('isAllMatch')
       break;
     case 'new':
@@ -505,179 +401,6 @@ function setRotateGroup(rotObj, target) {
       console.log('default');
       break;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ////////////////////////////////
-  // let newCount = 0;
-  // let existCount = 0;
-  // let targetIsExit = false;
-  // groupAllChildren.forEach(gr => {
-  //   rotObj.forEach(o => {
-      
-  //   });
-  // });
-
-  // if (targetIsExit == false) {
-  //   if (existCount == 0) { //全要素新しい
-  //     console.log('全要素新しい');
-  //     let parent = target.getParent();
-  //     g.x(axis.x - parent.getAbsolutePosition().x);
-  //     g.y(axis.y - parent.getAbsolutePosition().y);
-  //     g.offsetX(axis.x - parent.getAbsolutePosition().x);
-  //     g.offsetY(axis.y - parent.getAbsolutePosition().y);
-  //     addDest = parent;
-  //     addObj = rotObj;
-  //     add(addObj, g, addDest, rotObj);
-  //   } else { //新>既
-  //     console.log('新>既');
-  //   }
-    
-  // } else if (targetIsExit == true) {
-  //   if (newCount != 0) { //既の下に入る　ターゲットはexist いくつかnew
-  //     let parent = target.getParent();
-  //     addDest = parent;
-  //     addObj = rotObj;
-  //     axis = { x: useEyelet.getAbsolutePosition(parent).x, y: useEyelet.getAbsolutePosition(parent).y };
-  //     g.x(axis.x);
-  //     g.y(axis.y);
-  //     g.offsetX(axis.x);
-  //     g.offsetY(axis.y);
-
-  //     //target(既)はそのまま それ以外はparentのoffsetを中心として -parent.rotation
-  //     let tmpRotObj = rotObj.slice(1); //shape削除
-  //     let index = tmpRotObj.findIndex(element => element == useEyelet);
-  //     tmpRotObj.splice(index, 1);
-
-  //     //一時的にグループを作る
-  //     // let depth = parent.getDepth() - 2; //stageとlayer分 characterGroupまでの階層
-  //     // let charGr = parent;//実際のcharGrではない
-  //     // let tmpAxis = parent.offset();
-  //     // console.log(tmpAxis);
-  //     // for (let i = 0; i < depth; i++){ 
-  //     //   charGr = parent.getParent();
-  //     // }
-
-  //     let tmpG = new Konva.Group({
-  //       width: 600,
-  //       height: 400,
-  //       x: parent.offsetX(),
-  //       y: parent.offsetY(),
-  //       offsetX: parent.offsetX(),
-  //       offsetY: parent.offsetY(),
-  //     });
-  //     parent.add(tmpG);
-  //     // var rect1 = new Konva.Rect({
-  //     //   x: parent.offsetX(),
-  //     //   y: parent.offsetY(),
-  //     //   width: 10,
-  //     //   height: 10,
-  //     //   fill: 'green',
-  //     //   stroke: 'black',
-  //     //   strokeWidth: 4,
-  //     // });
-  //     // tmpG.add(rect1);
-  //     tmpRotObj.forEach(o => {
-  //       o.moveTo(tmpG);
-  //     });
-  //     tmpG.rotation(-parent.rotation());
-  //     tmpRotObj.forEach(o => {
-  //       tmpPos = o.getAbsolutePosition(parent);
-  //       o.x(tmpPos.x);
-  //       o.y(tmpPos.y);
-  //       o.rotation(- parent.rotation());
-  //       o.moveTo(parent);
-  //     });
-  //     tmpG.destroy();
-
-
-  //     // let depth = parent.getDepth() - 2; //stageとlayer分 characterGroupまでの階層
-  //     // let charGr = parent;//実際のcharGrではない
-  //     // let tmpAxis = parent.offset();
-  //     // console.log(tmpAxis);
-  //     // for (let i = 0; i < depth; i++){ 
-  //     //   charGr = parent.getParent();
-  //     // }
-  //     // for (let i = 0; i < tmpRotObj.length; i++) {
-  //     //   let tmpPos = tmpRotObj[i].getAbsolutePosition(parent)
-  //     //   let r = - parent.rotation() * (Math.PI / 180);
-  //     //   tmpRotObj[i].x(tmpPos.x * Math.cos(r) - tmpPos.y * Math.sin(r) - charGr.getAbsolutePosition().x);
-  //     //   tmpRotObj[i].y(tmpPos.x * Math.sin(r) + tmpPos.y * Math.cos(r));
-  //     //   tmpRotObj[i].rotation(-parent.rotation());
-  //     // }
-    
-  //     // let scale = charGr.scale;//characterGroupのscale?
-  //     // for (let i = 0; i < tmpRotObj.length; i++){
-  //     //   tmpRotObj[i].x((tmpAxis.x + ( - tmpAxis.x) * Math.cos(parent.rotation()) - ( - tmpAxis.y) * Math.sin(parent.rotation())) * 1 / scale.x);
-  //     //   tmpRotObj[i].y((tmpAxis.y + (- tmpAxis.x) * Math.sin(parent.rotation()) + ( - tmpAxis.y) * Math.cos(parent.rotation())) * 1 / scale.y);
-  //     //   tmpRotObj[i].rotation(parent.rotation());
-  //     // }
-
-  //     add(addObj, g, addDest, rotObj);
-  //     console.log('ターゲットはexist いくつかnew 既存の下に入る');
-  //   } else {
-  //     //全一致か部分一致かの判断の処理
-  //     let isAllMatch = false;
-  //     let matchIndex;
-  //     groupAllChildren.forEach(gr => {
-  //       let has = [];
-  //       gr.forEach(ge => {
-  //         has.push(rotObj.includes(ge));  //rotObjがexistGroupの要素を全て持っているか？
-  //       });
-  //       rotObj.forEach(ro => {
-  //         has.push(gr.includes(ro));  //rotObjがexistGroupの要素を全て持っているか？
-  //       });
-  //       if (has.some(b => b == false) == false && isAllMatch == false) {
-  //         isAllMatch = true;
-  //       }
-  //     });
-  //     if (isAllMatch == true) { // 完全一致
-  //       console.log('完全一致');
-  //     } else { //部分一致
-        
-  //     }
-
-  //     //else {
-  //     //   let depth = target.getDepth() - 3;
-  //     //   let parents = [target];
-  //     //   for (let i = 0; i < depth; i++){
-  //     //     parents[i] = parents[i-1].getParent();
-  //     //   }
-
-  //     // let jsonArray = "";
-  //     // rotObj.forEach(o => {
-  //     //   jsonArray += JSON.stringify(o);
-  //     // })
-  //     // let groupIsExist = groupJson.findIndex(element => element == jsonArray);
-  //     // if (groupIsExist != -1) {
-  //     //   console.log('全一致');
-  //     //   initGroupAngle = group[groupIsExist].rotation();
-  //     // }
-  //     // group.forEach(gr => {
-
-  //     //   gr.includes
-  //     // });
-  //     // if () { //全一致
-  //     //   console.log('全一致');
-  //     //   initGroupAngle = group[groupIsExist].rotation();
-  //     // } else { //部分一致
-  //     //   console.log('部分一致');
-  //     // }
-  //   }
-  // }
 }
 
 function add(addObj, g, addDest, rotObj) {
@@ -687,17 +410,13 @@ function add(addObj, g, addDest, rotObj) {
   addDest.add(g);
   group.push(g);
   groupAllChildren.push(rotObj);
-  // let groupJsonArray = "";
-  // rotObj.forEach(o => {
-  //   groupJsonArray+=JSON.stringify(o);
-  // })
-  // groupJson.push(groupJsonArray);
   console.log(groupAllChildren);
 }
 
 
 function rotateGroup(rotObj, angle) {
-  let g = rotObj[0].getParent();
+  if (targetGroup == null) targetGroup = rotObj[0].getParent();
+  let g = targetGroup;
   g.rotation(initGroupAngle + angle);
 }
 
