@@ -17,6 +17,8 @@ let rotElt = [];
 var centX = 0;
 var centY = 0;
 
+let mode = 'moveShape';
+
 jsonLoad = document.getElementById('data').value
 stage = Konva.Node.create(jsonLoad, 'char-stage');
 layer = stage.findOne('#layer');
@@ -102,6 +104,7 @@ function drawCross(x, y){
     name: "eyelet",
     id: "eyelet" + eyeletCounter,
     overlappingShapes: shapesId,
+    draggable: true,
   });
   group.add(smallRect);
   eyeletCounter++;
@@ -149,30 +152,165 @@ function cn(polygon, x, y){
 
 
 let rotObj;
+let selEyelet;
+
+var tr = new Konva.Transformer({
+  resizeEnabled: false,
+  rotateEnabled: false,
+  padding: 2,
+  borderStroke: 'white',
+  borderStrokeWidth: 4,
+});
+layer.add(tr);
+tr.nodes([]);
+
 //操作
 layer.on('mousedown', function (e) {
+  tr.nodes([]);
   targetShape = e.target;
-  if (targetShape.getAttr('eyelets').length == 0) return;
-  hasEyelet = true;
-  mousedownPos = stage.getPointerPosition();
-  selectEyelet(targetShape, mousedownPos);
-  isDragging = true;
-  rotObj = setInitData(rotShapes.concat(rotElt), axis);
+  targetShape.name() == 'eyelet' && mode!='makeEyelet' ? mode = 'editEyelet': console.log('a');
+  switch (mode) {
+    case 'editEyelet':
+      selEyelet = targetShape;
+      tr.nodes([selEyelet]);
+      let shapesWithEye = selEyelet.getAttr('overlappingShapes');
+      
+      
+      shapesWithEye.forEach(se => {
+        var index = stage.findOne('#' + se).getAttr('eyelets').indexOf(selEyelet.id());
+          let tmpEyelets = stage.findOne('#' + se).getAttr('eyelets');
+          tmpEyelets.splice(index, 1);
+        stage.findOne('#' + se).getAttr('eyelets', tmpEyelets);
+      });
+      
+      break;
+    case 'makeEyelet':
+      // let moveEyelet = stage.findOne("#eyelet" + (eyeletCounter - 1));
+      // moveEyelet.x(stage.getPointerPosition().x);
+      // moveEyelet.y(stage.getPointerPosition().y);
+      break;
+    case 'moveShape':
+      if (targetShape.getAttr('eyelets').length == 0) return;
+      hasEyelet = true;
+      mousedownPos = stage.getPointerPosition();
+      selectEyelet(targetShape, mousedownPos);
+      isDragging = true;
+      rotObj = setInitData(rotShapes.concat(rotElt), axis);
+      break;
+  }
 });
 
 stage.on('mousemove', function () {
-  if (isDragging == false) return;
-  if (hasEyelet == false) return;
-
-  let mousePos = stage.getPointerPosition();
-  let angle = calcAngle(mousePos);
-  rotateObj(rotObj, angle);
+  switch (mode) {
+    case 'editEyelet':
+      
+      break;
+    case 'makeEyelet':
+      let moveEyelet = stage.findOne("#eyelet" + (eyeletCounter - 1));
+      moveEyelet.x(stage.getPointerPosition().x);
+      moveEyelet.y(stage.getPointerPosition().y);
+      break;
+    case 'moveShape':
+      if (isDragging == false) return;
+      if (hasEyelet == false) return;
+      let mousePos = stage.getPointerPosition();
+      let angle = calcAngle(mousePos);
+      rotateObj(rotObj, angle);
+      break;
+  }
 });
 
 stage.on('mouseup', function (e) {
-  isDragging = false;
-  targetShape = null;
+  switch (mode) {
+    case 'editEyelet': {
+      var preShapes = stage.getAllIntersections({ x: selEyelet.x(), y: selEyelet.y() });
+      var shapes = [];
+      for (var i = 0; i < preShapes.length; i++) {
+        if (preShapes[i].getAttr("name") == "rect" || preShapes[i].getAttr("name") == "circle" || preShapes[i].getAttr("name") == "triangle") {
+          shapes.push(preShapes[i])
+        }
+      }
+      let shapesId = [];
+      for (let i = 0; i < shapes.length; i++) {
+        let array = shapes[i].getAttr('eyelets')
+        array.push(selEyelet.id());
+        shapes[i].setAttr('eyelets', array);
+        shapesId.push(shapes[i].getAttr('id'))
+      }
+      selEyelet.setAttr('overlappingShapes', shapesId);
+      mode = 'moveShape';
+      break;
+    }
+    case 'makeEyelet': {
+      let moveEyelet = stage.findOne("#eyelet" + (eyeletCounter - 1));
+      var preShapes = stage.getAllIntersections({ x: moveEyelet.x(), y: moveEyelet.y() });
+      var shapes = [];
+      for (var i = 0; i < preShapes.length; i++) {
+        if (preShapes[i].getAttr("name") == "rect" || preShapes[i].getAttr("name") == "circle" || preShapes[i].getAttr("name") == "triangle") {
+          shapes.push(preShapes[i])
+        }
+      }
+      
+      let shapesId = [];
+      for (let i = 0; i < shapes.length; i++) {
+        let array = shapes[i].getAttr('eyelets')
+        array.push("eyelet" + (eyeletCounter - 1));
+        shapes[i].setAttr('eyelets', array);
+        shapesId.push(shapes[i].getAttr('id'))
+      }
+      moveEyelet.setAttr('overlappingShapes', shapesId)
+      mode = 'moveShape';
+      break;
+    }
+    case 'moveShape':
+      isDragging = false;
+      targetShape = null;
+      break;
+  }
 });
+
+document.getElementById('makeEyelet').addEventListener(
+  'click',
+  function () {
+    mode = 'makeEyelet';
+    let smallRect = new Konva.Circle({
+      x: 0,
+      y: 0,
+      radius: 8,
+      fill: 'white',
+      stroke: '#dab300',
+      strokeWidth: 4,
+      name: "eyelet",
+      id: "eyelet" + eyeletCounter,
+      overlappingShapes: [],
+      draggable: true,
+    });
+    group.add(smallRect);
+    eyeletCounter++;
+  },
+  false
+);
+
+document.getElementById('destroyEyelet').addEventListener(
+  'click',
+  function () {
+    mode = 'moveShape';
+    tr.nodes([]);
+    let editAttrShapes = stage.find(node => {
+      return node.getAttr('eyelets') != null && node.getAttr('eyelets').includes(selEyelet.id());
+    });
+    editAttrShapes.forEach(eas => {
+      let tmpEyelets = [];
+      eas.getAttr('eyelets').forEach(eye => {
+        if (eye != selEyelet.id()) tmpEyelets.push(eye);
+      })
+      eas.setAttr('eyelets', tmpEyelets);
+    });
+    selEyelet.destroy();
+    selEyelet = null;
+  },
+  false
+);
 
 
 

@@ -84,7 +84,7 @@ layer.add(group);
       shapes[clickCount] = new Konva.Ellipse({
         x: 200,
         y: 200,
-        radiusX: 80,
+        radiusX: 50,
         radiusY: 50,
         fill: colors[colorCount],
         stroke: 'black',
