@@ -7,9 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'jvm1tsd',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
   </head>
 
-  <body class="h-100 mx-0 px-0">
+  <div class="container">
+    <div class="header">
+      <%= link_to root_path, id:'logo' do %>
+        <%= image_tag 'logo.png', :width => '250' %>
+      <% end %>
+      <%= link_to 'みんなのさくひん', scenes_path, class:'header-btn', id:'header-works-btn' %>
+      <%= link_to 'あたらしくつくる', new_scene_path, class:'header-btn', id:'header-new-btn' %>
+    </div>
+    
     <%= yield %>
-  </body>
+  </div>
 </html>

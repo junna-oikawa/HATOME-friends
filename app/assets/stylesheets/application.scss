@@ -10,9 +10,63 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ * require_tree .
  */
-@import "bootstrap";
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: happy-ruika, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  color: #696969;
+}
+
+.header {
+  height: 92px;
+  background-color: #aad4e7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  height: calc(100vh - 92px);
+  background-color: #aad4e7;
+}
+
+#logo {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.header-btn {
+  background-color: #54bfad;
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+
+#header-works-btn {
+}
+
+#header-new-btn {
+  background-color: #f19580;
+}

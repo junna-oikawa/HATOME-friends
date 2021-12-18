@@ -45,7 +45,6 @@ layer.add(group);
   document.getElementById('makeBox').addEventListener(
     'click',
     function () {
-
       shapes[clickCount] = new Konva.Line({
         points: [-50, -50, 50, -50, 50, 50, -50, 50],
         x: 200,
@@ -266,7 +265,7 @@ layer.add(group);
       }
 
       function compareFunc(a, b) {
-        return a.zIndex() - b.zIndex();;
+        return a.zIndex() - b.zIndex();
       }
        
       toGroup.sort(compareFunc);
@@ -353,7 +352,7 @@ layer.on('click tap', function (e) {
     }
   });
 
-stage.on('mousemove', function (e) {
+  stage.on('mousemove', function (e) {
     let tgt = tr.nodes()[0]
     if (tgt == null) return;
     if (tgt.getAttr('name') == 'circle') {
