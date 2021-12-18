@@ -1,23 +1,46 @@
-<div>
-  <div>
-    <h1>Scenes#new</h1>
-    <p>シーン作成画面</p>
-    <%= link_to 'キャラ作成画面', new_character_path %>
-    <button id="save">セーブ</button>
+<div class="main-content row">
+  <div class="col" id="col-left">
+    <div id="char-container">
+      <% @characters.each do |char| %>
+        <div id="char<%= char.id %>" class="characters">
+          <div id="char<%= char.id %>-stage"></div>
+        </div>
+      <% end %>
+    </div>
+    <div id="btn-container">
+      <%= link_to new_character_path, class:"button", id:"to-char-new" do %>
+        <p>じぶんのキャラクターを<br>つくってみる！</p>
+      <% end %>
+    </div>
   </div>
 
-  <div class="rows">
-    <div id="char-container">
-        <% @characters.each do |char| %>
-          <div id="char<%= char.id %>" class="characters">
-            <div id="char<%= char.id %>-stage"></div>
-          </div>
-        <% end %>
+  <div class="col" id="col-center">
+    <div class="xform-btns">
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="scaleDown" class="btn xform-btn">小さく</div>
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="scaleDown" class="btn xform-btn">小さく</div>
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="scaleDown" class="btn xform-btn">小さく</div>
     </div>
     <div id="scene-container">
-      <div class="scene">
-      </div>
+      <div class="scene"></div>
     </div>
+    <div class="xform-btns">
+      <div id="toTop" class="btn xform-btn">最前面へ移動</div>
+      <div id="toBottom" class="btn xform-btn">最背面へ移動</div>
+      <div id="up" class="btn xform-btn">前面へ</div>
+      <div id="down" class="btn xform-btn">背面へ</div>
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+    </div>
+  </div>
+
+  <div class="col" id="col-right">
+      <div id="bg-container">
+      </div>
+      <div class="information">
+        <div id="save" class="btn">できた！</div>
+      </div>
   </div>
 </div>
 
@@ -27,4 +50,7 @@
   <% end %>
 </div>
 <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
+<%= javascript_include_tag "transform.js" %>
 <%= javascript_include_tag "scene-new.js" %>
+<%= stylesheet_link_tag 'scenes' %>
+

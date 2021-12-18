@@ -1,29 +1,47 @@
-<div>
-  <div>
-    <h1>Scenes#animate</h1>
-    <p>Find me in app/views/scenes/animate.html.erb</p>
-    <button id="save">---</button>
-    <button id="first">-</button>
-    <button id="second">-</button>
-    <button id="ff">１</button>
-    <button id="ss">２</button>
-    <button id="start">スタート</button>
-    <button id="stop">ストップ</button>
+
+
+<div class="main-content">
+  <div class="upper">
+    <h3 id="explain"><span id="first-pose">はじめのポーズ</span>と<span id="second-pose">おわりのポーズ</span>をきめてアニメーションをつくろう！</h3>
   </div>
 
-  <div class="rows">
-    <div id="char-container">
-    </div>
-    <div id="scene-container">
+  <div class="middle">
+    <div id="scene-animate-container">
       <div class="scene">
+      </div>
+    </div>
+    <div id="animation-demo">
+      <div class="demo">
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="lower">
+    <div id="got-it" class="btn">わかった</div>
+    <div id="first" class="btn">できた！</div>
+    <div id="second" class="btn">できた！</div>
+    <div id="redo" class="btn">やりなおす</div>
+    <div id="ok" class="btn">ばっちり！</div>
+  </div>
+
+  <div id="guide">
+    <div id ='arrow_box' class='arrow_box'>
+      <p id="guide-sentence">ぼくの<br><span id="first-pose">はじめのポーズ</span><br>はこれ！</p>
+    </div>
+    <div id="char-to-explain">
+      <div class="explain-char">
       </div>
     </div>
   </div>
 </div>
 
+  
 
 <div id="hidden">
   <input type="hidden" id="data" value="<%= @scene.json_data %>">
 </div>
 <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
-<%= javascript_include_tag "animate.js" %>
+<%= stylesheet_link_tag 'scenes' %>
+<%= javascript_include_tag "animate-demo.js" %>
+<%= javascript_include_tag "make-animation.js" %>

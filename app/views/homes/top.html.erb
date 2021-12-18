@@ -1,4 +1,11 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<div class="main-content" id="top-main">
+  <div id="top-main-visual">
+    <div id="top-main"></div>
+  </div>
+  <%= link_to 'みんなのさくひん', scenes_path, class:'button', id:'works-button' %>
+  <%= link_to 'あたらしくつくる', new_scene_path, class:'button', id:'new-button' %>
+</div>
 
-<%= link_to '一覧画面', scenes_path %>
+<script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
+<%= stylesheet_link_tag 'homes' %>
+<%= javascript_include_tag "top.js" %>
