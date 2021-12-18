@@ -18373,3 +18373,907 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-12-19 00:04:14 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (5471.2ms)
+Completed 200 OK in 5583ms (Views: 5576.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-19 00:04:21 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (10.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (87.4ms)
+Completed 200 OK in 135ms (Views: 109.5ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:04:23 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (12.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 86ms (Views: 64.0ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:04:27 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:04:37 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":170,\"y\":133,\"radiusX\":50,\"radiusY\":50,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"yellow\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape2\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":200,\"y\":160,\"radiusX\":50,\"radiusY\":50,\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape3\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (7.1ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":170,\"y\":133,\"radiusX\":50,\"radiusY\":50,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"yellow\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape2\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":200,\"y\":160,\"radiusX\":50,\"radiusY\":50,\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape3\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:04:37.846438"], ["updated_at", "2021-12-18 15:04:37.846438"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 18ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:04:37 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:04:46 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:05:09 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":261,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":261,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:05:09.582714"], ["updated_at", "2021-12-18 15:05:09.582714"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:05:09 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.6ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:05:36 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:05:43 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":200,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":84,\"y\":115,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":200,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":84,\"y\":115,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:05:43.696220"], ["updated_at", "2021-12-18 15:05:43.696220"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:05:43 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:05:57 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:06:02 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:06:02.656866"], ["updated_at", "2021-12-18 15:06:02.656866"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 12ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:06:02 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.4ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:07:17 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.8ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 121ms (Views: 102.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:07:19 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:10:30 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (130.2ms)
+Completed 200 OK in 312ms (Views: 295.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:10:31 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:10:33 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:11:06 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:11:24 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":149,\"y\":151,\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes\",\"id\":\"shape3\",\"eyelets\":[],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":189,\"y\":195,\"radiusX\":50,\"radiusY\":50,\"fill\":\"blue\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle shapes\",\"id\":\"shape4\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":136,\"y\":133,\"offsetX\":100,\"offsetY\":100,\"draggable\":true,\"id\":\"face\",\"name\":\"shapes\",\"faceParent\":\"shape3\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"MM73.59,88.11c-1.02,1.46-2.06,2.96-2.53,4.68c-0.47,1.72-0.26,3.73,0.98,5.01c1.33,1.38,3.56,1.58,5.36,0.93c2.95-1.07,4.95-4.5,4.08-7.51C80.6,88.2,75.61,85.21,73.59,88.11z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M120.9,89.9c-1.8,2.17-3.72,4.92-2.79,7.58c0.91,2.6,4.37,3.6,6.93,2.59c2.09-0.82,3.73-2.76,4.06-4.98c0.34-2.22-0.71-4.62-2.62-5.78C124.56,88.14,122.06,88.5,120.9,89.9z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M101.24,112.92c-0.71,0.21-1.43,0.19-2.15-0.01c-1.58-0.44-4.4-1.19-5.41-4.07c-0.34-0.98,1.14-2.13,2.47-2.22c1.27-0.08,6.19-0.2,8.07,0.19c1.42,0.3,1.92,1.16,1.72,2.02C105.48,110.93,103.87,112.14,101.24,112.92z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"}]}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.5ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":149,\"y\":151,\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes\",\"id\":\"shape3\",\"eyelets\":[],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":189,\"y\":195,\"radiusX\":50,\"radiusY\":50,\"fill\":\"blue\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle shapes\",\"id\":\"shape4\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":136,\"y\":133,\"offsetX\":100,\"offsetY\":100,\"draggable\":true,\"id\":\"face\",\"name\":\"shapes\",\"faceParent\":\"shape3\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"MM73.59,88.11c-1.02,1.46-2.06,2.96-2.53,4.68c-0.47,1.72-0.26,3.73,0.98,5.01c1.33,1.38,3.56,1.58,5.36,0.93c2.95-1.07,4.95-4.5,4.08-7.51C80.6,88.2,75.61,85.21,73.59,88.11z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M120.9,89.9c-1.8,2.17-3.72,4.92-2.79,7.58c0.91,2.6,4.37,3.6,6.93,2.59c2.09-0.82,3.73-2.76,4.06-4.98c0.34-2.22-0.71-4.62-2.62-5.78C124.56,88.14,122.06,88.5,120.9,89.9z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M101.24,112.92c-0.71,0.21-1.43,0.19-2.15-0.01c-1.58-0.44-4.4-1.19-5.41-4.07c-0.34-0.98,1.14-2.13,2.47-2.22c1.27-0.08,6.19-0.2,8.07,0.19c1.42,0.3,1.92,1.16,1.72,2.02C105.48,110.93,103.87,112.14,101.24,112.92z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"}]}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:11:24.241306"], ["updated_at", "2021-12-18 15:11:24.241306"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:11:24 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:13:02 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 49ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:13:04 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:13:09 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":166,\"y\":241,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"triangle shapes\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.2ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":166,\"y\":241,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"triangle shapes\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:13:09.574329"], ["updated_at", "2021-12-18 15:13:09.574329"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:13:09 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:13:12 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:13:14 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":200,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle shapes\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":200,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle shapes\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:13:14.509373"], ["updated_at", "2021-12-18 15:13:14.509373"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 11ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:13:14 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 117ms (Views: 114.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:15:19 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.5ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 131ms (Views: 113.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:15:30 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:15:33 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:15:37 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes polygon\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":242,\"y\":241,\"radiusX\":50,\"radiusY\":50,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle shapes\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes polygon\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":242,\"y\":241,\"radiusX\":50,\"radiusY\":50,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle shapes\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:15:37.949931"], ["updated_at", "2021-12-18 15:15:37.949931"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:15:37 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:16:00 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:16:02 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes polygon\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes polygon\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:16:02.481376"], ["updated_at", "2021-12-18 15:16:02.481376"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:16:02 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.4ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:16:04 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:16:08 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes polygon\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":156,\"y\":139,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"triangle shapes polygon\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect shapes polygon\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":156,\"y\":139,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"triangle shapes polygon\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:16:08.976394"], ["updated_at", "2021-12-18 15:16:08.976394"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 9ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:16:08 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:16:33 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.4ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:16:48 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:17:04 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:17:20 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:17:31 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:17:33 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:17:42 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 47ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-19 00:19:51 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 203ms (Views: 198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-19 00:19:54 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (14.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 79ms (Views: 63.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-19 00:19:56 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 73ms (Views: 42.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:19:58 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (4.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 59ms (Views: 50.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:20:00 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:20:05 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (1.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:21:28 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (7.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (1263.2ms)
+Completed 200 OK in 1362ms (Views: 1340.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:21:32 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:21:37 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[]},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":226,\"y\":251,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"triangle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.5ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[]},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":200,\"y\":200,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":226,\"y\":251,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"triangle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:21:37.346035"], ["updated_at", "2021-12-18 15:21:37.346035"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:21:37 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:21:41 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:21:45 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:21:51 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[]},{\"attrs\":{\"x\":131,\"y\":140,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":175,\"y\":185,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[]},{\"attrs\":{\"x\":131,\"y\":140,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":175,\"y\":185,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:21:51.215107"], ["updated_at", "2021-12-18 15:21:51.215107"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:21:51 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:22:07 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:22:52 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:23:09 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:23:13 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":200,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":232,\"y\":250,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":200,\"y\":200,\"radiusX\":50,\"radiusY\":50,\"fill\":\"red\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":232,\"y\":250,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:23:13.034059"], ["updated_at", "2021-12-18 15:23:13.034059"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:23:13 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:23:16 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-19 00:23:37 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":157,\"y\":127,\"radiusX\":50,\"radiusY\":50,\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape3\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":161,\"y\":181,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"blue\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape4\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":155,\"y\":113,\"offsetX\":100,\"offsetY\":100,\"draggable\":true,\"id\":\"face\",\"faceParent\":\"shape3\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"MM73.59,88.11c-1.02,1.46-2.06,2.96-2.53,4.68c-0.47,1.72-0.26,3.73,0.98,5.01c1.33,1.38,3.56,1.58,5.36,0.93c2.95-1.07,4.95-4.5,4.08-7.51C80.6,88.2,75.61,85.21,73.59,88.11z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M120.9,89.9c-1.8,2.17-3.72,4.92-2.79,7.58c0.91,2.6,4.37,3.6,6.93,2.59c2.09-0.82,3.73-2.76,4.06-4.98c0.34-2.22-0.71-4.62-2.62-5.78C124.56,88.14,122.06,88.5,120.9,89.9z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M101.24,112.92c-0.71,0.21-1.43,0.19-2.15-0.01c-1.58-0.44-4.4-1.19-5.41-4.07c-0.34-0.98,1.14-2.13,2.47-2.22c1.27-0.08,6.19-0.2,8.07,0.19c1.42,0.3,1.92,1.16,1.72,2.02C105.48,110.93,103.87,112.14,101.24,112.92z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"}]}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.4ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":157,\"y\":127,\"radiusX\":50,\"radiusY\":50,\"fill\":\"green\",\"stroke\":\"black\",\"strokeWidth\":4,\"draggable\":true,\"name\":\"circle\",\"id\":\"shape3\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":161,\"y\":181,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"blue\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"draggable\":true,\"name\":\"rect\",\"id\":\"shape4\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":155,\"y\":113,\"offsetX\":100,\"offsetY\":100,\"draggable\":true,\"id\":\"face\",\"faceParent\":\"shape3\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"MM73.59,88.11c-1.02,1.46-2.06,2.96-2.53,4.68c-0.47,1.72-0.26,3.73,0.98,5.01c1.33,1.38,3.56,1.58,5.36,0.93c2.95-1.07,4.95-4.5,4.08-7.51C80.6,88.2,75.61,85.21,73.59,88.11z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M120.9,89.9c-1.8,2.17-3.72,4.92-2.79,7.58c0.91,2.6,4.37,3.6,6.93,2.59c2.09-0.82,3.73-2.76,4.06-4.98c0.34-2.22-0.71-4.62-2.62-5.78C124.56,88.14,122.06,88.5,120.9,89.9z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M101.24,112.92c-0.71,0.21-1.43,0.19-2.15-0.01c-1.58-0.44-4.4-1.19-5.41-4.07c-0.34-0.98,1.14-2.13,2.47-2.22c1.27-0.08,6.19-0.2,8.07,0.19c1.42,0.3,1.92,1.16,1.72,2.02C105.48,110.93,103.87,112.14,101.24,112.92z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"}]}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-18 15:23:37.756441"], ["updated_at", "2021-12-18 15:23:37.756441"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:23:37 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-19 00:23:44 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.4ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-12-19 00:24:17 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-19 00:24:21 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-19 00:24:22 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (3.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 82ms (Views: 73.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-19 00:24:27 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (1.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 53ms (Views: 39.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/scenes/11" for ::1 at 2021-12-19 00:24:28 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/10" for ::1 at 2021-12-19 00:24:29 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (1.9ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 45ms (Views: 36.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/scenes/9" for ::1 at 2021-12-19 00:24:30 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (1.7ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 51ms (Views: 41.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:24:31 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (3.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:25:25 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 143ms (Views: 140.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:25:28 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/scenes/9" for ::1 at 2021-12-19 00:25:30 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mScene Load (0.7ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 47ms (Views: 35.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-19 00:25:33 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:25:41 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:29:09 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    34: <div class="main-content row">
+    35:   <div class="col" id="col-left">
+    36:     <div id="char-container">
+    37:       <% @characters.each do |char| %>
+    38:         <div id="char<%= char.id %>" class="characters">
+    39:           <div id="char<%= char.id %>-stage"></div>
+    40:         </div>
+  
+app/views/characters/new.html.erb:37:in `_app_views_characters_new_html_erb___922613145084914555_70209734917460'
+Started GET "/characters/new" for ::1 at 2021-12-19 00:29:45 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (232.9ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `char' for #<#<Class:0x00007fb5ea5be6e8>:0x00007fb5ea4fc548>):
+    34: <div class="main-content row">
+    35:   <div class="col" id="col-left">
+    36:     <div id="char-container">
+    37:         <div id="char<%= char.id %>" class="characters">
+    38:           <div id="char<%= char.id %>-stage"></div>
+    39:         </div>
+    40:     </div>
+  
+app/views/characters/new.html.erb:37:in `_app_views_characters_new_html_erb___922613145084914555_70209648455660'
+Started GET "/characters/new" for ::1 at 2021-12-19 00:30:00 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 105ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-19 00:32:13 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (39.8ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "character.css" is not present in the asset pipeline.
+):
+    74:  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
+    75:  <%= javascript_include_tag "char-new.js" %>
+    76:  <%= stylesheet_link_tag 'scenes' %>
+    77:  <%= stylesheet_link_tag 'character' %>
+  
+app/views/characters/new.html.erb:77:in `_app_views_characters_new_html_erb___922613145084914555_70209670139680'
+Started GET "/characters/new" for ::1 at 2021-12-19 00:32:48 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (506.6ms)
+Completed 200 OK in 732ms (Views: 729.5ms | ActiveRecord: 0.0ms)
+
+

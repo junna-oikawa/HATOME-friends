@@ -22,12 +22,56 @@
   </div>
   <div class="row">
     <div class="col-3"></div>
-    <div id="char" class="col-6 p-0">
-      <div id="char-stage" class="bg-white w-100"></div>
-    </div>
+    
     <div class="col-3"></div>
   </div>
 </div>
+
+
+
+
+
+<div class="main-content row">
+  <div class="col" id="col-left">
+    <div id="char-container">
+        <div id="" class="characters">
+          <div id=""></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="col" id="col-center">
+    <div class="xform-btns">
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="scaleDown" class="btn xform-btn">小さく</div>
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="scaleDown" class="btn xform-btn">小さく</div>
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="scaleDown" class="btn xform-btn">小さく</div>
+    </div>
+    <div id="char-container">
+      <div id="char"></div>
+    </div>
+    <div class="xform-btns">
+      <div id="toTop" class="btn xform-btn">最前面へ移動</div>
+      <div id="toBottom" class="btn xform-btn">最背面へ移動</div>
+      <div id="up" class="btn xform-btn">前面へ</div>
+      <div id="down" class="btn xform-btn">背面へ</div>
+      <div id="scaleUp" class="btn xform-btn">大きく</div>
+    </div>
+  </div>
+
+  <div class="col" id="col-right">
+      <div id="bg-container">
+      </div>
+      <div class="information">
+        <div id="save" class="btn">できた！</div>
+      </div>
+  </div>
+</div>
+
  <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
  <%= javascript_include_tag "char-new.js" %>
+ <%= stylesheet_link_tag 'scenes' %>
+ <%= stylesheet_link_tag 'characters' %>

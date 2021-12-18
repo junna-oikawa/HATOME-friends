@@ -7,7 +7,7 @@ let face;
 let toGroup = [];
 
   var stage = new Konva.Stage({
-    container: 'char-stage',
+    container: 'char',
     width: width,
     height: width,
     id: 'stage',
@@ -67,7 +67,6 @@ layer.add(group);
         document.body.style.cursor = 'default';
       });
       layer.add(shapes[clickCount]);
-      toGroup.push(shapes[clickCount]);
       
 
       clickCount += 1;
@@ -101,7 +100,6 @@ layer.add(group);
         document.body.style.cursor = 'default';
       });
       layer.add(shapes[clickCount]);
-      toGroup.push(shapes[clickCount]);
 
       clickCount += 1;
       colorCount += 1;
@@ -134,7 +132,6 @@ layer.add(group);
         document.body.style.cursor = 'default';
       });
       layer.add(shapes[clickCount]);
-      toGroup.push(shapes[clickCount]);
       
       clickCount += 1;
       colorCount += 1;
@@ -186,7 +183,6 @@ layer.add(group);
       });
       shapes[clickCount].add(path3);
       layer.add(shapes[clickCount]);
-      toGroup.push(shapes[clickCount]);
       face = shapes[clickCount];
       
       
@@ -267,6 +263,8 @@ layer.add(group);
       function compareFunc(a, b) {
         return a.zIndex() - b.zIndex();
       }
+
+      toGroup = stage.find('.rect, .circle, .triangle, #face')
        
       toGroup.sort(compareFunc);
 
