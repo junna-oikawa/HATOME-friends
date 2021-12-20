@@ -1,29 +1,3 @@
-<div class="">
-  <div id="buttons">
-    <button id="makeBox">◻︎</button>
-    <button id="makeCircle">◯</button>
-    <button id="makeTriangle">△</button>
-    <button id="facea">△</button>
-    <button id="toTop">最前面へ移動</button>
-    <button id="toBottom">最背面へ移動</button>
-    <button id="up">前面へ</button>
-    <button id="down">背面へ</button>
-    <button id="save-kari">セーブ仮</button>
-    <button id="save">セーブ</button>
-    <button id="destroy">削除</button>
-    <button id="destroy_all">クリア</button>
-  </div>
-  <div class="row">
-    <div class="col-3"></div>
-    
-    <div class="col-3"></div>
-  </div>
-</div>
-
-
-
-
-
 <div class="main-content row">
   <div class="col" id="col-left">
     <div id="shapesContainer">
@@ -39,20 +13,19 @@
     <div class="xform-btns">
       <div id="scaleUp" class="btn xform-btn">大きく</div>
       <div id="scaleDown" class="btn xform-btn">小さく</div>
-      <div id="scaleUp" class="btn xform-btn">大きく</div>
-      <div id="scaleDown" class="btn xform-btn">小さく</div>
-      <div id="scaleUp" class="btn xform-btn">大きく</div>
-      <div id="scaleDown" class="btn xform-btn">小さく</div>
+      <div id="leftRot" class="btn xform-btn">左</div>
+      <div id="rightRot" class="btn xform-btn">右</div>
+      <div id="destroy" class="btn xform-btn">ゴミ箱</div>
+      <div id="destroyAll" class="btn xform-btn">クリア</div>
     </div>
     <div id="char-container">
       <div id="char"></div>
     </div>
     <div class="xform-btns">
-      <div id="toTop" class="btn xform-btn">最前面へ移動</div>
-      <div id="toBottom" class="btn xform-btn">最背面へ移動</div>
-      <div id="up" class="btn xform-btn">前面へ</div>
-      <div id="down" class="btn xform-btn">背面へ</div>
-      <div id="scaleUp" class="btn xform-btn">大きく</div>
+      <div id="toTop" class="btn xform-btn">toTop</div>
+      <div id="toBottom" class="btn xform-btn">toBottom</div>
+      <div id="up" class="btn xform-btn">up</div>
+      <div id="down" class="btn xform-btn">down</div>
     </div>
   </div>
 
@@ -68,6 +41,7 @@
 
  <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
+ <%= javascript_include_tag "transform.js" %>
  <%= javascript_include_tag "char-new.js" %>
  <%= stylesheet_link_tag 'scenes' %>
  <%= stylesheet_link_tag 'characters' %>
