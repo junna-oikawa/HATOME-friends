@@ -30,6 +30,8 @@ let group = new Konva.Group({
   name: "element"
 });
 layer.add(group);
+group.offsetX(group.getClientRect().width / 2);
+group.offsetY(group.getClientRect().width / 2);
 
 function compareFunc(a, b) {
   return a.zIndex() - b.zIndex();
@@ -445,6 +447,10 @@ function selectEyelet(shape, mousePos) {
 document.getElementById('save').addEventListener(
   'click',
   function () {
+    layer.findOne('#characterGroup').getChildren().forEach(c => {
+      c.draggable(false);
+    });
+
     var json = layer.toJSON();
 
     const form = document.createElement('form');

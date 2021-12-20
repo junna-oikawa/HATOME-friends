@@ -223,7 +223,7 @@
           name: shapeName,
           strokeScaleEnabled: false,
         }).moveTo(layer);
-          makeShape.moveToTop();
+        makeShape.moveToTop();
 
         if (shapeName == 'face') {
           makeShape.id('face');
