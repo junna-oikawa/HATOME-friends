@@ -22,11 +22,33 @@ let mode = 'moveShape';
 jsonLoad = document.getElementById('data').value
 stage = Konva.Node.create(jsonLoad, 'char-stage');
 layer = stage.findOne('#layer');
-let group = stage.findOne('#characterGroup');
-var children = group.getChildren();
-for (let i = 0; i < children.length; i++) {
-  children[i].draggable(false);
+// let group = stage.findOne('#characterGroup');
+// var children = group.getChildren();
+// for (let i = 0; i < children.length; i++) {
+//   children[i].draggable(false);
+// }
+let toGroup = [];
+let group = new Konva.Group({
+  x: 0,
+  y: 0,
+  id: "characterGroup",
+  name: "element"
+});
+layer.add(group);
+
+function compareFunc(a, b) {
+  return a.zIndex() - b.zIndex();
 }
+
+toGroup = stage.find('.rect, .circle, .triangle, #face')
+toGroup.sort(compareFunc);
+
+toGroup.forEach(function (e) {
+  e.draggable(false);
+  group.add(e);
+});
+console.log(layer)
+
 
 var width = stage.getAttr('width');
 var height = stage.getAttr('height');
