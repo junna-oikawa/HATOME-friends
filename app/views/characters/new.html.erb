@@ -3,14 +3,7 @@
     <button id="makeBox">◻︎</button>
     <button id="makeCircle">◯</button>
     <button id="makeTriangle">△</button>
-    <button id="face">△</button>
-    <button id="white" style="background-color:white;">　</button>
-    <button id="black" style="background-color:black;">　</button>
-    <button id="orange" style="background-color:#fd7e14;">　</button>
-    <button id="red" style="background-color:#dc3545;">　</button>
-    <button id="blue" style="background-color:#0d6efd;">　</button>
-    <button id="yellow" style="background-color:#ffc107;">　</button>
-    <button id="green" style="background-color:#20c997;">　</button>
+    <button id="facea">△</button>
     <button id="toTop">最前面へ移動</button>
     <button id="toBottom">最背面へ移動</button>
     <button id="up">前面へ</button>
@@ -33,10 +26,12 @@
 
 <div class="main-content row">
   <div class="col" id="col-left">
-    <div id="char-container">
-        <div id="" class="characters">
-          <div id=""></div>
-        </div>
+    <div id="shapesContainer">
+    </div>
+    <div id="btn-container">
+      <%= link_to new_character_path, class:"button", id:"to-scene-new" do %>
+        <p>キャラクターつくるのをやめる</p>
+      <% end %>
     </div>
   </div>
 
@@ -62,7 +57,8 @@
   </div>
 
   <div class="col" id="col-right">
-      <div id="bg-container">
+      <div id="colorContainer">
+        
       </div>
       <div class="information">
         <div id="save" class="btn">できた！</div>

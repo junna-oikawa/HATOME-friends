@@ -3,7 +3,6 @@
   let charContainer = document.getElementById("char-container");
   let childrenLength = charContainer.childElementCount;
   let counter = 0;
-  let number = [];
   let stages = [];
 
   let n = 0;
