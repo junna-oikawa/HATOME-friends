@@ -8,10 +8,42 @@ for (let i = 0; i < characterGroup.length; i++) {
 var width = stage.getAttr('width');
 var height = stage.getAttr('height');
 
+let bg = stage.findOne('.back-image');
+let bgLayer = stage.findOne('#bgLayer');
+var imageObj = new Image();
+imageObj.onload = function () {
+  var bg = new Konva.Image({
+    x: 0,
+    y: 0,
+    image: imageObj,
+    width: width,
+    height: height,
+  });
+  bgLayer.add(bg);
+};
+if (bg!=undefined) imageObj.src = bg.getAttr('image-src');
+
 let isSecond = new Boolean(false);
 
 let targetGroup;
 let targetZIndex;
+
+document.getElementById('visibility').addEventListener(
+  'click',
+  function () {
+    let eyelets = stage.find('.eyelet');
+    if (eyelets[0].visible() == true) {
+      eyelets.forEach(e => {
+        e.visible(false);
+      });
+    } else {
+      eyelets.forEach(e => {
+        e.visible(true);
+      });
+    }
+  },
+  false
+);
 
 //はとめ操作 show-thirsより
 let eyeletsArray = [{}];
@@ -31,8 +63,11 @@ let children = [];
 let rotObj;
 //操作
 stage.on('mousedown', function (e) {
-  //console.log(stage.getPointerPosition());
   targetShape = e.target;
+  if (targetShape.name() == 'faceParts') targetShape = e.target.getParent();
+  if (targetShape.id() == 'face') targetShape = layer.findOne('#'+targetShape.getAttr('faceParent'));
+  //console.log(stage.getPointerPosition());
+  
   if (targetShape.getAttr('eyelets').length == 0) return;
   hasEyelet = true;
   mousedownPos = stage.getPointerPosition();
@@ -42,7 +77,7 @@ stage.on('mousedown', function (e) {
     rotObj = setInitData(rotShapes.concat(rotElt), axis);
   } else {
     rotObj = rotShapes.concat(rotElt);
-    setRotateGroup(rotObj, e.target);
+    setRotateGroup(rotObj, targetShape);
   }
 });
 
@@ -214,7 +249,8 @@ document.getElementById('first').addEventListener(
     tmpBackground = Konva.Node.create(jsonBackGround);
     stage.add(tmpBackground);
     tmpBackground.moveToBottom();
-    tmpBackground.opacity(0.2);
+    bgLayer.moveToBottom();
+    tmpBackground.opacity(0.4);
     document.getElementById('first').style.display = 'none';
     document.getElementById('second').style.display = 'block';
     changeCharPose();
@@ -454,7 +490,6 @@ function setRotateGroup(rotObj, target) {
       g.y(axis.y);
       g.offsetX(axis.x);
       g.offsetY(axis.y);
-      console.log(targetParent.getAbsolutePosition())
       addDest = targetParent;
       addObj = rotObj;
       add(addObj, g, addDest, rotObj, type);
@@ -462,7 +497,6 @@ function setRotateGroup(rotObj, target) {
       break;
     case 'existingInNew':
       axis = {x: useEyelet.getAbsolutePosition(targetParent).x, y:useEyelet.getAbsolutePosition(targetParent).y}
-      console.log(targetParent);
       g.x(axis.x);
       g.y(axis.y);
       g.offsetX(axis.x);
@@ -577,11 +611,9 @@ function setRotateGroup(rotObj, target) {
       let tmpRotObj = rotObj.slice(1); //shape削除
       // let index = tmpRotObj.findIndex(element => element == useEyelet);
       // tmpRotObj.splice(index, 1);
-      console.log(targetParent.zIndex())
       rotObj.sort(compareRotFunc);
       function compareRotFunc(a, b) {
         if (a == targetShape) {
-          console.log('a')
           return targetParent.zIndex() - b.zIndex();
           
         } else if (b == targetShape) {
@@ -626,7 +658,6 @@ function setRotateGroup(rotObj, target) {
         o.moveTo(targetParent);
       });
       tmpG.destroy();
-      console.log(rotObj)
       add(addObj, g, addDest, rotObj, type);
       g.zIndex(comparison.indexOf('target'));
       console.log('default');
@@ -657,8 +688,6 @@ function add(addObj, g, addDest, rotObj, type) {
       cc == targetShape ? comparison.push('target') : comparison.push('other');
     }
   });
-  console.log(comparison);
-  console.log(addObj);
   if(type != 'other') addObj.sort(compareFunc);
   addObj.forEach(o => {
     o.moveTo(g);
@@ -706,4 +735,6 @@ function animate() {
     }, tmpLayer);
     anim.start();
   }
+
+  
 }

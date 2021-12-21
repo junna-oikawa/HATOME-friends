@@ -49,10 +49,8 @@
         tr.moveToTop();
 
         cloneChar.on('mousedown click tap', function (e) {
-          console.log(e.target)
           e.target.name() == 'faceParts' ? console.log('face') : targetChar = e.target;
           if (targetChar.id() != ('characterGroup')) targetChar = targetChar.getParent();
-          console.log(targetChar)
           targetChar.moveToTop();
           tr.nodes([targetChar]);
           tr.moveToTop();
@@ -73,7 +71,7 @@
   }
 
   //main-canvas
-  var stage = new Konva.Stage({
+  let stage = new Konva.Stage({
     container: 'stageCenter',
     width: 600,
     height: 400,
@@ -85,13 +83,18 @@
   });
   stage.add(layer);
 
+  let bgLayer = new Konva.Layer({
+    id: 'bgLayer',
+  });
+  stage.add(bgLayer);
+  bgLayer.moveToBottom();
 
   //バウンディングボックス
   var tr = new Konva.Transformer();
   layer.add(tr);
 
   stage.on('click tap', function (e) {
-    if (e.target === stage) {
+    if (e.target == stage || e.target.name() == 'back-image') {
       tr.nodes([]);
     }
   });
@@ -129,4 +132,77 @@
     },
     false
   );
+
+  document.getElementById('visibility').addEventListener(
+    'click',
+    function () {
+      let eyelets = stage.find('.eyelet');
+      if (eyelets[0].visible() == true) {
+        eyelets.forEach(e => {
+          e.visible(false);
+        });
+      } else {
+        eyelets.forEach(e => {
+          e.visible(true);
+        });
+      }
+    },
+    false
+  );
+
+  //背景
+  let sources = [];
+  for (let i = 0; i < 15; i++) {
+    sources[i] = '/assets/bg-' + (i + 1) + '.jpg'
+  }
+  bgPalette();
+  function bgPalette() {
+    let bgContainer = document.getElementById("stageRight");
+    for (let i = 0; i < sources.length; i++) {
+      let bg = document.createElement('div');
+      bg.id = 'bgImage-' + i;
+      bg.classList.add('bg-image');
+      bgContainer.appendChild(bg);
+      makeContent('bgImage-' + i, i);
+    }
+  }
+
+  function makeContent(containerId, index) {
+    var partialStage = new Konva.Stage({
+      container: containerId,
+      width: 200,
+      height: 400 / 3,
+    });
+
+    var partialLayer = new Konva.Layer();
+    partialStage.add(partialLayer);
+
+    let imageObj = new Image();
+    let bg;
+    imageObj.onload = function () {
+      bg = new Konva.Image({
+        x: 0,
+        y: 0,
+        image: imageObj,
+        width: 200,
+        height: 400 / 3,
+        name: 'back-image',
+        id: 'bg' + index,
+        'image-src': sources[index],
+      });
+      partialLayer.add(bg);
+    }
+    imageObj.src = sources[index];
+
+    document.getElementById(containerId).addEventListener(
+      'click',
+      function () {
+        bgLayer.destroyChildren();
+        partialLayer.findOne('#bg' + index).clone({
+          width: 600,
+          height: 400,
+        }).moveTo(bgLayer);
+      }, false
+    );
+  }
 }
