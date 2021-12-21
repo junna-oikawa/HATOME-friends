@@ -5,8 +5,6 @@ let characterGroup = stage.find('#characterGroup');
 for (let i = 0; i < characterGroup.length; i++) {
   characterGroup[i].draggable(false);
 }
-
-
 var width = stage.getAttr('width');
 var height = stage.getAttr('height');
 
@@ -14,8 +12,6 @@ let isSecond = new Boolean(false);
 
 let targetGroup;
 let targetZIndex;
-
-
 
 //はとめ操作 show-thirsより
 let eyeletsArray = [{}];
@@ -29,6 +25,8 @@ let mousedownPos;
 let hasEyelet = new Boolean(false);
 let rotShapes = [];
 let rotElt = [];
+
+let children = [];
 
 let rotObj;
 //操作
@@ -65,7 +63,6 @@ stage.on('mouseup', function (e) {
   isDragging = false;
   targetShape = null;
   targetGroup = null;
-  console.log(stage.getPointerPosition(targetGroup));
 });
 
 
@@ -106,22 +103,14 @@ function calcAngle(mousePos) {
 }
 
 function rotateObj(paramRotObj, ang) {
-  for (let i = 0; i < paramRotObj.length; i++){
+  for (let i = 0; i < paramRotObj.length; i++) {
     let obj = paramRotObj[i];
     let r = (obj.initRot + ang) / 180 * Math.PI;
-    let scale;
-    let groupPos = { x: 0, y: 0 };
-    if (obj.obj.getDepth() == 3) {
-      scale = (obj.obj.getParent().scale());
-      groupPos.x = obj.obj.getParent().getAttr('x');
-      groupPos.y = obj.obj.getParent().getAttr('y');
-    } else if (obj.obj.getDepth() == 4) {
-      scale = obj.obj.getParent().getParent().scale();
-      groupPos.x = obj.obj.getParent().getParent().getAttr('x');
-      groupPos.y = obj.obj.getParent().getParent().getAttr('y');
-    }
-    obj.obj.x((axis.x + (obj.horPosX - axis.x) * Math.cos(r) - (obj.horPosY - axis.y) * Math.sin(r) - groupPos.x) * 1 / scale.x);
-    obj.obj.y((axis.y + (obj.horPosX - axis.x) * Math.sin(r) + (obj.horPosY - axis.y) * Math.cos(r) - groupPos.y) * 1 / scale.y);
+    let tar = obj.obj;
+    tar.absolutePosition({
+      x: (axis.x + (obj.horPosX - axis.x) * Math.cos(r) - (obj.horPosY - axis.y) * Math.sin(r)),
+      y: (axis.y + (obj.horPosX - axis.x) * Math.sin(r) + (obj.horPosY - axis.y) * Math.cos(r))
+    });
     obj.obj.rotation(obj.initRot + ang);
   }
 }
@@ -138,7 +127,7 @@ function selectEyelet(shape, mousePos) {
   //階層
   let depth = shape.getDepth() - 2; //stageとlayer分 characterGroupまでの階層
   let parent = shape;
-  for (let i = 0; i < depth; i++){ 
+  for (let i = 0; i < depth; i++){
     parent = parent.getParent();
   }
   
@@ -193,9 +182,19 @@ function selectEyelet(shape, mousePos) {
   }
   //rotElt.push(useEyelet);
 
-  if (shape.getAttr('face') == true) {
-     rotShapes.push(parent.findOne("#face"));
-  }
+  // if (shape.getAttr('face') == true) {
+  //    rotShapes.push(parent.findOne("#face"));
+  // }
+  // let face = stage.findOne("#face");
+  // if (face != null) {
+  //   let parent = stage.findOne('#' + face.getAttr('faceParent'));
+  //   if (rotShapes.includes(parent) == true) {
+  //     rotShapes.push(face);
+  //   }
+  // }
+  rotShapes.forEach(r => {
+    if (r.getAttr('face') == true) rotShapes.push(parent.findOne('#face'));
+  });
 
 }
 
@@ -378,12 +377,10 @@ function setRotateGroup(rotObj, target) {
 
       //子要素があった時の処理
       // let children = targetGroup.find('.rotateGroup');
-      let children = [];
+      children = [];
       let tmp = targetGroup.getChildren();
-
-      let allChildren = targetGroup.find('.rotateGroup');
       tmp.forEach(t => {
-        if (t.getAttr('name') == 'rotateGroup') children.push(t);
+        if (t.getAttr('name') == 'rotateGroup' && t.id() != 'tmpGroupAtAllMatch') children.push(t);
       });
 
       if (children.length != 0) {
@@ -402,18 +399,10 @@ function setRotateGroup(rotObj, target) {
         });
         
         tmpGrandChildren.forEach(tg => {
-          if (groupAllChildren[existingGroup].includes(tg) == false) grandChildren.push(tg);
+          if (groupAllChildren[existingGroup].includes(tg) == false && !targetShape.getAttr('eyelets').includes(tg.id())) {
+            grandChildren.push(tg);
+          }
         })
-        //grandChildren.push(useEyelet);
-
-        // children.forEach(function(child, index){
-        //   groupAllChildren[index].forEach(c => {
-        //     if (groupAllChildren[existingGroup].includes(c) == false) {
-        //       grandChildren.push(c);
-        //       console.log('a')
-        //     }
-        //   })
-        // });
         if (grandChildren.length != 0) {
           let tmpRotation = group[existingGroup].rotation();
           //group[existingGroup].rotation(0);
@@ -422,15 +411,20 @@ function setRotateGroup(rotObj, target) {
             x: useEyelet.getAbsolutePosition(group[existingGroup]).x,
             y: useEyelet.getAbsolutePosition(group[existingGroup]).y  
           };
-          console.log(group[existingGroup].getAbsolutePosition(), group[existingGroup].offset());
           let prePos = target.getAbsolutePosition();
           group[existingGroup].offsetX(axis.x);
           group[existingGroup].offsetY(axis.y);
-          group[existingGroup].x(axis.x);
-          group[existingGroup].y(axis.y);
+          group[existingGroup].absolutePosition({
+            x: axis.x,
+            y: axis.y
+          });
           let afterPos = target.getAbsolutePosition();
-          group[existingGroup].x(axis.x - (afterPos.x - prePos.x));
-          group[existingGroup].y(axis.y - (afterPos.y - prePos.y));
+          group[existingGroup].absolutePosition({
+            x: axis.x - (afterPos.x - prePos.x),
+            y: axis.y - (afterPos.y - prePos.y)
+          });
+
+          let zIndex = targetShape.zIndex();
 
           tmpAxis = { x: useEyelet.getAbsolutePosition(grandChildren[0].getParent()).x, y: useEyelet.getAbsolutePosition(grandChildren[0].getParent()).y };
           let tmpG = new Konva.Group({
@@ -447,6 +441,7 @@ function setRotateGroup(rotObj, target) {
           grandChildren.forEach(gc => {
             gc.moveTo(tmpG);
           });
+          zIndex != 0 ? tmpG.zIndex(0) : targetShape.zIndex(0);
           group.push(tmpG);
           groupAllChildren.push(grandChildren);
         }
@@ -454,22 +449,24 @@ function setRotateGroup(rotObj, target) {
 
       break;
     case 'new':
-      g.x(axis.x - targetParent.getAbsolutePosition().x);
-      g.y(axis.y - targetParent.getAbsolutePosition().y);
-      g.offsetX(axis.x - targetParent.getAbsolutePosition().x);
-      g.offsetY(axis.y - targetParent.getAbsolutePosition().y);
+      axis = {x: useEyelet.getAbsolutePosition(targetParent).x, y:useEyelet.getAbsolutePosition(targetParent).y}
+      g.x(axis.x);
+      g.y(axis.y);
+      g.offsetX(axis.x);
+      g.offsetY(axis.y);
       console.log(targetParent.getAbsolutePosition())
       addDest = targetParent;
       addObj = rotObj;
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
       console.log('new');
       break;
     case 'existingInNew':
-      
-      g.x(axis.x - targetParent.getAbsolutePosition().x);
-      g.y(axis.y - targetParent.getAbsolutePosition().y);
-      g.offsetX(axis.x - targetParent.getAbsolutePosition().x);
-      g.offsetY(axis.y - targetParent.getAbsolutePosition().y);
+      axis = {x: useEyelet.getAbsolutePosition(targetParent).x, y:useEyelet.getAbsolutePosition(targetParent).y}
+      console.log(targetParent);
+      g.x(axis.x);
+      g.y(axis.y);
+      g.offsetX(axis.x);
+      g.offsetY(axis.y);
       addDest = targetParent;
       // group[existingGroup].moveTo(g);
       // rotObj.forEach(ro => {
@@ -493,7 +490,6 @@ function setRotateGroup(rotObj, target) {
           cc == group[childExGroups[0]] ? comparison.push('target') : comparison.push('other');
         }
       });
-      console.log(comparison)
 
       group[childExGroups[0]].moveTo(g);
       rotObj.forEach(ro => {
@@ -501,7 +497,7 @@ function setRotateGroup(rotObj, target) {
           addObj.push(ro);
         }
       });
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
       group[childExGroups[0]].zIndex(comparison.indexOf('target'));
       console.log('existingInNew');
       break;
@@ -518,7 +514,7 @@ function setRotateGroup(rotObj, target) {
       g.y(axis.y);
       g.offsetX(axis.x);
       g.offsetY(axis.y);
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
       console.log('newInExisting');
       break;
     case 'exInNewInEx': {
@@ -549,7 +545,7 @@ function setRotateGroup(rotObj, target) {
           addObj.push(ro);
         }
       });
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
 
       let characterChildren = group[childExGroups[0]].getParent().getChildren();
       let comparison = [];
@@ -575,10 +571,26 @@ function setRotateGroup(rotObj, target) {
       g.offsetX(axis.x);
       g.offsetY(axis.y);
 
+      
+
       //target(既)はそのまま それ以外はparentのoffsetを中心として -parent.rotation
       let tmpRotObj = rotObj.slice(1); //shape削除
       // let index = tmpRotObj.findIndex(element => element == useEyelet);
       // tmpRotObj.splice(index, 1);
+      console.log(targetParent.zIndex())
+      rotObj.sort(compareRotFunc);
+      function compareRotFunc(a, b) {
+        if (a == targetShape) {
+          console.log('a')
+          return targetParent.zIndex() - b.zIndex();
+          
+        } else if (b == targetShape) {
+          return a.zIndex() - targetParent.zIndex();
+        } else {
+          return a.zIndex() - b.zIndex();
+        }
+      }
+      
 
       let tmpG = new Konva.Group({
         width: 600,
@@ -599,10 +611,7 @@ function setRotateGroup(rotObj, target) {
       characterChildren.forEach(cc => {
         cc == targetShape ? comparison.push('target') : comparison.push('other');
       });
-
-      function compareFunc(a, b) {
-        return a.zIndex() - b.zIndex();
-      }
+      tmpRotObj.sort(compareFunc);
 
       targetParent.add(tmpG);
       tmpRotObj.forEach(o => {
@@ -617,8 +626,8 @@ function setRotateGroup(rotObj, target) {
         o.moveTo(targetParent);
       });
       tmpG.destroy();
-      
-      add(addObj, g, addDest, rotObj);
+      console.log(rotObj)
+      add(addObj, g, addDest, rotObj, type);
       g.zIndex(comparison.indexOf('target'));
       console.log('default');
       break;
@@ -629,7 +638,7 @@ function setRotateGroup(rotObj, target) {
 
 }
 
-function add(addObj, g, addDest, rotObj) {
+function add(addObj, g, addDest, rotObj, type) {
   let targetAncestors = targetShape.getAncestors();
   let charG = targetAncestors[targetAncestors.length - 3];
   let characterChildren = addDest.getChildren();
@@ -649,11 +658,8 @@ function add(addObj, g, addDest, rotObj) {
     }
   });
   console.log(comparison);
-
-  function compareFunc(a, b) {
-    return a.zIndex() - b.zIndex();
-  }
-  addObj.sort(compareFunc);
+  console.log(addObj);
+  if(type != 'other') addObj.sort(compareFunc);
   addObj.forEach(o => {
     o.moveTo(g);
   });
@@ -661,22 +667,16 @@ function add(addObj, g, addDest, rotObj) {
   group.push(g);
   groupAllChildren.push(rotObj);
   g.zIndex(comparison.indexOf('target'));
-  
 }
 
 
 function rotateGroup(rotObj, angle) {
   
   let g = targetGroup;
-  //console.log(g)
   if (g == null) g = rotObj[0].getParent();
-  // console.log(g)
-  // console.log(axis)
-  // console.log(stage.getPointerPosition(g));
-  //console.log(useEyelet.getAbsolutePosition(g));
   
   g.rotation(initGroupAngle + angle);
-  if (g.find('#tmpGroupAtAllMatch').length != 0) {
+  if (g.find('#tmpGroupAtAllMatch').length != 0 && children.length != 0) {
     let tmpGroup = stage.findOne('#tmpGroupAtAllMatch');
     tmpGroup.rotation(- angle);
   }
