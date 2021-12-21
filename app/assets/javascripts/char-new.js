@@ -1,10 +1,11 @@
 {
   var width = 400;
   var height = 400;
+  let face;
   let sampleShapes = [];
 
   var stage = new Konva.Stage({
-    container: 'stageCenter',
+    container: 'char',
     width: width,
     height: width,
     id: 'stage',
@@ -23,53 +24,49 @@
   });
   layer.add(tr);
 
-  function resize() {
-    let resizeShapes = layer.find('.rect, .triangle, .circle');
-    resizeShapes.forEach(s => {
-      if (s.name() == 'circle') {
-        s.setAttrs({
-          radiusX: s.radiusX() * s.scaleX(),
-          radiusY: s.radiusY() * s.scaleY(),
-          scaleX: 1,
-          scaleY: 1,
-        })
-      } else if (s.name() == 'triangle' || s.name() == 'rect') {
-        let points = s.points();
-        let scale = s.getAttr('scale');
-        for (let i = 0; i < points.length; i++) {
-          i % 2 == 0 ? points[i] *= scale.x : points[i] *= scale.y;
-        }
-        s.setAttrs({
-          points: points,
-          scaleX: 1,
-          scaleY: 1,
-        })
-      }
-    });
-  }
+  document.getElementById('toTop').addEventListener(
+    'click',
+    function () {
+      selectedShape.moveToTop();
+      tr.moveToTop();
+    },
+    false
+  );
+
+  document.getElementById('toBottom').addEventListener(
+    'click',
+    function () {
+      selectedShape.moveToBottom();
+    },
+    false
+  );
+
+  document.getElementById('up').addEventListener(
+    'click',
+    function () {
+      selectedShape.moveUp();
+    },
+    false
+  );
+
+  document.getElementById('down').addEventListener(
+    'click',
+    function () {
+      selectedShape.moveDown();
+    },
+    false
+  );
 
   document.getElementById('save').addEventListener(
     'click',
     function () {
-      // scaleをwidth, heightへ変換
-      resize();
       //顔を見つける
-      let face = stage.findOne('#face');
       if (face != null) {
         let faceR = face.getClientRect();
         let checkPos = { x: faceR.x + faceR.width / 2, y: faceR.y + faceR.height / 2 };
-        let targets = layer.getAllIntersections(checkPos);
-        let tar;
-        function compareFunc(a, b) {
-          return b.zIndex() - a.zIndex();
-        }
-        targets.sort(compareFunc);
-        targets.forEach(t => {
-          if (t.id() != 'face' && t.name() != 'faceParts' && tar == null) tar = t;
-        });
+        let tar = layer.getIntersection(checkPos);
         tar.setAttr('face', true);
-        face.setAttr('faceParent', tar.id());
-        face.zIndex(tar.zIndex() + 1);
+        face.setAttr('faceParent', tar.getAttr('id'));
       }
 
       var json = stage.toJSON();
@@ -90,9 +87,16 @@
     false
   );
 
-  
+  document.getElementById('destroy').addEventListener(
+    'click',
+    function () {
+      selectedShape.destroy();
+      tr.nodes([]);
+    },
+    false
+  );
 
-  document.getElementById('destroyAll').addEventListener(
+  document.getElementById('destroy_all').addEventListener(
     'click',
     function () {
       shapes.forEach(s => {
@@ -110,9 +114,32 @@
     }
   });
 
+  stage.on('mousemove', function (e) {
+    let tgt = tr.nodes()[0]
+    if (tgt == null) return;
+    if (tgt.name() == 'circle') {
+      tgt.setAttrs({
+        radiusX: tgt.radiusX() * tgt.scaleX(),
+        radiusY: tgt.radiusY() * tgt.scaleY(),
+        scaleX: 1,
+        scaleY: 1,
+      })
+    } else if (tgt.name() == 'triangle' || tgt.name() == 'rect') {
+      let points = tgt.points();
+      let scale = tgt.getAttr('scale');
+      for (let i = 0; i < points.length; i++) {
+        i % 2 == 0 ? points[i] *= scale.x : points[i] *= scale.y;
+      }
+      tgt.setAttrs({
+        points: points,
+        scaleX: 1,
+        scaleY: 1,
+      })
+    }
+  });
 
   // 図形ボタン
-  let shapesContainer = document.getElementById("stageLeft");
+  let shapesContainer = document.getElementById("shapesContainer");
   let shapeNames =
     ['rect', 'circle', 'triangle', 'face'];
 
@@ -141,7 +168,7 @@
           points: [-50, -50, 50, -50, 50, 50, -50, 50],
           x: 60,
           y: 60,
-          fill: '#F39800',
+          fill: 'black',
           stroke: 'black',
           strokeWidth: 4,
           closed: true,
@@ -154,7 +181,7 @@
           y: 60,
           radiusX: 50,
           radiusY: 50,
-          fill: '#F39800',
+          fill: 'black',
           stroke: 'black',
           strokeWidth: 4,
           name: 'shapeButton',
@@ -165,7 +192,7 @@
           x: 60,
           y: 60,
           points: [0, -36.6, 50, 50, -50, 50],
-          fill: '#F39800',
+          fill: 'black',
           stroke: 'black',
           strokeWidth: 4,
           closed: true,
@@ -210,6 +237,7 @@
     partialLayer.add(shape);
     setShapeBtnFunc(shape, shapeName);
     if (shapeName != 'face') sampleShapes.push(shape);
+    
   }
   colorPalette();
 
@@ -221,9 +249,8 @@
         let makeShape = shape.clone({
           draggable: true,
           name: shapeName,
-          strokeScaleEnabled: false,
         }).moveTo(layer);
-        makeShape.moveToTop();
+          makeShape.moveToTop();
 
         if (shapeName == 'face') {
           makeShape.id('face');
@@ -240,14 +267,12 @@
         tr.moveToTop();
         selectedShape = makeShape;
         startTween(makeShape);
-        getTarget(selectedShape, tr);
 
         makeShape.on('mousedown click tap', function (e) {
           e.target.name() == 'faceParts' ? selectedShape = e.target.getParent() : selectedShape = e.target;
           selectedShape.moveToTop();
           tr.nodes([selectedShape]);
           tr.moveToTop();
-          getTarget(selectedShape, tr);
         });
       },
       false
@@ -262,11 +287,14 @@
       duration: 1,
     });
     tween.play();
+    console.log(tween)
   }
 
   // 色
+  
+
   function colorPalette() {
-    let colorContainer = document.getElementById("stageRight");
+    let colorContainer = document.getElementById("colorContainer");
     let colorsName =
       ['E60012', 'F39800', 'FFF100', '8FC31F', '009944', '009E96',
         '00A0E9', '0068B7', '1D2088', '920783', 'E4007F', 'E5004F', 'FFFFFF', '000000'];

@@ -1,10 +1,9 @@
 {
   //左側のキャラクターたち
-  let charContainer = document.getElementById("stageLeft");
+  let charContainer = document.getElementById("char-container");
   let childrenLength = charContainer.childElementCount;
   let counter = 0;
   let stages = [];
-  let targetChar;
 
   let n = 0;
   while (counter < childrenLength) {
@@ -19,62 +18,41 @@
         scaleY: 9 / 40,
       });
       let layer = Konva.Node.create(json);
-      let changeStrokeShapes = layer.find('.rect, .circle, .triangle');
       stages[counter].add(layer);
-      setAddListener(stages[counter], 'char' + n);
       counter++;
+      //number.push(n);
+      //stages.push(stage);
     }
     n++;
   }
 
-  let charCounter = 0;
-  function setAddListener(charStage, charContainerId) {
-    document.getElementById(charContainerId).addEventListener(
-      'click',
-      function () {
-        let char = charStage.findOne('#characterGroup')
-        let cloneChar = char.clone({
-          draggable: true,
-          name: 'characterGroup' + charCounter,
-        }).moveTo(layer);
-        cloneChar.offsetX(cloneChar.getClientRect().x + cloneChar.getClientRect().width / 2);
-        cloneChar.offsetY(cloneChar.getClientRect().y + cloneChar.getClientRect().height / 2);
-        cloneChar.scaleX(0.8);
-        cloneChar.scaleY(0.8);
-        cloneChar.x(110);
-        cloneChar.y(-110);
-        startTween(cloneChar);
-        charCounter++;
-        tr.nodes([cloneChar]);
-        tr.moveToTop();
+  //もしくは最初から90x90にする
+  // function fitStageIntoParentContainer() {
+  //   for (let j = 0; j < number.length; j++){
+  //     var container = document.querySelector('#char' + number[j]);
 
-        cloneChar.on('mousedown click tap', function (e) {
-          console.log(e.target)
-          e.target.name() == 'faceParts' ? console.log('face') : targetChar = e.target;
-          if (targetChar.id() != ('characterGroup')) targetChar = targetChar.getParent();
-          console.log(targetChar)
-          targetChar.moveToTop();
-          tr.nodes([targetChar]);
-          tr.moveToTop();
-          getTarget(targetChar, tr);
-        });
-      }, false
-    );
-  }
+  //     // now we need to fit stage into parent container
+  //     var containerWidth = container.clientWidth;
+  //     var scale = containerWidth / 500;
+  //     let stage = stages[j];
+  //     stage.width(400 * scale);
+  //     stage.height(400 * scale);
+  //     stage.scale({ x: scale*0.7, y: scale*0.7 });
 
-  function startTween(shape) {
-    let tween = new Konva.Tween({
-      node: shape,
-      y: 200,
-      easing: Konva.Easings['BounceEaseOut'],
-      duration: 1,
-    });
-    tween.play();
-  }
+  //     container.style.height = (containerWidth) + "px";
+  //   }
+  // }
+
+  // fitStageIntoParentContainer();
+  // // adapt the stage on any window resize
+  // window.addEventListener('load', fitStageIntoParentContainer);
+
+  //////////////////////////
 
   //main-canvas
+
   var stage = new Konva.Stage({
-    container: 'stageCenter',
+    container: 'scene-container',
     width: 600,
     height: 400,
     id: 'stage',
@@ -84,17 +62,75 @@
     id: 'layer',
   });
   stage.add(layer);
+  getVariable(stage, layer);
 
+  ///////キャラがクリックされたら
+  for (let i = 0; i < stages.length; i++) {
+    stages[i].on('click', function (e) {
+      let char = stages[i].findOne('#characterGroup')
+      char.clone({
+        draggable: true,
+        name: 'characterGroup' + i,
+      }).moveTo(layer);
+    });
+  }
 
   //バウンディングボックス
   var tr = new Konva.Transformer();
   layer.add(tr);
+
+  layer.on('mousedown', function (e) {
+    if (e.target.getDepth() == 2) {
+      selectedShape = e.target;
+    } else if (e.target.getDepth() >= 3) {
+      selectedShape = e.target.getParent();
+    }
+    getTarget(selectedShape, tr);
+    selectedShape.moveToTop();
+    tr.moveToTop();
+    // alert('you clicked on "' + selectedShape.name() + '"');
+  });
+
+  layer.on('click tap', function (e) {
+    if (e.target.getDepth() == 2) {
+      tr.nodes([e.target]);
+    } else if (e.target.getDepth() == 3) {
+      tr.nodes([e.target.getParent()]);
+    }
+  
+    tr.moveToTop();
+  });
 
   stage.on('click tap', function (e) {
     if (e.target === stage) {
       tr.nodes([]);
     }
   });
+
+  // stage.on('mousemove', function (e) {
+  //   let tgt = tr.nodes()[0]
+  //   if (tgt == null) return;
+  //   if (tgt.getAttr('name') == 'circle') {
+  //     tgt.setAttrs({
+  //       radiusX: tgt.radiusX() * tgt.scaleX(),
+  //       radiusY: tgt.radiusY() * tgt.scaleY(),
+  //       scaleX: 1,
+  //       scaleY: 1,
+  //     })
+  //   } else if (tgt.getAttr('name') == 'triangle'||tgt.getAttr('name') == 'rect'){
+  //     let points = tgt.points();
+  //     let scale = tgt.getAttr('scale');
+  //     for (let i = 0; i < points.length; i++) {
+  //       i % 2 == 0 ? points[i] *= scale.x : points[i] *= scale.y;
+  //     }
+  //     tgt.setAttrs({
+  //       points: points,
+  //       scaleX: 1,
+  //       scaleY: 1,
+  //     })
+  //   }
+  // });
+
 
   ////セーブ
   document.getElementById('save').addEventListener(
@@ -119,14 +155,5 @@
     false
   );
 
-  document.getElementById('destroyAll').addEventListener(
-    'click',
-    function () {
-      layer.find('#characterGroup').forEach(c => {
-        c.destroy();
-      });
-      tr.nodes([]);
-    },
-    false
-  );
+
 }

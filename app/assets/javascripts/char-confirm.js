@@ -20,8 +20,13 @@ var centY = 0;
 let mode = 'moveShape';
 
 jsonLoad = document.getElementById('data').value
-stage = Konva.Node.create(jsonLoad, 'stageCenter');
+stage = Konva.Node.create(jsonLoad, 'char-stage');
 layer = stage.findOne('#layer');
+// let group = stage.findOne('#characterGroup');
+// var children = group.getChildren();
+// for (let i = 0; i < children.length; i++) {
+//   children[i].draggable(false);
+// }
 let toGroup = [];
 let group = new Konva.Group({
   x: 0,
@@ -30,8 +35,6 @@ let group = new Konva.Group({
   name: "element"
 });
 layer.add(group);
-group.offsetX(group.getClientRect().width / 2);
-group.offsetY(group.getClientRect().width / 2);
 
 function compareFunc(a, b) {
   return a.zIndex() - b.zIndex();
@@ -42,9 +45,9 @@ toGroup.sort(compareFunc);
 
 toGroup.forEach(function (e) {
   e.draggable(false);
-  e.strokeScaleEnabled(true);
   group.add(e);
 });
+console.log(layer)
 
 
 var width = stage.getAttr('width');
@@ -187,9 +190,7 @@ tr.nodes([]);
 layer.on('mousedown', function (e) {
   tr.nodes([]);
   targetShape = e.target;
-  if (targetShape.name() == 'faceParts') targetShape = e.target.getParent();
-  if (targetShape.id() == 'face') targetShape = layer.findOne('#'+targetShape.getAttr('faceParent'));
-  if (targetShape.name() == 'eyelet' && mode!='makeEyelet') mode = 'editEyelet';
+  targetShape.name() == 'eyelet' && mode!='makeEyelet' ? mode = 'editEyelet': console.log('a');
   switch (mode) {
     case 'editEyelet':
       selEyelet = targetShape;
@@ -443,15 +444,12 @@ function selectEyelet(shape, mousePos) {
       rotShapes.push(face);
     }
   }
+
 }
 
 document.getElementById('save').addEventListener(
   'click',
   function () {
-    layer.findOne('#characterGroup').getChildren().forEach(c => {
-      c.draggable(false);
-    });
-
     var json = layer.toJSON();
 
     const form = document.createElement('form');
