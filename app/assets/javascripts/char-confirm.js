@@ -20,7 +20,7 @@ var centY = 0;
 let mode = 'moveShape';
 
 jsonLoad = document.getElementById('data').value
-stage = Konva.Node.create(jsonLoad, 'char');
+stage = Konva.Node.create(jsonLoad, 'stageCenter');
 layer = stage.findOne('#layer');
 let toGroup = [];
 let group = new Konva.Group({
@@ -42,6 +42,7 @@ toGroup.sort(compareFunc);
 
 toGroup.forEach(function (e) {
   e.draggable(false);
+  e.strokeScaleEnabled(true);
   group.add(e);
 });
 
