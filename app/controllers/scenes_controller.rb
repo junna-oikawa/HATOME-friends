@@ -1,11 +1,11 @@
 class ScenesController < ApplicationController
   protect_from_forgery
   def index
-    @scenes = Scene.all.reverse_order
+    @scenes = Scene.all
   end
 
   def new
-    @characters = Character.all.reverse_order
+    @characters = Character.all
   end
 
   def animate
