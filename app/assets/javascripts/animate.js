@@ -47,4 +47,21 @@
       anim.start();
     }
   }
+
+  document.getElementById('visibility').addEventListener(
+    'click',
+    function () {
+      let eyelets = stage.find('.eyelet');
+      if (eyelets[0].visible() == true) {
+        eyelets.forEach(e => {
+          e.visible(false);
+        });
+      } else {
+        eyelets.forEach(e => {
+          e.visible(true);
+        });
+      }
+    },
+    false
+  );
 }

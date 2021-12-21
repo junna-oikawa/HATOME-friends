@@ -21,12 +21,29 @@ imageObj.onload = function () {
   });
   bgLayer.add(bg);
 };
-imageObj.src = bg.getAttr('image-src');
+if (bg!=undefined) imageObj.src = bg.getAttr('image-src');
 
 let isSecond = new Boolean(false);
 
 let targetGroup;
 let targetZIndex;
+
+document.getElementById('visibility').addEventListener(
+  'click',
+  function () {
+    let eyelets = stage.find('.eyelet');
+    if (eyelets[0].visible() == true) {
+      eyelets.forEach(e => {
+        e.visible(false);
+      });
+    } else {
+      eyelets.forEach(e => {
+        e.visible(true);
+      });
+    }
+  },
+  false
+);
 
 //はとめ操作 show-thirsより
 let eyeletsArray = [{}];
@@ -473,7 +490,6 @@ function setRotateGroup(rotObj, target) {
       g.y(axis.y);
       g.offsetX(axis.x);
       g.offsetY(axis.y);
-      console.log(targetParent.getAbsolutePosition())
       addDest = targetParent;
       addObj = rotObj;
       add(addObj, g, addDest, rotObj, type);
@@ -481,7 +497,6 @@ function setRotateGroup(rotObj, target) {
       break;
     case 'existingInNew':
       axis = {x: useEyelet.getAbsolutePosition(targetParent).x, y:useEyelet.getAbsolutePosition(targetParent).y}
-      console.log(targetParent);
       g.x(axis.x);
       g.y(axis.y);
       g.offsetX(axis.x);
@@ -596,11 +611,9 @@ function setRotateGroup(rotObj, target) {
       let tmpRotObj = rotObj.slice(1); //shape削除
       // let index = tmpRotObj.findIndex(element => element == useEyelet);
       // tmpRotObj.splice(index, 1);
-      console.log(targetParent.zIndex())
       rotObj.sort(compareRotFunc);
       function compareRotFunc(a, b) {
         if (a == targetShape) {
-          console.log('a')
           return targetParent.zIndex() - b.zIndex();
           
         } else if (b == targetShape) {
@@ -645,7 +658,6 @@ function setRotateGroup(rotObj, target) {
         o.moveTo(targetParent);
       });
       tmpG.destroy();
-      console.log(rotObj)
       add(addObj, g, addDest, rotObj, type);
       g.zIndex(comparison.indexOf('target'));
       console.log('default');
@@ -676,8 +688,6 @@ function add(addObj, g, addDest, rotObj, type) {
       cc == targetShape ? comparison.push('target') : comparison.push('other');
     }
   });
-  console.log(comparison);
-  console.log(addObj);
   if(type != 'other') addObj.sort(compareFunc);
   addObj.forEach(o => {
     o.moveTo(g);
@@ -725,4 +735,6 @@ function animate() {
     }, tmpLayer);
     anim.start();
   }
+
+  
 }
