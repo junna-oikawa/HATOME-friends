@@ -26,6 +26,8 @@ let hasEyelet = new Boolean(false);
 let rotShapes = [];
 let rotElt = [];
 
+let children = [];
+
 let rotObj;
 //操作
 stage.on('mousedown', function (e) {
@@ -365,12 +367,10 @@ function setRotateGroup(rotObj, target) {
 
       //子要素があった時の処理
       // let children = targetGroup.find('.rotateGroup');
-      let children = [];
+      children = [];
       let tmp = targetGroup.getChildren();
-
-      let allChildren = targetGroup.find('.rotateGroup');
       tmp.forEach(t => {
-        if (t.getAttr('name') == 'rotateGroup') children.push(t);
+        if (t.getAttr('name') == 'rotateGroup' && t.id() != 'tmpGroupAtAllMatch') children.push(t);
       });
 
       if (children.length != 0) {
@@ -389,7 +389,9 @@ function setRotateGroup(rotObj, target) {
         });
         
         tmpGrandChildren.forEach(tg => {
-          if (groupAllChildren[existingGroup].includes(tg) == false) grandChildren.push(tg);
+          if (groupAllChildren[existingGroup].includes(tg) == false && !targetShape.getAttr('eyelets').includes(tg.id())) {
+            grandChildren.push(tg);
+          }
         })
         if (grandChildren.length != 0) {
           let tmpRotation = group[existingGroup].rotation();
@@ -402,11 +404,17 @@ function setRotateGroup(rotObj, target) {
           let prePos = target.getAbsolutePosition();
           group[existingGroup].offsetX(axis.x);
           group[existingGroup].offsetY(axis.y);
-          group[existingGroup].x(axis.x);
-          group[existingGroup].y(axis.y);
+          group[existingGroup].absolutePosition({
+            x: axis.x,
+            y: axis.y
+          });
           let afterPos = target.getAbsolutePosition();
-          group[existingGroup].x(axis.x - (afterPos.x - prePos.x));
-          group[existingGroup].y(axis.y - (afterPos.y - prePos.y));
+          group[existingGroup].absolutePosition({
+            x: axis.x - (afterPos.x - prePos.x),
+            y: axis.y - (afterPos.y - prePos.y)
+          });
+
+          let zIndex = targetShape.zIndex();
 
           tmpAxis = { x: useEyelet.getAbsolutePosition(grandChildren[0].getParent()).x, y: useEyelet.getAbsolutePosition(grandChildren[0].getParent()).y };
           let tmpG = new Konva.Group({
@@ -423,6 +431,7 @@ function setRotateGroup(rotObj, target) {
           grandChildren.forEach(gc => {
             gc.moveTo(tmpG);
           });
+          zIndex != 0 ? tmpG.zIndex(0) : targetShape.zIndex(0);
           group.push(tmpG);
           groupAllChildren.push(grandChildren);
         }
@@ -438,7 +447,7 @@ function setRotateGroup(rotObj, target) {
       console.log(targetParent.getAbsolutePosition())
       addDest = targetParent;
       addObj = rotObj;
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
       console.log('new');
       break;
     case 'existingInNew':
@@ -478,7 +487,7 @@ function setRotateGroup(rotObj, target) {
           addObj.push(ro);
         }
       });
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
       group[childExGroups[0]].zIndex(comparison.indexOf('target'));
       console.log('existingInNew');
       break;
@@ -495,7 +504,7 @@ function setRotateGroup(rotObj, target) {
       g.y(axis.y);
       g.offsetX(axis.x);
       g.offsetY(axis.y);
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
       console.log('newInExisting');
       break;
     case 'exInNewInEx': {
@@ -526,7 +535,7 @@ function setRotateGroup(rotObj, target) {
           addObj.push(ro);
         }
       });
-      add(addObj, g, addDest, rotObj);
+      add(addObj, g, addDest, rotObj, type);
 
       let characterChildren = group[childExGroups[0]].getParent().getChildren();
       let comparison = [];
@@ -552,10 +561,26 @@ function setRotateGroup(rotObj, target) {
       g.offsetX(axis.x);
       g.offsetY(axis.y);
 
+      
+
       //target(既)はそのまま それ以外はparentのoffsetを中心として -parent.rotation
       let tmpRotObj = rotObj.slice(1); //shape削除
       // let index = tmpRotObj.findIndex(element => element == useEyelet);
       // tmpRotObj.splice(index, 1);
+      console.log(targetParent.zIndex())
+      rotObj.sort(compareRotFunc);
+      function compareRotFunc(a, b) {
+        if (a == targetShape) {
+          console.log('a')
+          return targetParent.zIndex() - b.zIndex();
+          
+        } else if (b == targetShape) {
+          return a.zIndex() - targetParent.zIndex();
+        } else {
+          return a.zIndex() - b.zIndex();
+        }
+      }
+      
 
       let tmpG = new Konva.Group({
         width: 600,
@@ -576,6 +601,7 @@ function setRotateGroup(rotObj, target) {
       characterChildren.forEach(cc => {
         cc == targetShape ? comparison.push('target') : comparison.push('other');
       });
+      tmpRotObj.sort(compareFunc);
 
       targetParent.add(tmpG);
       tmpRotObj.forEach(o => {
@@ -590,8 +616,8 @@ function setRotateGroup(rotObj, target) {
         o.moveTo(targetParent);
       });
       tmpG.destroy();
-      
-      add(addObj, g, addDest, rotObj);
+      console.log(rotObj)
+      add(addObj, g, addDest, rotObj, type);
       g.zIndex(comparison.indexOf('target'));
       console.log('default');
       break;
@@ -602,7 +628,7 @@ function setRotateGroup(rotObj, target) {
 
 }
 
-function add(addObj, g, addDest, rotObj) {
+function add(addObj, g, addDest, rotObj, type) {
   let targetAncestors = targetShape.getAncestors();
   let charG = targetAncestors[targetAncestors.length - 3];
   let characterChildren = addDest.getChildren();
@@ -621,11 +647,9 @@ function add(addObj, g, addDest, rotObj) {
       cc == targetShape ? comparison.push('target') : comparison.push('other');
     }
   });
-
-  function compareFunc(a, b) {
-    return a.zIndex() - b.zIndex();
-  }
-  addObj.sort(compareFunc);
+  console.log(comparison);
+  console.log(addObj);
+  if(type != 'other') addObj.sort(compareFunc);
   addObj.forEach(o => {
     o.moveTo(g);
   });
@@ -633,7 +657,6 @@ function add(addObj, g, addDest, rotObj) {
   group.push(g);
   groupAllChildren.push(rotObj);
   g.zIndex(comparison.indexOf('target'));
-  
 }
 
 
@@ -643,7 +666,7 @@ function rotateGroup(rotObj, angle) {
   if (g == null) g = rotObj[0].getParent();
   
   g.rotation(initGroupAngle + angle);
-  if (g.find('#tmpGroupAtAllMatch').length != 0) {
+  if (g.find('#tmpGroupAtAllMatch').length != 0 && children.length != 0) {
     let tmpGroup = stage.findOne('#tmpGroupAtAllMatch');
     tmpGroup.rotation(- angle);
   }

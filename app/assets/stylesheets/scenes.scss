@@ -21,7 +21,7 @@
   display: flex;
 }
 
-#col-left {
+.col-left {
   width: calc((100% - 700px) / 2);
 
   #charContainer {
@@ -61,7 +61,7 @@
   }
 }
 
-#col-center {
+.col-center {
   width: 600px;
   margin: 0 50px;
 
@@ -90,7 +90,7 @@
   }
 }
 
-#col-right {
+.col-right {
   width: calc((100% - 700px) / 2);
 
   #bg-container {

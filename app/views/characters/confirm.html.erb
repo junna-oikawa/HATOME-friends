@@ -1,24 +1,40 @@
-<h1>Charactors#confirm</h1>
-<p>Find me in app/views/charactors/confirm.html.erb</p>
+<div class="main-content row">
+  <div class="col col-left">
+    <div id="shapesContainer">
+    </div>
+    <div id="btn-container">
+      <%= link_to new_character_path, class:"button", id:"to-scene-new" do %>
+        <p>キャラクターつくるのをやめる</p>
+      <% end %>
+    </div>
+  </div>
 
+  <div class="col col-center">
+    <div class="xform-btns">
+      
+    </div>
+    <div id="char-container">
+      <div id="char"></div>
+    </div>
+    <div class="xform-btns">
+      <div id="makeEyelet" class="btn xform-btn">makeEyelet</div>
+      <div id="destroyEyelet" class="btn xform-btn">destroyEyelet</div>
+    </div>
+  </div>
+
+  <div class="col col-right">
+      <div id="colorContainer">
+      </div>
+      <div class="information">
+        <div id="save" class="btn">できた！</div>
+      </div>
+  </div>
+</div>
 
 <input type="hidden" id="data" value="<%= @data.json_data %>">
-<div id="buttons">
-  <button id="makeEyelet">はとめをつける</button>
-  <button id="destroyEyelet">はとめゴミ箱</button>
-  <button id="load">showページが読み込まれたとする挙動</button>
-  <button id="save">セーブ</button>
-</div>
-<div class="row">
-    <div class="col-3"></div>
-    <div id="char" class="col-6 p-0">
-      <div id="char-stage" class="bg-white w-100"></div>
-    </div>
-    <div class="col-3"></div>
-  </div>
-<button id="load">ポリゴン</button>
-<button id="gravity">重心計算</button>
  <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
  <%= javascript_include_tag "solution.js" %>
  <%= javascript_include_tag "char-confirm.js" %>
+ <%= stylesheet_link_tag 'scenes' %>
+ <%= stylesheet_link_tag 'characters' %>

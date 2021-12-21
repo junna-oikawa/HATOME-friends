@@ -20,7 +20,7 @@ var centY = 0;
 let mode = 'moveShape';
 
 jsonLoad = document.getElementById('data').value
-stage = Konva.Node.create(jsonLoad, 'char-stage');
+stage = Konva.Node.create(jsonLoad, 'char');
 layer = stage.findOne('#layer');
 let toGroup = [];
 let group = new Konva.Group({
