@@ -1,6 +1,6 @@
 {
   //左側のキャラクターたち
-  let charContainer = document.getElementById("charContainer");
+  let charContainer = document.getElementById("stageLeft");
   let childrenLength = charContainer.childElementCount;
   let counter = 0;
   let stages = [];
@@ -20,9 +20,6 @@
       });
       let layer = Konva.Node.create(json);
       let changeStrokeShapes = layer.find('.rect, .circle, .triangle');
-      changeStrokeShapes.forEach(s => {
-        s.strokeWidth(0.8);
-      });
       stages[counter].add(layer);
       setAddListener(stages[counter], 'char' + n);
       counter++;
@@ -47,10 +44,6 @@
         cloneChar.x(110);
         cloneChar.y(-110);
         startTween(cloneChar);
-        let changeStrokeShapes = cloneChar.find('.rect, .circle, .triangle');
-        changeStrokeShapes.forEach(s => {
-          s.strokeWidth(4);
-        });
         charCounter++;
         tr.nodes([cloneChar]);
         tr.moveToTop();
@@ -81,7 +74,7 @@
 
   //main-canvas
   var stage = new Konva.Stage({
-    container: 'scene-container',
+    container: 'stageCenter',
     width: 600,
     height: 400,
     id: 'stage',

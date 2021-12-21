@@ -182,9 +182,19 @@ function selectEyelet(shape, mousePos) {
   }
   //rotElt.push(useEyelet);
 
-  if (shape.getAttr('face') == true) {
-     rotShapes.push(parent.findOne("#face"));
-  }
+  // if (shape.getAttr('face') == true) {
+  //    rotShapes.push(parent.findOne("#face"));
+  // }
+  // let face = stage.findOne("#face");
+  // if (face != null) {
+  //   let parent = stage.findOne('#' + face.getAttr('faceParent'));
+  //   if (rotShapes.includes(parent) == true) {
+  //     rotShapes.push(face);
+  //   }
+  // }
+  rotShapes.forEach(r => {
+    if (r.getAttr('face') == true) rotShapes.push(parent.findOne('#face'));
+  });
 
 }
 

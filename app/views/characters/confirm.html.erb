@@ -1,32 +1,27 @@
 <div class="main-content row">
   <div class="col col-left">
-    <div id="shapesContainer">
-    </div>
-    <div id="btn-container">
-      <%= link_to new_character_path, class:"button", id:"to-scene-new" do %>
-        <p>キャラクターつくるのをやめる</p>
+    <div id="stageLeft" class="stage-left confirm-stage"></div>
+    <div class="btn-back-container">
+      <%= link_to new_character_path, class:"btn-back" do %>
+        <p>まえのがめんへ</br>もどる</p>
       <% end %>
     </div>
   </div>
 
   <div class="col col-center">
     <div class="xform-btns">
-      
     </div>
-    <div id="char-container">
-      <div id="char"></div>
-    </div>
+    <div class="char-stage" id="stageCenter"></div>
     <div class="xform-btns">
-      <div id="makeEyelet" class="btn xform-btn">makeEyelet</div>
-      <div id="destroyEyelet" class="btn xform-btn">destroyEyelet</div>
+      <div id="makeEyelet" class="round-btn xform-btn">makeEyelet</div>
+      <div id="destroyEyelet" class="round-btn xform-btn">destroyEyelet</div>
     </div>
   </div>
 
   <div class="col col-right">
-      <div id="colorContainer">
-      </div>
+      <div id="stageRight" class="stage-right confirm-stage"></div>
       <div class="information">
-        <div id="save" class="btn">できた！</div>
+        <div id="save" class="round-btn">できた！</div>
       </div>
   </div>
 </div>
@@ -36,5 +31,4 @@
  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
  <%= javascript_include_tag "solution.js" %>
  <%= javascript_include_tag "char-confirm.js" %>
- <%= stylesheet_link_tag 'scenes' %>
  <%= stylesheet_link_tag 'characters' %>
