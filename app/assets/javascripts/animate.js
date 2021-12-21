@@ -6,6 +6,21 @@
   var width = stage.getAttr('width');
   var height = stage.getAttr('height');
 
+  let bg = stage.findOne('.back-image');
+  let bgLayer = stage.findOne('#bgLayer');
+  var imageObj = new Image();
+  imageObj.onload = function () {
+    var bg = new Konva.Image({
+      x: 0,
+      y: 0,
+      image: imageObj,
+      width: width,
+      height: height,
+    });
+    bgLayer.add(bg);
+  };
+  imageObj.src = bg.getAttr('image-src');
+
   animate();
 
   function animate() {

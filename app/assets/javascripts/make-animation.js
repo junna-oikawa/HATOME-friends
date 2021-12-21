@@ -8,6 +8,21 @@ for (let i = 0; i < characterGroup.length; i++) {
 var width = stage.getAttr('width');
 var height = stage.getAttr('height');
 
+let bg = stage.findOne('.back-image');
+let bgLayer = stage.findOne('#bgLayer');
+var imageObj = new Image();
+imageObj.onload = function () {
+  var bg = new Konva.Image({
+    x: 0,
+    y: 0,
+    image: imageObj,
+    width: width,
+    height: height,
+  });
+  bgLayer.add(bg);
+};
+imageObj.src = bg.getAttr('image-src');
+
 let isSecond = new Boolean(false);
 
 let targetGroup;
@@ -31,8 +46,11 @@ let children = [];
 let rotObj;
 //操作
 stage.on('mousedown', function (e) {
-  //console.log(stage.getPointerPosition());
   targetShape = e.target;
+  if (targetShape.name() == 'faceParts') targetShape = e.target.getParent();
+  if (targetShape.id() == 'face') targetShape = layer.findOne('#'+targetShape.getAttr('faceParent'));
+  //console.log(stage.getPointerPosition());
+  
   if (targetShape.getAttr('eyelets').length == 0) return;
   hasEyelet = true;
   mousedownPos = stage.getPointerPosition();
@@ -42,7 +60,7 @@ stage.on('mousedown', function (e) {
     rotObj = setInitData(rotShapes.concat(rotElt), axis);
   } else {
     rotObj = rotShapes.concat(rotElt);
-    setRotateGroup(rotObj, e.target);
+    setRotateGroup(rotObj, targetShape);
   }
 });
 
@@ -214,7 +232,8 @@ document.getElementById('first').addEventListener(
     tmpBackground = Konva.Node.create(jsonBackGround);
     stage.add(tmpBackground);
     tmpBackground.moveToBottom();
-    tmpBackground.opacity(0.2);
+    bgLayer.moveToBottom();
+    tmpBackground.opacity(0.4);
     document.getElementById('first').style.display = 'none';
     document.getElementById('second').style.display = 'block';
     changeCharPose();

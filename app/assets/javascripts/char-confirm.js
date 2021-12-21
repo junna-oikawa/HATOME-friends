@@ -42,7 +42,7 @@ toGroup.sort(compareFunc);
 
 toGroup.forEach(function (e) {
   e.draggable(false);
-  e.strokeScaleEnabled(true);
+  if(e.id() != 'face') e.strokeScaleEnabled(true);
   group.add(e);
 });
 
