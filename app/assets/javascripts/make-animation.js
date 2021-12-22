@@ -63,10 +63,16 @@ let children = [];
 let rotObj;
 //操作
 stage.on('mousedown', function (e) {
+  
   targetShape = e.target;
+  let depth = targetShape.getDepth() - 2; //stageとlayer分 characterGroupまでの階層
+  let parent = targetShape;
+  for (let i = 0; i < depth; i++){
+    parent = parent.getParent();
+  }
   if (targetShape.name() == 'faceParts') targetShape = e.target.getParent();
-  if (targetShape.id() == 'face') targetShape = layer.findOne('#'+targetShape.getAttr('faceParent'));
-  //console.log(stage.getPointerPosition());
+  console.log(parent.findOne('#' + targetShape.getAttr('faceParent')));
+  if (targetShape.id() == 'face') targetShape = parent.findOne('#'+targetShape.getAttr('faceParent'));
   
   if (targetShape.getAttr('eyelets').length == 0) return;
   hasEyelet = true;
@@ -230,6 +236,7 @@ function selectEyelet(shape, mousePos) {
   rotShapes.forEach(r => {
     if (r.getAttr('face') == true) rotShapes.push(parent.findOne('#face'));
   });
+  console.log(parent)
 
 }
 
