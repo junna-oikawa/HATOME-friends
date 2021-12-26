@@ -2,6 +2,7 @@
   let jsonLoad = document.getElementById('data').value
   let stage = Konva.Node.create(jsonLoad, 'scene-container');
   let layer = stage.findOne('#layer');
+  stage.listening(false);
 
   var width = stage.getAttr('width');
   var height = stage.getAttr('height');

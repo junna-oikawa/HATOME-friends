@@ -281,6 +281,7 @@ document.getElementById('second').addEventListener(
     stageJson = stage.toJSON();
     layer.visible(false);
     tmpLayer = Konva.Node.create(layerJson);
+    tmpLayer.listening(false);
     stage.add(tmpLayer);
     animate();
     document.getElementById('second').style.display = 'none';

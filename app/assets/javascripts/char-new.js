@@ -130,6 +130,7 @@
       container: shapeName,
       width: 120,
       height: 120,
+      listening: false,
     });
 
     let partialLayer = new Konva.Layer();
@@ -316,10 +317,12 @@
       container: colorCode,
       width: 110,
       height: 110,
+      listening: false,
     });
 
     var partialLayer = new Konva.Layer();
     partialStage.add(partialLayer);
+    console.log(partialLayer.isListening())
 
     dataWFill.forEach(d => {
       let path = new Konva.Path({

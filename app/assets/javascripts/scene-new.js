@@ -1,23 +1,4 @@
 {
-
-//   // ページをreloadする方法
-// // reloadの応用方法
-// // キャッシュを無視してリロードする方法
-// function doReloadNoCache() {
- 
-//   // キャッシュを無視してサーバーからリロード
-//   window.location.reload(true);
-
-// }
-
-// window.addEventListener('load', function () {
-//   console.log('a')
-//   // ページ表示完了した5秒後にリロード
-//   setTimeout(doReloadNoCache, 5000);
-  
-
-// });
-  
   //左側のキャラクターたち
   let charContainer = document.getElementById("stageLeft");
   let childrenLength = charContainer.childElementCount;
@@ -36,6 +17,7 @@
         id: 'stage' + counter,
         scaleX: 9 / 40,
         scaleY: 9 / 40,
+        listening: false,
       });
       let layer = Konva.Node.create(json);
       let changeStrokeShapes = layer.find('.rect, .circle, .triangle');
@@ -191,6 +173,7 @@
       container: containerId,
       width: 200,
       height: 400 / 3,
+      listening: false,
     });
 
     var partialLayer = new Konva.Layer();

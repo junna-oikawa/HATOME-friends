@@ -32825,3 +32825,454 @@ Processing by ScenesController#new as HTML
 Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2021-12-26 22:03:51 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (526.1ms)
+Completed 200 OK in 595ms (Views: 592.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:04:04 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:04:14 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (12.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 92ms (Views: 70.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:04:16 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-26 22:04:17 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (5.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 73ms (Views: 61.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-26 22:04:34 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 39ms (Views: 29.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-26 22:04:43 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.9ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:04:44 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-26 22:05:33 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-26 22:05:45 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape1\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.3ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape1\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]}]}"], ["created_at", "2021-12-26 13:05:45.709425"], ["updated_at", "2021-12-26 13:05:45.709425"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 13ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-26 22:05:45 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (322.1ms)
+Completed 200 OK in 342ms (Views: 339.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-26 22:05:51 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[36mTmpEyelet Create (1.1ms)[0m  [1m[32mINSERT INTO "tmp_eyelets" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-26 13:05:51.343470"], ["updated_at", "2021-12-26 13:05:51.343470"]]
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+Redirected to http://localhost:3000/characters/name
+Completed 302 Found in 17ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/characters/name" for ::1 at 2021-12-26 22:05:51 +0900
+Processing by CharactersController#name as HTML
+  [1m[36mTmpEyelet Load (0.2ms)[0m  [1m[34mSELECT  "tmp_eyelets".* FROM "tmp_eyelets" ORDER BY "tmp_eyelets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:24
+  Rendering characters/name.html.erb within layouts/application
+  Rendered characters/name.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:05:54 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/scenes/create_tmp" for ::1 at 2021-12-26 22:06:04 +0900
+Processing by ScenesController#create_tmp as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":600,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"bgLayer\"},\"className\":\"Layer\",\"children\":[]},{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"characterGroup0\",\"draggable\":true,\"offsetX\":210.8959728101938,\"offsetY\":208.30088107436694,\"scaleX\":0.8,\"scaleY\":0.8,\"x\":110,\"y\":200},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":292.39597281019377,\"y\":237.39597281019383,\"radiusX\":96.39597281019383,\"radiusY\":96.39597281019388,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape18\",\"eyelets\":[\"eyelet0\",\"eyelet3\",\"eyelet6\",\"eyelet7\",\"eyelet23\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":358.4358753176859,\"y\":215.4358753176856,\"radiusX\":20.43587531768585,\"radiusY\":20.435875317685863,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape16\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":54.32193706022039,\"y\":213.32193706022042,\"radiusX\":21.32193706022038,\"radiusY\":21.32193706022038,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape15\",\"eyelets\":[\"eyelet5\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-49.99999999999989,-20.500000000000064,49.99999999999989,-20.500000000000064,49.99999999999989,20.500000000000064,-49.99999999999989,20.500000000000064],\"x\":304.9999999999993,\"y\":216.49999999999994,\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape12\",\"eyelets\":[\"eyelet6\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"points\":[-49.99999999999999,-18.999999999999936,49.99999999999999,-18.999999999999936,49.99999999999999,18.999999999999936,-49.99999999999999,18.999999999999936],\"x\":106,\"y\":214.00000000000006,\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape11\",\"eyelets\":[\"eyelet5\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"points\":[-57.00000000000001,-65.99999999999997,57.00000000000001,-65.99999999999997,57.00000000000001,65.99999999999997,-57.00000000000001,65.99999999999997],\"x\":202.99999999999991,\"y\":259,\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape10\",\"eyelets\":[\"eyelet6\",\"eyelet7\",\"eyelet9\",\"eyelet23\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":201.26341047346952,\"y\":156.26341047346955,\"radiusX\":58.26341047346952,\"radiusY\":58.263410473469534,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape7\",\"eyelets\":[\"eyelet3\",\"eyelet7\",\"eyelet10\",\"eyelet11\",\"eyelet12\",\"eyelet13\",\"eyelet14\"],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":198.80512542679855,\"y\":165.80512542679855,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape7\",\"scaleX\":0.695128135669964,\"scaleY\":0.6951281356699633},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":203,\"y\":78,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"triangle\",\"id\":\"shape2\",\"eyelets\":[\"eyelet10\",\"eyelet16\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":200.69911892563223,\"y\":37.30088107436757,\"radiusX\":22.699118925632327,\"radiusY\":22.699118925632305,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[\"eyelet16\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":153.83148958526647,\"y\":126.83148958526647,\"radiusX\":18.831489585266485,\"radiusY\":18.831489585266468,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape5\",\"eyelets\":[\"eyelet11\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":252.76499400479526,\"y\":127.76499400479491,\"radiusX\":18.7649940047953,\"radiusY\":18.764994004795295,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape6\",\"eyelets\":[\"eyelet12\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":222.41625343679829,\"y\":131.41625343679783,\"radiusX\":19.416253436798165,\"radiusY\":19.41625343679816,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape3\",\"eyelets\":[\"eyelet13\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":183.52562418976663,\"y\":130.52562418976663,\"radiusX\":19.525624189766617,\"radiusY\":19.52562418976662,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape4\",\"eyelets\":[\"eyelet14\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":200.0000000000002,\"y\":234.39999999999844,\"points\":[0,-36.600000000000456,49.99999999999965,50.000000000000625,-49.99999999999965,50.000000000000625],\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"triangle\",\"id\":\"shape9\",\"eyelets\":[\"eyelet3\",\"eyelet7\"],\"face\":false,\"rotation\":-180,\"skewX\":-6.765421556264705e-17},\"className\":\"Line\"},{\"attrs\":{\"points\":[-163.4999999999998,-49.9999999999999,163.4999999999998,-49.9999999999999,163.4999999999998,49.9999999999999,-163.4999999999998,49.9999999999999],\"x\":206.49999999999994,\"y\":351.9999999999987,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape14\",\"eyelets\":[\"eyelet9\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":358.35794542536115,\"y\":215.35794542536115,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape18\",\"shape16\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":232.64923619271445,\"y\":183.7502937720329,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet3\",\"overlappingShapes\":[\"shape18\",\"shape7\",\"shape9\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":64.54895104895105,\"y\":213.57692307692307,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet5\",\"overlappingShapes\":[\"shape15\",\"shape11\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":257,\"y\":216,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet6\",\"overlappingShapes\":[\"shape18\",\"shape12\",\"shape10\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":201.45245641838352,\"y\":200.9825673534073,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet7\",\"overlappingShapes\":[\"shape18\",\"shape10\",\"shape7\",\"shape9\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":202.5,\"y\":313,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet9\",\"overlappingShapes\":[\"shape10\",\"shape14\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":201.34066496163683,\"y\":115.9150895140665,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet10\",\"overlappingShapes\":[\"shape7\",\"shape2\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":160.37662337662337,\"y\":130.89795918367346,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet11\",\"overlappingShapes\":[\"shape7\",\"shape5\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":244.58273381294964,\"y\":132.24460431654677,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet12\",\"overlappingShapes\":[\"shape7\",\"shape6\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":222.44513274336282,\"y\":131.44513274336282,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet13\",\"overlappingShapes\":[\"shape7\",\"shape3\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":183.53080985915494,\"y\":130.53080985915494,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet14\",\"overlappingShapes\":[\"shape7\",\"shape4\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":202.65697674418604,\"y\":52.9593023255814,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet16\",\"overlappingShapes\":[\"shape2\",\"shape0\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":247,\"y\":260,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet23\",\"overlappingShapes\":[\"shape18\",\"shape10\"]},\"className\":\"Circle\"}]},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scenes_controller.rb:32
+  [1m[36mTmpScene Create (1.4ms)[0m  [1m[32mINSERT INTO "tmp_scenes" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":600,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"bgLayer\"},\"className\":\"Layer\",\"children\":[]},{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"characterGroup0\",\"draggable\":true,\"offsetX\":210.8959728101938,\"offsetY\":208.30088107436694,\"scaleX\":0.8,\"scaleY\":0.8,\"x\":110,\"y\":200},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":292.39597281019377,\"y\":237.39597281019383,\"radiusX\":96.39597281019383,\"radiusY\":96.39597281019388,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape18\",\"eyelets\":[\"eyelet0\",\"eyelet3\",\"eyelet6\",\"eyelet7\",\"eyelet23\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":358.4358753176859,\"y\":215.4358753176856,\"radiusX\":20.43587531768585,\"radiusY\":20.435875317685863,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape16\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":54.32193706022039,\"y\":213.32193706022042,\"radiusX\":21.32193706022038,\"radiusY\":21.32193706022038,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape15\",\"eyelets\":[\"eyelet5\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"points\":[-49.99999999999989,-20.500000000000064,49.99999999999989,-20.500000000000064,49.99999999999989,20.500000000000064,-49.99999999999989,20.500000000000064],\"x\":304.9999999999993,\"y\":216.49999999999994,\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape12\",\"eyelets\":[\"eyelet6\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"points\":[-49.99999999999999,-18.999999999999936,49.99999999999999,-18.999999999999936,49.99999999999999,18.999999999999936,-49.99999999999999,18.999999999999936],\"x\":106,\"y\":214.00000000000006,\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape11\",\"eyelets\":[\"eyelet5\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"points\":[-57.00000000000001,-65.99999999999997,57.00000000000001,-65.99999999999997,57.00000000000001,65.99999999999997,-57.00000000000001,65.99999999999997],\"x\":202.99999999999991,\"y\":259,\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape10\",\"eyelets\":[\"eyelet6\",\"eyelet7\",\"eyelet9\",\"eyelet23\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":201.26341047346952,\"y\":156.26341047346955,\"radiusX\":58.26341047346952,\"radiusY\":58.263410473469534,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape7\",\"eyelets\":[\"eyelet3\",\"eyelet7\",\"eyelet10\",\"eyelet11\",\"eyelet12\",\"eyelet13\",\"eyelet14\"],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":198.80512542679855,\"y\":165.80512542679855,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape7\",\"scaleX\":0.695128135669964,\"scaleY\":0.6951281356699633},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":203,\"y\":78,\"points\":[0,-36.6,50,50,-50,50],\"fill\":\"#E60012\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"triangle\",\"id\":\"shape2\",\"eyelets\":[\"eyelet10\",\"eyelet16\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":200.69911892563223,\"y\":37.30088107436757,\"radiusX\":22.699118925632327,\"radiusY\":22.699118925632305,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[\"eyelet16\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":153.83148958526647,\"y\":126.83148958526647,\"radiusX\":18.831489585266485,\"radiusY\":18.831489585266468,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape5\",\"eyelets\":[\"eyelet11\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":252.76499400479526,\"y\":127.76499400479491,\"radiusX\":18.7649940047953,\"radiusY\":18.764994004795295,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape6\",\"eyelets\":[\"eyelet12\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":222.41625343679829,\"y\":131.41625343679783,\"radiusX\":19.416253436798165,\"radiusY\":19.41625343679816,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape3\",\"eyelets\":[\"eyelet13\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":183.52562418976663,\"y\":130.52562418976663,\"radiusX\":19.525624189766617,\"radiusY\":19.52562418976662,\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape4\",\"eyelets\":[\"eyelet14\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":200.0000000000002,\"y\":234.39999999999844,\"points\":[0,-36.600000000000456,49.99999999999965,50.000000000000625,-49.99999999999965,50.000000000000625],\"fill\":\"#FFFFFF\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"triangle\",\"id\":\"shape9\",\"eyelets\":[\"eyelet3\",\"eyelet7\"],\"face\":false,\"rotation\":-180,\"skewX\":-6.765421556264705e-17},\"className\":\"Line\"},{\"attrs\":{\"points\":[-163.4999999999998,-49.9999999999999,163.4999999999998,-49.9999999999999,163.4999999999998,49.9999999999999,-163.4999999999998,49.9999999999999],\"x\":206.49999999999994,\"y\":351.9999999999987,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape14\",\"eyelets\":[\"eyelet9\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":358.35794542536115,\"y\":215.35794542536115,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape18\",\"shape16\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":232.64923619271445,\"y\":183.7502937720329,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet3\",\"overlappingShapes\":[\"shape18\",\"shape7\",\"shape9\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":64.54895104895105,\"y\":213.57692307692307,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet5\",\"overlappingShapes\":[\"shape15\",\"shape11\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":257,\"y\":216,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet6\",\"overlappingShapes\":[\"shape18\",\"shape12\",\"shape10\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":201.45245641838352,\"y\":200.9825673534073,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet7\",\"overlappingShapes\":[\"shape18\",\"shape10\",\"shape7\",\"shape9\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":202.5,\"y\":313,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet9\",\"overlappingShapes\":[\"shape10\",\"shape14\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":201.34066496163683,\"y\":115.9150895140665,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet10\",\"overlappingShapes\":[\"shape7\",\"shape2\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":160.37662337662337,\"y\":130.89795918367346,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet11\",\"overlappingShapes\":[\"shape7\",\"shape5\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":244.58273381294964,\"y\":132.24460431654677,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet12\",\"overlappingShapes\":[\"shape7\",\"shape6\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":222.44513274336282,\"y\":131.44513274336282,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet13\",\"overlappingShapes\":[\"shape7\",\"shape3\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":183.53080985915494,\"y\":130.53080985915494,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet14\",\"overlappingShapes\":[\"shape7\",\"shape4\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":202.65697674418604,\"y\":52.9593023255814,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet16\",\"overlappingShapes\":[\"shape2\",\"shape0\"]},\"className\":\"Circle\"},{\"attrs\":{\"x\":247,\"y\":260,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet23\",\"overlappingShapes\":[\"shape18\",\"shape10\"]},\"className\":\"Circle\"}]},{\"attrs\":{},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-26 13:06:04.058668"], ["updated_at", "2021-12-26 13:06:04.058668"]]
+  ↳ app/controllers/scenes_controller.rb:32
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scenes_controller.rb:32
+Redirected to http://localhost:3000/scenes/animate
+Completed 302 Found in 21ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/scenes/animate" for ::1 at 2021-12-26 22:06:04 +0900
+Processing by ScenesController#animate as HTML
+  [1m[36mTmpScene Load (0.2ms)[0m  [1m[34mSELECT  "tmp_scenes".* FROM "tmp_scenes" ORDER BY "tmp_scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:12
+  Rendering scenes/animate.html.erb within layouts/application
+  Rendered scenes/animate.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:10:41 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 80ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-26 22:16:10 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (7.6ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 82ms (Views: 64.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:18:13 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 155ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-26 22:18:15 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (25.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 137ms (Views: 109.5ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-26 22:18:23 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (1.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.9ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 25.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-26 22:20:18 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (2.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 98ms (Views: 86.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-26 22:20:20 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 57ms (Views: 47.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-26 22:20:52 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 49ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:21:22 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (12.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 52ms (Views: 37.5ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:22:25 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:22:38 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:23:44 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:23:50 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:23:58 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-26 22:24:06 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-26 22:26:01 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-26 22:26:28 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":134,\"y\":259,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape2\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":133,\"y\":174,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape1\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":134.2821951231761,\"y\":158.28219512317617,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\",\"scaleX\":0.6070548780794038,\"scaleY\":0.6070548780794038},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"ignoreStroke\":true,\"x\":88,\"y\":209},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.4ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":134,\"y\":259,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape2\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":133,\"y\":174,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape1\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":134.2821951231761,\"y\":158.28219512317617,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\",\"scaleX\":0.6070548780794038,\"scaleY\":0.6070548780794038},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"ignoreStroke\":true,\"x\":88,\"y\":209},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-26 13:26:28.913970"], ["updated_at", "2021-12-26 13:26:28.913970"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-26 22:26:28 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-26 22:26:36 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":88,\"y\":209},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":137.15732656389116,\"y\":258.81733215987725,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape2\",\"eyelets\":[\"eyelet0\"],\"face\":false,\"rotation\":-4.05703336333449},\"className\":\"Line\"},{\"attrs\":{\"x\":133,\"y\":174,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[\"eyelet0\"],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":134.2821951231761,\"y\":158.28219512317617,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\",\"scaleX\":0.6070548780794038,\"scaleY\":0.6070548780794038},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":133,\"y\":214.3377001455604,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape2\",\"shape1\"],\"rotation\":-4.05703336333449},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[36mTmpEyelet Create (2.4ms)[0m  [1m[32mINSERT INTO "tmp_eyelets" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":88,\"y\":209},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":137.15732656389116,\"y\":258.81733215987725,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape2\",\"eyelets\":[\"eyelet0\"],\"face\":false,\"rotation\":-4.05703336333449},\"className\":\"Line\"},{\"attrs\":{\"x\":133,\"y\":174,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#00A0E9\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[\"eyelet0\"],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":134.2821951231761,\"y\":158.28219512317617,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape1\",\"scaleX\":0.6070548780794038,\"scaleY\":0.6070548780794038},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":133,\"y\":214.3377001455604,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape2\",\"shape1\"],\"rotation\":-4.05703336333449},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-26 13:26:36.406909"], ["updated_at", "2021-12-26 13:26:36.406909"]]
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+Redirected to http://localhost:3000/characters/name
+Completed 302 Found in 9ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/characters/name" for ::1 at 2021-12-26 22:26:36 +0900
+Processing by CharactersController#name as HTML
+  [1m[36mTmpEyelet Load (0.4ms)[0m  [1m[34mSELECT  "tmp_eyelets".* FROM "tmp_eyelets" ORDER BY "tmp_eyelets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:24
+  Rendering characters/name.html.erb within layouts/application
+  Rendered characters/name.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:26:37 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-26 22:26:38 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:4
+  Rendered scenes/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/scenes/create_tmp" for ::1 at 2021-12-26 22:26:52 +0900
+Processing by ScenesController#create_tmp as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":600,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"bgLayer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"name\":\"back-image\",\"id\":\"bg7\",\"image-src\":\"/assets/bg-8.jpg\"},\"className\":\"Image\"}]},{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"characterGroup0\",\"draggable\":true,\"offsetX\":230.3458856941631,\"offsetY\":208.05950696826415,\"scaleX\":0.8,\"scaleY\":0.8,\"x\":382,\"y\":206},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-17.99999999999996,-49.999999999999986,17.99999999999996,-49.999999999999986,17.99999999999996,49.999999999999986,-17.99999999999996,49.999999999999986],\"x\":185.36863991354883,\"y\":200.14718447097,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape5\",\"eyelets\":[\"eyelet0\",\"eyelet1\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"points\":[-13.499999999999924,-49.99999999999985,13.499999999999924,-49.99999999999985,13.499999999999924,49.99999999999985,-13.499999999999924,49.99999999999985],\"x\":305.0037684840757,\"y\":342.8765998411494,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape9\",\"eyelets\":[\"eyelet2\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"points\":[-11.500000000000005,-49.99999999999999,11.500000000000005,-49.99999999999999,11.500000000000005,49.99999999999999,-11.500000000000005,49.99999999999999],\"x\":178.0364869257477,\"y\":337.10516902303414,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape8\",\"eyelets\":[\"eyelet3\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"points\":[-16.99999999999993,-37.999999999999964,16.99999999999993,-37.999999999999964,16.99999999999993,37.999999999999964,-16.99999999999993,37.999999999999964],\"x\":186.82292664576252,\"y\":127.22822472617614,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape4\",\"eyelets\":[\"eyelet0\",\"eyelet9\"],\"face\":false,\"rotation\":4.125151876424207},\"className\":\"Line\"},{\"attrs\":{\"points\":[-6.919553976741544,-20.50000000000002,6.919553976741544,-20.50000000000002,6.919553976741544,20.50000000000002,-6.919553976741544,20.50000000000002],\"x\":209.32702685068648,\"y\":51.78676420794882,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape3\",\"eyelets\":[\"eyelet6\"],\"face\":false,\"rotation\":26.85142023674328,\"skewX\":-2.8333202337534623e-16},\"className\":\"Line\"},{\"attrs\":{\"points\":[-6.964249196572973,-17.464249196572915,6.964249196572973,-17.464249196572915,6.964249196572973,17.464249196572915,-6.964249196572973,17.464249196572915],\"x\":166.4417749269523,\"y\":41.516666704566205,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape2\",\"eyelets\":[\"eyelet7\"],\"face\":false,\"rotation\":6.616119020781634,\"skewX\":-3.469446951953614e-17},\"className\":\"Line\"},{\"attrs\":{\"points\":[-79.99999999999991,-49.9999999999999,79.99999999999991,-49.9999999999999,79.99999999999991,49.9999999999999,-79.99999999999991,49.9999999999999],\"x\":245.9969402081653,\"y\":261.5166329236464,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape6\",\"eyelets\":[\"eyelet1\",\"eyelet2\",\"eyelet3\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"x\":178.49354779347746,\"y\":75.49035788609491,\"radiusX\":34.7940368454136,\"radiusY\":34.7940368454136,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[\"eyelet6\",\"eyelet7\",\"eyelet8\",\"eyelet9\"],\"face\":true,\"rotation\":10.11266167831578},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":171.93076123960398,\"y\":78.60786957977069,\"offsetX\":100,\"offsetY\":100,\"id\":\"face\",\"scaleX\":0.6165721781885692,\"scaleY\":0.6165721781885697,\"faceParent\":\"shape0\",\"rotation\":10.11266167831578},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"MM73.59,88.11c-1.02,1.46-2.06,2.96-2.53,4.68c-0.47,1.72-0.26,3.73,0.98,5.01c1.33,1.38,3.56,1.58,5.36,0.93c2.95-1.07,4.95-4.5,4.08-7.51C80.6,88.2,75.61,85.21,73.59,88.11z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M120.9,89.9c-1.8,2.17-3.72,4.92-2.79,7.58c0.91,2.6,4.37,3.6,6.93,2.59c2.09-0.82,3.73-2.76,4.06-4.98c0.34-2.22-0.71-4.62-2.62-5.78C124.56,88.14,122.06,88.5,120.9,89.9z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M101.24,112.92c-0.71,0.21-1.43,0.19-2.15-0.01c-1.58-0.44-4.4-1.19-5.41-4.07c-0.34-0.98,1.14-2.13,2.47-2.22c1.27-0.08,6.19-0.2,8.07,0.19c1.42,0.3,1.92,1.16,1.72,2.02C105.48,110.93,103.87,112.14,101.24,112.92z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"}]},{\"attrs\":{\"x\":160.27573957605713,\"y\":102.50461366289836,\"radiusX\":21.76292719282039,\"radiusY\":21.76292719282039,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[\"eyelet8\"],\"face\":false,\"rotation\":11.106184078134518},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":184.5169542653109,\"y\":157.67671066145778,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape5\",\"shape4\"],\"draggable\":true,\"rotation\":4.125151876424207},\"className\":\"Circle\"},{\"attrs\":{\"x\":185.05634193024335,\"y\":230.53946511215588,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet1\",\"overlappingShapes\":[\"shape5\",\"shape6\"],\"draggable\":true,\"rotation\":0.34807313648601995},\"className\":\"Circle\"},{\"attrs\":{\"x\":305.43948158475695,\"y\":301.83706937533174,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet2\",\"overlappingShapes\":[\"shape9\",\"shape6\"],\"draggable\":true,\"rotation\":0.34807313648601995},\"className\":\"Circle\"},{\"attrs\":{\"x\":177.77038307092553,\"y\":298.6028419668879,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet3\",\"overlappingShapes\":[\"shape8\",\"shape6\"],\"draggable\":true,\"rotation\":0.34807313648601995},\"className\":\"Circle\"},{\"attrs\":{\"x\":205.57268432706562,\"y\":64.61960827609904,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet6\",\"overlappingShapes\":[\"shape3\",\"shape0\"],\"draggable\":true,\"rotation\":10.11266167831578},\"className\":\"Circle\"},{\"attrs\":{\"x\":165.30501203031042,\"y\":51.18385644482332,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet7\",\"overlappingShapes\":[\"shape2\",\"shape0\"],\"draggable\":true,\"rotation\":10.11266167831578},\"className\":\"Circle\"},{\"attrs\":{\"x\":156.57949709048816,\"y\":94.16838799150794,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet8\",\"overlappingShapes\":[\"shape0\",\"shape1\"],\"draggable\":true,\"rotation\":17.441767016512095},\"className\":\"Circle\"},{\"attrs\":{\"x\":193.85340235585485,\"y\":99.48864572001379,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet9\",\"overlappingShapes\":[\"shape4\",\"shape0\"],\"draggable\":true,\"rotation\":3.777078739938187},\"className\":\"Circle\"}]},{\"attrs\":{\"x\":300.6276475265213,\"y\":56.47176352917245},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scenes_controller.rb:32
+  [1m[36mTmpScene Create (4.9ms)[0m  [1m[32mINSERT INTO "tmp_scenes" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":600,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"bgLayer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"name\":\"back-image\",\"id\":\"bg7\",\"image-src\":\"/assets/bg-8.jpg\"},\"className\":\"Image\"}]},{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"characterGroup0\",\"draggable\":true,\"offsetX\":230.3458856941631,\"offsetY\":208.05950696826415,\"scaleX\":0.8,\"scaleY\":0.8,\"x\":382,\"y\":206},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-17.99999999999996,-49.999999999999986,17.99999999999996,-49.999999999999986,17.99999999999996,49.999999999999986,-17.99999999999996,49.999999999999986],\"x\":185.36863991354883,\"y\":200.14718447097,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape5\",\"eyelets\":[\"eyelet0\",\"eyelet1\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"points\":[-13.499999999999924,-49.99999999999985,13.499999999999924,-49.99999999999985,13.499999999999924,49.99999999999985,-13.499999999999924,49.99999999999985],\"x\":305.0037684840757,\"y\":342.8765998411494,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape9\",\"eyelets\":[\"eyelet2\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"points\":[-11.500000000000005,-49.99999999999999,11.500000000000005,-49.99999999999999,11.500000000000005,49.99999999999999,-11.500000000000005,49.99999999999999],\"x\":178.0364869257477,\"y\":337.10516902303414,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape8\",\"eyelets\":[\"eyelet3\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"points\":[-16.99999999999993,-37.999999999999964,16.99999999999993,-37.999999999999964,16.99999999999993,37.999999999999964,-16.99999999999993,37.999999999999964],\"x\":186.82292664576252,\"y\":127.22822472617614,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape4\",\"eyelets\":[\"eyelet0\",\"eyelet9\"],\"face\":false,\"rotation\":4.125151876424207},\"className\":\"Line\"},{\"attrs\":{\"points\":[-6.919553976741544,-20.50000000000002,6.919553976741544,-20.50000000000002,6.919553976741544,20.50000000000002,-6.919553976741544,20.50000000000002],\"x\":209.32702685068648,\"y\":51.78676420794882,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape3\",\"eyelets\":[\"eyelet6\"],\"face\":false,\"rotation\":26.85142023674328,\"skewX\":-2.8333202337534623e-16},\"className\":\"Line\"},{\"attrs\":{\"points\":[-6.964249196572973,-17.464249196572915,6.964249196572973,-17.464249196572915,6.964249196572973,17.464249196572915,-6.964249196572973,17.464249196572915],\"x\":166.4417749269523,\"y\":41.516666704566205,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape2\",\"eyelets\":[\"eyelet7\"],\"face\":false,\"rotation\":6.616119020781634,\"skewX\":-3.469446951953614e-17},\"className\":\"Line\"},{\"attrs\":{\"points\":[-79.99999999999991,-49.9999999999999,79.99999999999991,-49.9999999999999,79.99999999999991,49.9999999999999,-79.99999999999991,49.9999999999999],\"x\":245.9969402081653,\"y\":261.5166329236464,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape6\",\"eyelets\":[\"eyelet1\",\"eyelet2\",\"eyelet3\"],\"face\":false,\"rotation\":0.34807313648601995},\"className\":\"Line\"},{\"attrs\":{\"x\":178.49354779347746,\"y\":75.49035788609491,\"radiusX\":34.7940368454136,\"radiusY\":34.7940368454136,\"fill\":\"#ffc107\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[\"eyelet6\",\"eyelet7\",\"eyelet8\",\"eyelet9\"],\"face\":true,\"rotation\":10.11266167831578},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":171.93076123960398,\"y\":78.60786957977069,\"offsetX\":100,\"offsetY\":100,\"id\":\"face\",\"scaleX\":0.6165721781885692,\"scaleY\":0.6165721781885697,\"faceParent\":\"shape0\",\"rotation\":10.11266167831578},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"MM73.59,88.11c-1.02,1.46-2.06,2.96-2.53,4.68c-0.47,1.72-0.26,3.73,0.98,5.01c1.33,1.38,3.56,1.58,5.36,0.93c2.95-1.07,4.95-4.5,4.08-7.51C80.6,88.2,75.61,85.21,73.59,88.11z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M120.9,89.9c-1.8,2.17-3.72,4.92-2.79,7.58c0.91,2.6,4.37,3.6,6.93,2.59c2.09-0.82,3.73-2.76,4.06-4.98c0.34-2.22-0.71-4.62-2.62-5.78C124.56,88.14,122.06,88.5,120.9,89.9z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M101.24,112.92c-0.71,0.21-1.43,0.19-2.15-0.01c-1.58-0.44-4.4-1.19-5.41-4.07c-0.34-0.98,1.14-2.13,2.47-2.22c1.27-0.08,6.19-0.2,8.07,0.19c1.42,0.3,1.92,1.16,1.72,2.02C105.48,110.93,103.87,112.14,101.24,112.92z\",\"fill\":\"black\",\"name\":\"face\",\"id\":\"a\"},\"className\":\"Path\"}]},{\"attrs\":{\"x\":160.27573957605713,\"y\":102.50461366289836,\"radiusX\":21.76292719282039,\"radiusY\":21.76292719282039,\"fill\":\"orange\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[\"eyelet8\"],\"face\":false,\"rotation\":11.106184078134518},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":184.5169542653109,\"y\":157.67671066145778,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape5\",\"shape4\"],\"draggable\":true,\"rotation\":4.125151876424207},\"className\":\"Circle\"},{\"attrs\":{\"x\":185.05634193024335,\"y\":230.53946511215588,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet1\",\"overlappingShapes\":[\"shape5\",\"shape6\"],\"draggable\":true,\"rotation\":0.34807313648601995},\"className\":\"Circle\"},{\"attrs\":{\"x\":305.43948158475695,\"y\":301.83706937533174,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet2\",\"overlappingShapes\":[\"shape9\",\"shape6\"],\"draggable\":true,\"rotation\":0.34807313648601995},\"className\":\"Circle\"},{\"attrs\":{\"x\":177.77038307092553,\"y\":298.6028419668879,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet3\",\"overlappingShapes\":[\"shape8\",\"shape6\"],\"draggable\":true,\"rotation\":0.34807313648601995},\"className\":\"Circle\"},{\"attrs\":{\"x\":205.57268432706562,\"y\":64.61960827609904,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet6\",\"overlappingShapes\":[\"shape3\",\"shape0\"],\"draggable\":true,\"rotation\":10.11266167831578},\"className\":\"Circle\"},{\"attrs\":{\"x\":165.30501203031042,\"y\":51.18385644482332,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet7\",\"overlappingShapes\":[\"shape2\",\"shape0\"],\"draggable\":true,\"rotation\":10.11266167831578},\"className\":\"Circle\"},{\"attrs\":{\"x\":156.57949709048816,\"y\":94.16838799150794,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet8\",\"overlappingShapes\":[\"shape0\",\"shape1\"],\"draggable\":true,\"rotation\":17.441767016512095},\"className\":\"Circle\"},{\"attrs\":{\"x\":193.85340235585485,\"y\":99.48864572001379,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet9\",\"overlappingShapes\":[\"shape4\",\"shape0\"],\"draggable\":true,\"rotation\":3.777078739938187},\"className\":\"Circle\"}]},{\"attrs\":{\"x\":300.6276475265213,\"y\":56.47176352917245},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-26 13:26:52.269475"], ["updated_at", "2021-12-26 13:26:52.269475"]]
+  ↳ app/controllers/scenes_controller.rb:32
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scenes_controller.rb:32
+Redirected to http://localhost:3000/scenes/animate
+Completed 302 Found in 12ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/scenes/animate" for ::1 at 2021-12-26 22:26:52 +0900
+Processing by ScenesController#animate as HTML
+  [1m[36mTmpScene Load (0.3ms)[0m  [1m[34mSELECT  "tmp_scenes".* FROM "tmp_scenes" ORDER BY "tmp_scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:12
+  Rendering scenes/animate.html.erb within layouts/application
+  Rendered scenes/animate.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/scenes/animate" for ::1 at 2021-12-26 22:27:43 +0900
+Processing by ScenesController#animate as HTML
+  [1m[36mTmpScene Load (0.2ms)[0m  [1m[34mSELECT  "tmp_scenes".* FROM "tmp_scenes" ORDER BY "tmp_scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:12
+  Rendering scenes/animate.html.erb within layouts/application
+  Rendered scenes/animate.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:29:40 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 22:29:41 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-26 22:29:43 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (6.9ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 6.9ms)
+
+

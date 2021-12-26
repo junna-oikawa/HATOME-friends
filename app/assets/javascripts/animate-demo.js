@@ -28,6 +28,7 @@ var stageDemo = new Konva.Stage({
   container: 'animation-demo',
   width: width,
   height: height,
+  listening: false,
 });
 
 var layerDemo = new Konva.Layer();
@@ -118,6 +119,7 @@ var stageEx = new Konva.Stage({
   container: 'char-to-explain',
   width: width,
   height: height,
+  listening: false,
 });
 
 var layerEx = new Konva.Layer();
