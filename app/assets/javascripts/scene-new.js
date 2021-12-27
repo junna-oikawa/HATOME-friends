@@ -38,6 +38,7 @@
           draggable: true,
           name: 'characterGroup' + charCounter,
         }).moveTo(layer);
+        targetChar = cloneChar;
         cloneChar.offsetX(cloneChar.getClientRect().x + cloneChar.getClientRect().width / 2);
         cloneChar.offsetY(cloneChar.getClientRect().y + cloneChar.getClientRect().height / 2);
         cloneChar.scaleX(0.8);
@@ -48,11 +49,12 @@
         charCounter++;
         tr.nodes([cloneChar]);
         tr.moveToTop();
+        getTarget(targetChar, tr);
 
         cloneChar.on('mousedown click tap', function (e) {
           e.target.name() == 'faceParts' ? console.log('face') : targetChar = e.target;
           if (targetChar.id() != ('characterGroup')) targetChar = targetChar.getParent();
-          targetChar.moveToTop();
+          //targetChar.moveToTop();
           tr.nodes([targetChar]);
           tr.moveToTop();
           getTarget(targetChar, tr);
@@ -129,6 +131,7 @@
       layer.find('#characterGroup').forEach(c => {
         c.destroy();
       });
+      bgLayer.destroyChildren();
       tr.nodes([]);
     },
     false
@@ -203,8 +206,39 @@
         partialLayer.findOne('#bg' + index).clone({
           width: 600,
           height: 400,
+          listening: false,
         }).moveTo(bgLayer);
       }, false
     );
+  }
+
+  //左のボタン
+  document.getElementById( "charGoUp" ).onclick = function () {
+    charContainer.scrollBy({
+      top: -charContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+  document.getElementById( "charGoDown" ).onclick = function () {
+    charContainer.scrollBy({
+      top: charContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+
+  //右のボタン
+  document.getElementById("sceneGoUp").onclick = function () {
+    let bgContainer = document.getElementById("stageRight");
+    bgContainer.scrollBy({
+      top: -bgContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+  document.getElementById("sceneGoDown").onclick = function () {
+    let bgContainer = document.getElementById("stageRight");
+    bgContainer.scrollBy({
+      top: bgContainer.clientHeight,
+      behavior: 'smooth'
+    });
   }
 }

@@ -245,7 +245,6 @@
 
         makeShape.on('mousedown click tap', function (e) {
           e.target.name() == 'faceParts' ? selectedShape = e.target.getParent() : selectedShape = e.target;
-          selectedShape.moveToTop();
           tr.nodes([selectedShape]);
           tr.moveToTop();
           getTarget(selectedShape, tr);
