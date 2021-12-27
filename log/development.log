@@ -34939,3 +34939,2087 @@ Processing by ScenesController#new as HTML
 Completed 200 OK in 142ms (Views: 139.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/characters/new" for ::1 at 2021-12-28 02:40:44 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (1281.0ms)
+Completed 200 OK in 1351ms (Views: 1348.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 02:44:37 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 02:44:37 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 02:44:38 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (9.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 137ms (Views: 116.5ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 02:45:11 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (3.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 93ms (Views: 86.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 02:46:05 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 02:46:28 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (2.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 02:46:32 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 02:47:18 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 02:47:31 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-28 02:48:02 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"x\":184,\"y\":232,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true,\"x\":148},\"className\":\"Transformer\"},{\"attrs\":{\"x\":185,\"y\":230,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"x\":184,\"y\":232,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true,\"x\":148},\"className\":\"Transformer\"},{\"attrs\":{\"x\":185,\"y\":230,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]}]}"], ["created_at", "2021-12-27 17:48:02.031361"], ["updated_at", "2021-12-27 17:48:02.031361"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 02:48:02 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 02:48:03 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 02:48:17 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 02:48:19 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (5.8ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:5
+  Rendered scenes/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 85ms (Views: 69.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 02:48:55 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (3.8ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 48ms (Views: 43.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 02:49:51 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.8ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (90.4ms)
+Completed 200 OK in 122ms (Views: 118.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 02:49:58 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (1.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (2.8ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (1.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 54ms (Views: 34.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-28 02:50:16 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (1.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-28 02:50:18 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.9ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 47ms (Views: 38.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 02:50:21 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 32ms (Views: 25.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:50:22 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (2.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 38ms (Views: 28.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:50:42 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 37ms (Views: 32.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:51:44 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (91.5ms)
+Completed 200 OK in 128ms (Views: 120.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:52:09 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.8ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:52:33 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 139ms (Views: 130.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:52:42 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (65.2ms)
+Completed 200 OK in 106ms (Views: 99.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:53:07 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 99ms (Views: 92.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:53:16 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 87ms (Views: 80.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:53:24 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:53:52 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (1.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (1.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (142.0ms)
+Completed 200 OK in 176ms (Views: 165.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:54:04 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 99ms (Views: 86.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:56:22 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 146ms (Views: 133.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:56:31 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 99ms (Views: 94.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:57:02 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 53ms (Views: 44.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:57:09 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.7ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 114ms (Views: 106.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:57:16 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (1.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 120ms (Views: 113.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:58:04 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 43ms (Views: 34.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:58:10 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:58:16 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.8ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:58:22 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.9ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 41ms (Views: 31.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:58:44 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 42ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 02:59:26 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 38.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:00:02 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (73.8ms)
+Completed 200 OK in 106ms (Views: 97.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:00:36 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 130ms (Views: 123.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:00:47 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 123ms (Views: 116.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:01:10 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:01:28 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 149ms (Views: 144.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 03:01:33 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 41ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:01:35 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (9.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 94ms (Views: 82.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:01:59 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 03:02:00 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 03:02:02 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (7.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 43ms (Views: 33.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 03:02:03 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 45ms (Views: 37.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 03:02:07 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:02:08 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:02:25 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 900ms (Views: 897.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 03:02:30 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 03:02:31 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 03:02:33 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 33ms (Views: 27.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:02:35 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 52ms (Views: 45.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 03:02:36 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 42ms (Views: 34.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-28 03:02:37 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/8" for ::1 at 2021-12-28 03:02:39 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/9" for ::1 at 2021-12-28 03:02:40 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.9ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/scenes/9" for ::1 at 2021-12-28 03:03:16 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 84ms (Views: 77.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/10" for ::1 at 2021-12-28 03:03:18 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 35ms (Views: 27.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenes/11" for ::1 at 2021-12-28 03:03:19 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (1.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 50ms (Views: 42.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/scenes/12" for ::1 at 2021-12-28 03:03:20 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 35ms (Views: 26.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scenes/13" for ::1 at 2021-12-28 03:03:21 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mScene Load (0.7ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/scenes/12" for ::1 at 2021-12-28 03:03:22 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/11" for ::1 at 2021-12-28 03:03:23 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (1.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 46ms (Views: 37.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/scenes/10" for ::1 at 2021-12-28 03:03:23 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/scenes/9" for ::1 at 2021-12-28 03:03:24 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/8" for ::1 at 2021-12-28 03:03:25 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-28 03:03:26 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (1.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 59ms (Views: 51.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 03:03:26 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.7ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 34ms (Views: 26.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:03:27 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 39ms (Views: 31.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/scenes/20" for ::1 at 2021-12-28 03:03:28 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenes/19" for ::1 at 2021-12-28 03:03:29 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.9ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 43ms (Views: 33.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/scenes/18" for ::1 at 2021-12-28 03:03:30 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 42ms (Views: 33.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/17" for ::1 at 2021-12-28 03:03:31 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/16" for ::1 at 2021-12-28 03:03:32 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (1.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 52ms (Views: 43.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 03:03:35 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:03:37 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 03:03:48 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 03:03:50 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (1.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:03:55 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 32ms (Views: 24.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 03:03:56 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scenes/7" for ::1 at 2021-12-28 03:03:57 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mCACHE Scene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 29.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 03:04:01 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/21" for ::1 at 2021-12-28 03:04:03 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenes/20" for ::1 at 2021-12-28 03:04:06 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 03:04:10 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:04:11 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 03:04:21 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-28 03:04:28 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":60,\"y\":300,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":149,\"y\":307,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape2\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true,\"x\":95},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (2.0ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":60,\"y\":300,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":149,\"y\":307,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape2\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true,\"x\":95},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-27 18:04:28.983537"], ["updated_at", "2021-12-27 18:04:28.983537"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 03:04:28 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-28 03:04:32 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":95},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":60,\"y\":300,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[\"eyelet0\"],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":149,\"y\":307,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape2\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":105.76407506702412,\"y\":307,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape0\",\"shape2\"]},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[36mTmpEyelet Create (1.1ms)[0m  [1m[32mINSERT INTO "tmp_eyelets" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":95},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":60,\"y\":300,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[\"eyelet0\"],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":149,\"y\":307,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape2\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":105.76407506702412,\"y\":307,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape0\",\"shape2\"]},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-27 18:04:32.246836"], ["updated_at", "2021-12-27 18:04:32.246836"]]
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+Redirected to http://localhost:3000/characters/name
+Completed 302 Found in 15ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/characters/name" for ::1 at 2021-12-28 03:04:32 +0900
+Processing by CharactersController#name as HTML
+  [1m[36mTmpEyelet Load (0.3ms)[0m  [1m[34mSELECT  "tmp_eyelets".* FROM "tmp_eyelets" ORDER BY "tmp_eyelets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:24
+  Rendering characters/name.html.erb within layouts/application
+  Rendered characters/name.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/characters" for ::1 at 2021-12-28 03:04:52 +0900
+Processing by CharactersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BPKPqLkUjREoLzoJ0onx8wQr7mald9GBRUpMsRoN44GKXWjAhqYC2hb8L5PGoYsT63Xb1r6iAgQBK+wOM9I25Q==", "character"=>{"name"=>"", "json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":95},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":60,\"y\":300,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[\"eyelet0\"],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":149,\"y\":307,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape2\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":105.76407506702412,\"y\":307,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape0\",\"shape2\"]},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}, "commit"=>"決定"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:29
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "json_data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":95},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":60,\"y\":300,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[\"eyelet0\"],\"face\":true},\"className\":\"Line\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"x\":149,\"y\":307,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape2\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":105.76407506702412,\"y\":307,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape0\",\"shape2\"]},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-27 18:04:52.350881"], ["updated_at", "2021-12-27 18:04:52.350881"]]
+  ↳ app/controllers/characters_controller.rb:29
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:29
+Redirected to http://localhost:3000/scenes/new
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 03:04:52 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 03:59:59 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 135ms (Views: 133.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-28 04:00:10 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":171,\"y\":218,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":170,\"y\":148,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true,\"x\":117,\"y\":171},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.2ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":171,\"y\":218,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":170,\"y\":148,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape1\",\"eyelets\":[],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"ignoreStroke\":true,\"x\":117,\"y\":171},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-27 19:00:10.735126"], ["updated_at", "2021-12-27 19:00:10.735126"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:00:10 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:01:51 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:05:36 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.7ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (481.0ms)
+Completed 200 OK in 559ms (Views: 552.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:06:08 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:07:09 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:07:24 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:07:31 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:07:58 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:03 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:09 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:18 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:23 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:27 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:33 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:08:45 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:09:00 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:09:08 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:09:24 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:09:46 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-28 04:10:17 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":117,\"y\":171},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":171,\"y\":218,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":170,\"y\":148,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":170,\"y\":179.57914046121593,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape0\",\"shape1\"]},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[36mTmpEyelet Create (1.7ms)[0m  [1m[32mINSERT INTO "tmp_eyelets" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true,\"x\":117,\"y\":171},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"points\":[-50,-50,50,-50,50,50,-50,50],\"x\":171,\"y\":218,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"closed\":true,\"name\":\"rect\",\"id\":\"shape0\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Line\"},{\"attrs\":{\"x\":170,\"y\":148,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape1\",\"eyelets\":[\"eyelet0\"],\"face\":false},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":170,\"y\":179.57914046121593,\"radius\":8,\"fill\":\"white\",\"stroke\":\"#dab300\",\"strokeWidth\":4,\"name\":\"eyelet\",\"id\":\"eyelet0\",\"overlappingShapes\":[\"shape0\",\"shape1\"]},\"className\":\"Circle\"}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-27 19:10:17.698109"], ["updated_at", "2021-12-27 19:10:17.698109"]]
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+Redirected to http://localhost:3000/characters/name
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/characters/name" for ::1 at 2021-12-28 04:10:17 +0900
+Processing by CharactersController#name as HTML
+  [1m[36mTmpEyelet Load (0.4ms)[0m  [1m[34mSELECT  "tmp_eyelets".* FROM "tmp_eyelets" ORDER BY "tmp_eyelets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:24
+  Rendering characters/name.html.erb within layouts/application
+  Rendered characters/name.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:13:37 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1231.7ms)
+Completed 200 OK in 1300ms (Views: 1297.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 04:13:40 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (8.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 127ms (Views: 112.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 04:13:42 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-28 04:13:46 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (1.5ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"draggable\":true,\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]},{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-27 19:13:46.558230"], ["updated_at", "2021-12-27 19:13:46.558230"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:13:46 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-28 04:13:48 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[36mTmpEyelet Create (1.4ms)[0m  [1m[32mINSERT INTO "tmp_eyelets" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-27 19:13:48.120928"], ["updated_at", "2021-12-27 19:13:48.120928"]]
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+Redirected to http://localhost:3000/characters
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/characters" for ::1 at 2021-12-28 04:13:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:14:23 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.2ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-28 04:14:25 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[36mTmpEyelet Create (0.9ms)[0m  [1m[32mINSERT INTO "tmp_eyelets" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-27 19:14:25.503453"], ["updated_at", "2021-12-27 19:14:25.503453"]]
+  ↳ app/controllers/characters_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18
+Redirected to http://localhost:3000/characters
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/characters" for ::1 at 2021-12-28 04:14:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:14:36 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.5ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (446.9ms)
+Completed 200 OK in 544ms (Views: 532.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-28 04:14:38 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: character):
+  
+app/controllers/characters_controller.rb:44:in `character_name_params'
+app/controllers/characters_controller.rb:20:in `create_tmp_eyelet'
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:15:05 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/junna/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.6ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (547.0ms)
+Completed 200 OK in 616ms (Views: 603.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/characters/create_tmp_eyelet" for ::1 at 2021-12-28 04:15:06 +0900
+Processing by CharactersController#create_tmp_eyelet as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:21
+  [1m[36mCharacter Create (1.3ms)[0m  [1m[32mINSERT INTO "characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"},{\"attrs\":{\"id\":\"characterGroup\",\"name\":\"element\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"x\":60,\"y\":300,\"radiusX\":50,\"radiusY\":50,\"fill\":\"#F39800\",\"stroke\":\"black\",\"strokeWidth\":4,\"name\":\"circle\",\"id\":\"shape0\",\"eyelets\":[],\"face\":true},\"className\":\"Ellipse\"},{\"attrs\":{\"x\":60,\"y\":300,\"offsetX\":60,\"offsetY\":60,\"name\":\"face\",\"strokeScaleEnabled\":false,\"id\":\"face\",\"faceParent\":\"shape0\"},\"className\":\"Group\",\"children\":[{\"attrs\":{\"data\":\"M34.7,49.2c-1,1.5-2.1,3-2.5,4.7s-0.3,3.7,1,5c1.3,1.4,3.6,1.6,5.4,0.9c2.9-1.1,4.9-4.5,4.1-7.5C41.7,49.3,36.7,46.3,34.7,49.2z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M82,51c-1.8,2.2-3.7,4.9-2.8,7.6c0.9,2.6,4.4,3.6,6.9,2.6c2.1-0.8,3.7-2.8,4.1-5c0.3-2.2-0.7-4.6-2.6-5.8C85.7,49.3,83.2,49.6,82,51z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"data\":\"M62.4,74.1c-0.7,0.2-1.4,0.2-2.2,0c-1.6-0.4-4.4-1.2-5.4-4.1c-0.3-1,1.1-2.1,2.5-2.2c1.3-0.1,6.2-0.2,8.1,0.2c1.4,0.3,1.9,1.2,1.7,2C66.6,72.1,65,73.3,62.4,74.1z\",\"fill\":\"black\",\"name\":\"faceParts\"},\"className\":\"Path\"},{\"attrs\":{\"x\":20,\"y\":20,\"width\":80,\"height\":80,\"name\":\"faceParts\"},\"className\":\"Rect\"}]}]},{\"attrs\":{\"resizeEnabled\":false,\"rotateEnabled\":false,\"padding\":2,\"borderStroke\":\"white\",\"borderStrokeWidth\":4},\"className\":\"Transformer\"}]}"], ["created_at", "2021-12-27 19:15:06.942107"], ["updated_at", "2021-12-27 19:15:06.942107"]]
+  ↳ app/controllers/characters_controller.rb:21
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:21
+Redirected to http://localhost:3000/scenes/new
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 04:15:06 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (12.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 75ms (Views: 60.6ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/characters/new" for ::1 at 2021-12-28 04:15:19 +0900
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/characters/create_tmp_character" for ::1 at 2021-12-28 04:15:25 +0900
+Processing by CharactersController#create_tmp_character as HTML
+  Parameters: {"json_data"=>"{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[36mTmpCharacter Create (3.0ms)[0m  [1m[32mINSERT INTO "tmp_characters" ("json_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["json_data", "{\"attrs\":{\"width\":400,\"height\":400,\"id\":\"stage\"},\"className\":\"Stage\",\"children\":[{\"attrs\":{\"id\":\"layer\"},\"className\":\"Layer\",\"children\":[{\"attrs\":{\"ignoreStroke\":true},\"className\":\"Transformer\"}]}]}"], ["created_at", "2021-12-27 19:15:25.552309"], ["updated_at", "2021-12-27 19:15:25.552309"]]
+  ↳ app/controllers/characters_controller.rb:8
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:8
+Redirected to http://localhost:3000/characters/confirm
+Completed 302 Found in 7ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/characters/confirm" for ::1 at 2021-12-28 04:15:25 +0900
+Processing by CharactersController#confirm as HTML
+  [1m[36mTmpCharacter Load (0.3ms)[0m  [1m[34mSELECT  "tmp_characters".* FROM "tmp_characters" ORDER BY "tmp_characters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13
+  Rendering characters/confirm.html.erb within layouts/application
+  Rendered characters/confirm.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:15:28 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 04:15:30 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (5.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 59ms (Views: 45.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 04:15:35 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (6.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 72ms (Views: 63.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:15:37 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 04:15:38 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (5.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 41ms (Views: 34.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/scenes/22" for ::1 at 2021-12-28 04:15:40 +0900
+Processing by ScenesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:19
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:20
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  [1m[36mCACHE Scene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:21
+  Rendering scenes/show.html.erb within layouts/application
+  Rendered scenes/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 62ms (Views: 52.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 04:15:48 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:17:21 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:22:59 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (761.6ms)
+Completed 200 OK in 918ms (Views: 914.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top-bg.png" for ::1 at 2021-12-28 04:23:00 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images/top-bg.png"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-12-28 04:24:26 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:24:30 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:25:01 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:27:17 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 150ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-28 04:33:55 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (158.2ms)
+Completed 200 OK in 376ms (Views: 367.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenes" for ::1 at 2021-12-28 04:34:10 +0900
+Processing by ScenesController#index as HTML
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (16.8ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC[0m
+  ↳ app/views/scenes/index.html.erb:4
+  Rendered scenes/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 98ms (Views: 71.0ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/scenes/new" for ::1 at 2021-12-28 04:34:14 +0900
+Processing by ScenesController#new as HTML
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mCharacter Load (12.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" DESC[0m
+  ↳ app/views/scenes/new.html.erb:8
+  Rendered scenes/new.html.erb within layouts/application (109.3ms)
+Completed 200 OK in 139ms (Views: 116.2ms | ActiveRecord: 12.3ms)
+
+

@@ -143,23 +143,37 @@
 }
 
 // show
-#show-main {
+.show-main {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 100px;
 
   #scene-container {
     background-color: white;
-    margin-top: -100px;
   }
 
   .show-btn {
     margin: 40px;
-    margin-top: -100px;
+    line-height: 90px;
+    padding-top: 5px;
   }
 }
 
+.sc-show-elt-btn {
+  margin: 0 auto;
+  position: relative;
+  top: 110px;
+  line-height: 90px;
+  padding-top: 5px;
+  background-color: #e2b766;
+}
+
 // index
+.scene-index-main {
+  height: auto;
+}
 
 #index-scene-container {
   margin: 0 auto;

@@ -212,33 +212,5 @@
     );
   }
 
-  //左のボタン
-  document.getElementById( "charGoUp" ).onclick = function () {
-    charContainer.scrollBy({
-      top: -charContainer.clientHeight,
-      behavior: 'smooth'
-    });
-  }
-  document.getElementById( "charGoDown" ).onclick = function () {
-    charContainer.scrollBy({
-      top: charContainer.clientHeight,
-      behavior: 'smooth'
-    });
-  }
-
-  //右のボタン
-  document.getElementById("sceneGoUp").onclick = function () {
-    let bgContainer = document.getElementById("stageRight");
-    bgContainer.scrollBy({
-      top: -bgContainer.clientHeight,
-      behavior: 'smooth'
-    });
-  }
-  document.getElementById("sceneGoDown").onclick = function () {
-    let bgContainer = document.getElementById("stageRight");
-    bgContainer.scrollBy({
-      top: bgContainer.clientHeight,
-      behavior: 'smooth'
-    });
-  }
+  
 }

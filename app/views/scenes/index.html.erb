@@ -1,6 +1,5 @@
 
-<%= link_to "シーン作成画面", new_scene_path %>
-<div class="main-content">
+<div class="main-content scene-index-main">
   <div id="index-scene-container">
     <% @scenes.each do |scene| %>
       <%= link_to scene_path(scene) do %>

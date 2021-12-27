@@ -1,6 +1,14 @@
 <div class="main-content row">
   <div class="col col-left">
-    <div id="stageLeft" class="stage-left"></div>
+    <div class="stage-left-container">
+      <div id="stageLeftGoUp" class="round-btn xform-btn arrow-btn">
+        <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(0deg);"%>
+      </div>
+      <div id="stageLeft" class="stage-left"></div>
+      <div id="stageLeftGoDown" class="round-btn xform-btn arrow-btn">
+        <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(180deg);"%>
+      </div>
+    </div>
     <div class="btn-back-container">
       <%= link_to new_character_path, class:"btn-back" do %>
         <p>キャラクターをつくるのを</br>やめる</p>
@@ -50,10 +58,18 @@
   </div>
 
   <div class="col col-right">
-      <div id="stageRight" class="stage-right"></div>
-      <div class="information">
-        <div id="save" class="round-btn">できた！</div>
+    <div class="stage-right-container">
+      <div id="stageRightGoUp" class="round-btn xform-btn arrow-btn">
+        <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(0deg);"%>
       </div>
+      <div id="stageRight" class="stage-right"></div>
+      <div id="stageRightGoDown" class="round-btn xform-btn arrow-btn">
+        <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(180deg);"%>
+      </div>
+    </div>
+    <div class="information">
+      <div id="save" class="round-btn">できた！</div>
+    </div>
   </div>
 </div>
 
