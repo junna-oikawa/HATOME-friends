@@ -29,6 +29,18 @@
   border: 5px solid #6eb6d6;
 }
 
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-to-next {
+    margin: 0 0;
+    margin-right: 10px;
+    flex-shrink: 1;
+  }
+}
+
 /* animate */
 
 .upper {

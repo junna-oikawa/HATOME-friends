@@ -10,17 +10,19 @@
   let bg = stage.findOne('.back-image');
   let bgLayer = stage.findOne('#bgLayer');
   var imageObj = new Image();
-  imageObj.onload = function () {
-    var bg = new Konva.Image({
-      x: 0,
-      y: 0,
-      image: imageObj,
-      width: width,
-      height: height,
-    });
-    bgLayer.add(bg);
-  };
-  imageObj.src = bg.getAttr('image-src');
+  if (bg != undefined) {
+    imageObj.onload = function () {
+      var bg = new Konva.Image({
+        x: 0,
+        y: 0,
+        image: imageObj,
+        width: width,
+        height: height,
+      });
+      bgLayer.add(bg);
+    };
+    imageObj.src = bg.getAttr('image-src');
+  }
 
   animate();
 
@@ -39,7 +41,7 @@
         if (maxAngle[i] != -0 || maxAngle[i] != 0) {
           rotateGroup[i].rotate(thetaSign[i] * theta[i]);
           c[i] += Math.abs(theta[i]);
-          if (Math.floor(c[i]) >= Math.floor(Math.abs(maxAngle[i]))) {
+          if (c[i] >= Math.abs(maxAngle[i])) {
             theta[i] *= -1;
             c[i] = 0;
           }

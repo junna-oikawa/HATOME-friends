@@ -33,3 +33,19 @@
 .confirm-stage {
   visibility: hidden;
 }
+
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-to-next {
+    margin: 0 0;
+    margin-right: 10px;
+    flex-shrink: 1;
+  }
+}
+
+.btn-confirm {
+  margin: 0 0;
+}

@@ -28,23 +28,6 @@ let isSecond = new Boolean(false);
 let targetGroup;
 let targetZIndex;
 
-document.getElementById('visibility').addEventListener(
-  'click',
-  function () {
-    let eyelets = stage.find('.eyelet');
-    if (eyelets[0].visible() == true) {
-      eyelets.forEach(e => {
-        e.visible(false);
-      });
-    } else {
-      eyelets.forEach(e => {
-        e.visible(true);
-      });
-    }
-  },
-  false
-);
-
 //はとめ操作 show-thirsより
 let eyeletsArray = [{}];
 let save;
