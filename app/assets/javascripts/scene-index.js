@@ -10,6 +10,7 @@
       let json = document.getElementById('scene' + n + '-data').value
       let stage = Konva.Node.create(json, 'scene' + n + '-stage');
 
+      stage.listening(false);
       stage.scaleX(300 / stage.width());
       stage.scaleY(300 / stage.width());
       stage.width(300);

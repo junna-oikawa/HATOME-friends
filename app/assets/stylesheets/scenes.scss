@@ -26,6 +26,19 @@
 
 .bg-image {
   margin: 10px 0;
+  border: 5px solid #6eb6d6;
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-to-next {
+    margin: 0 0;
+    margin-right: 10px;
+    flex-shrink: 1;
+  }
 }
 
 /* animate */
@@ -37,6 +50,7 @@
     text-align: center;
     font-size: 30px;
     color: #666666;
+    padding-top: 20px;
 
     #first-pose {
       color: #e95b3b;
@@ -74,6 +88,7 @@
   height: calc((100vh - 492px) / 2);
   display: flex;
   justify-content: center;
+  align-items: center;
 
   .btn:hover {
     cursor: pointer;
@@ -84,6 +99,25 @@
   #ok,
   #redo {
     display: none;
+  }
+
+  .caption-animate {
+    display: none;
+    width: 200px;
+    margin-left: 15px;
+  }
+
+  .btn-and-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #first,
+    #second,
+    #ok,
+    #redo {
+      margin: 0 0;
+    }
   }
 
   #redo {
@@ -142,23 +176,38 @@
 }
 
 // show
-#show-main {
+.show-main {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 100px;
 
   #scene-container {
     background-color: white;
-    margin-top: -100px;
   }
 
   .show-btn {
     margin: 40px;
-    margin-top: -100px;
+    line-height: 90px;
+    padding-top: 5px;
   }
 }
 
+.sc-show-elt-btn {
+  margin: 0 auto;
+  position: relative;
+  top: 110px;
+  line-height: 90px;
+  padding-top: 5px;
+  background-color: #e2b766;
+}
+
 // index
+.scene-index-main {
+  min-height: 100vh;
+  height: auto;
+}
 
 #index-scene-container {
   margin: 0 auto;
@@ -173,5 +222,14 @@
     height: 200px;
     background-color: white;
     margin: 20px;
+  }
+}
+
+.step {
+  font-size: 30px;
+  margin-bottom: 5px;
+
+  .current-step {
+    color: white;
   }
 }

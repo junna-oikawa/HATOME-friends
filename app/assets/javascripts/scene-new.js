@@ -1,23 +1,4 @@
 {
-
-//   // ページをreloadする方法
-// // reloadの応用方法
-// // キャッシュを無視してリロードする方法
-// function doReloadNoCache() {
- 
-//   // キャッシュを無視してサーバーからリロード
-//   window.location.reload(true);
-
-// }
-
-// window.addEventListener('load', function () {
-//   console.log('a')
-//   // ページ表示完了した5秒後にリロード
-//   setTimeout(doReloadNoCache, 5000);
-  
-
-// });
-  
   //左側のキャラクターたち
   let charContainer = document.getElementById("stageLeft");
   let childrenLength = charContainer.childElementCount;
@@ -36,11 +17,13 @@
         id: 'stage' + counter,
         scaleX: 9 / 40,
         scaleY: 9 / 40,
+        listening: false,
       });
       let layer = Konva.Node.create(json);
       let changeStrokeShapes = layer.find('.rect, .circle, .triangle');
       stages[counter].add(layer);
       setAddListener(stages[counter], 'char' + n);
+      console.log(json)
       counter++;
     }
     n++;
@@ -56,6 +39,7 @@
           draggable: true,
           name: 'characterGroup' + charCounter,
         }).moveTo(layer);
+        targetChar = cloneChar;
         cloneChar.offsetX(cloneChar.getClientRect().x + cloneChar.getClientRect().width / 2);
         cloneChar.offsetY(cloneChar.getClientRect().y + cloneChar.getClientRect().height / 2);
         cloneChar.scaleX(0.8);
@@ -66,11 +50,12 @@
         charCounter++;
         tr.nodes([cloneChar]);
         tr.moveToTop();
+        getTarget(targetChar, tr);
 
         cloneChar.on('mousedown click tap', function (e) {
           e.target.name() == 'faceParts' ? console.log('face') : targetChar = e.target;
           if (targetChar.id() != ('characterGroup')) targetChar = targetChar.getParent();
-          targetChar.moveToTop();
+          //targetChar.moveToTop();
           tr.nodes([targetChar]);
           tr.moveToTop();
           getTarget(targetChar, tr);
@@ -109,7 +94,10 @@
   bgLayer.moveToBottom();
 
   //バウンディングボックス
-  var tr = new Konva.Transformer();
+  var tr = new Konva.Transformer({
+    anchorSize: 20,
+    anchorCornerRadius: 10,
+  });
   layer.add(tr);
 
   stage.on('click tap', function (e) {
@@ -147,6 +135,7 @@
       layer.find('#characterGroup').forEach(c => {
         c.destroy();
       });
+      bgLayer.destroyChildren();
       tr.nodes([]);
     },
     false
@@ -191,6 +180,7 @@
       container: containerId,
       width: 200,
       height: 400 / 3,
+      listening: false,
     });
 
     var partialLayer = new Konva.Layer();
@@ -220,8 +210,11 @@
         partialLayer.findOne('#bg' + index).clone({
           width: 600,
           height: 400,
+          listening: false,
         }).moveTo(bgLayer);
       }, false
     );
   }
+
+  
 }

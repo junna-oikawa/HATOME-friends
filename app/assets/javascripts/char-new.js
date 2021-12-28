@@ -20,6 +20,9 @@
 
   var tr = new Konva.Transformer({
     ignoreStroke: true,
+    anchorSize: 20,
+    anchorCornerRadius: 10,
+    padding: 5,
   });
   layer.add(tr);
 
@@ -130,6 +133,7 @@
       container: shapeName,
       width: 120,
       height: 120,
+      listening: false,
     });
 
     let partialLayer = new Konva.Layer();
@@ -244,7 +248,6 @@
 
         makeShape.on('mousedown click tap', function (e) {
           e.target.name() == 'faceParts' ? selectedShape = e.target.getParent() : selectedShape = e.target;
-          selectedShape.moveToTop();
           tr.nodes([selectedShape]);
           tr.moveToTop();
           getTarget(selectedShape, tr);
@@ -316,10 +319,12 @@
       container: colorCode,
       width: 110,
       height: 110,
+      listening: false,
     });
 
     var partialLayer = new Konva.Layer();
     partialStage.add(partialLayer);
+    console.log(partialLayer.isListening())
 
     dataWFill.forEach(d => {
       let path = new Konva.Path({

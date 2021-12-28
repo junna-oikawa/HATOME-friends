@@ -75,15 +75,19 @@ body {
 .col-left {
   width: calc((100% - 700px) / 2);
 
+  .stage-left-container {
+    height: calc(100% - (100% - 400px) / 2);
+  }
+
   .stage-left {
     background-color: #fff7d0;
     width: 300px;
-    height: calc(100% - (100% - 400px) / 2);
+    height: calc(100% - (100% - 400px) / 2 - 50px);
     overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 20px;
     padding: 10px;
     justify-content: space-around;
@@ -97,11 +101,12 @@ body {
     margin: 0 auto;
     border-radius: 20px;
     border: 5px solid white;
+    text-align: center;
+    margin-top: 30px;
 
     .btn-back {
       color: white;
       font-size: 18px;
-      font-family: happy-ruika, sans-serif;
     }
   }
 }
@@ -149,8 +154,13 @@ body {
 
 .col-right {
   width: calc((100% - 700px) / 2);
+
+  .stage-right-container {
+    height: calc(100% - (100% - 400px) / 2);
+  }
+
   .stage-right {
-    background-color: #fffdf3;
+    background-color: #fff7d0;
     width: 300px;
     height: calc(100% - (100% - 400px) / 2 - 50px);
     overflow-y: scroll;
@@ -158,7 +168,7 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-around;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 20px;
     border: 8px solid #6eb6d6;
   }
@@ -167,4 +177,13 @@ body {
 #stageCenter {
   background: white;
   margin: 0 auto;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  background-color: #e2b766;
 }

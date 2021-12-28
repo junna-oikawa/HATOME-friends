@@ -9,19 +9,24 @@
   </div>
 
   <div class="col col-center">
-    <div class="xform-btns">
+    <div class="caption">
+      <p>はとめのばしょはばっちりかな？<br>キャラクターをうごかしてかくにんしてみよう！</p>
     </div>
     <div class="char-stage" id="stageCenter"></div>
     <div class="xform-btns">
-      <div id="makeEyelet" class="round-btn xform-btn">makeEyelet</div>
-      <div id="destroyEyelet" class="round-btn xform-btn">destroyEyelet</div>
+      <div id="makeEyelet" class="round-btn xform-btn">
+          <%= image_tag 'btn11.png', :width => '90' %>
+      </div>
+      <div id="destroyEyelet" class="round-btn xform-btn">
+        <%= image_tag 'btn12.png', :width => '90' %>
+      </div>
     </div>
   </div>
 
   <div class="col col-right">
       <div id="stageRight" class="stage-right confirm-stage"></div>
       <div class="information">
-        <div id="save" class="round-btn">できた！</div>
+        <div id="save" class="round-btn btn-confirm">できた！</div>
       </div>
   </div>
 </div>

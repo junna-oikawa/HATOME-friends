@@ -87,4 +87,36 @@
     },
     false
   );
+
+  //左のボタン
+  document.getElementById("stageLeftGoUp").onclick = function () {
+    let rightContainer = document.getElementById("stageLeft");
+    rightContainer.scrollBy({
+      top: -rightContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+  document.getElementById("stageLeftGoDown").onclick = function () {
+    let rightContainer = document.getElementById("stageLeft");
+    rightContainer.scrollBy({
+      top: rightContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+
+  //右のボタン
+  document.getElementById("stageRightGoUp").onclick = function () {
+    let leftContainer = document.getElementById("stageRight");
+    leftContainer.scrollBy({
+      top: -leftContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+  document.getElementById("stageRightGoDown").onclick = function () {
+    let leftContainer = document.getElementById("stageRight");
+    leftContainer.scrollBy({
+      top: leftContainer.clientHeight,
+      behavior: 'smooth'
+    });
+  }
 }

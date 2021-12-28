@@ -17,8 +17,8 @@ class ScenesController < ApplicationController
     pre_id = id.to_i - 1
     next_id = id.to_i + 1
     @scene = Scene.find(params[:id])
-    @scene.id == Scene.first.id ? @pre_scene = Scene.last : @pre_scene = Scene.find(pre_id)
-    @scene.id == Scene.last.id ? @next_scene = Scene.first : @next_scene = Scene.find(next_id)
+    @scene.id == Scene.first.id ? @next_scene = Scene.last : @next_scene = Scene.find(pre_id)
+    @scene.id == Scene.last.id ? @pre_scene = Scene.first : @pre_scene = Scene.find(next_id)
   end
 
   def create
@@ -28,6 +28,7 @@ class ScenesController < ApplicationController
   end
 
   def create_tmp
+    TmpScene.destroy_all
     data = TmpScene.new(scene_params)
     data.save
     redirect_to scenes_animate_path

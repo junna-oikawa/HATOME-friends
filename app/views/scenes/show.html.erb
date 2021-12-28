@@ -1,12 +1,22 @@
-<div id="visibility" class="round-btn xform-btn">はとめ</div>
-<div class="main-content" id='show-main'>
-  <%= link_to 'pre', scene_path(@pre_scene.id), class:"round-btn show-btn pre-btn" %>
-  <div id="scene-container">
-    <div class="scene">
+
+<div class="main-content">
+  <div class="show-main">
+    <%= link_to scene_path(@pre_scene.id), class:"round-btn show-btn pre-btn" do %>
+      <%= image_tag 'arrow.png', :width => '90' , style:"transform: rotate(-90deg);"%>
+    <% end %>
+    <div id="scene-container">
+      <div class="scene">
+      </div>
     </div>
+    <%= link_to scene_path(@next_scene.id), class:"round-btn show-btn next-btn" do %>
+      <%= image_tag 'arrow.png', :width => '90' , style:"transform: rotate(90deg);"%>
+    <% end %>
   </div>
-  <%= link_to 'next', scene_path(@next_scene.id), class:"round-btn show-btn next-btn" %>
+  <div id="visibility" class="round-btn xform-btn sc-show-elt-btn">
+    <%= image_tag 'btn11.png', :width => '90' %>
+  </div>
 <div>
+
 
 
 <div id="hidden">

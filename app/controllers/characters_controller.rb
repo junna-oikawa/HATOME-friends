@@ -4,6 +4,7 @@ class CharactersController < ApplicationController
   end
 
   def create_tmp_character
+    TmpCharacter.destroy_all
     data = TmpCharacter.new(character_params)
     data.save
     redirect_to characters_confirm_path
@@ -14,9 +15,12 @@ class CharactersController < ApplicationController
   end
 
   def create_tmp_eyelet
-    data = TmpEyelet.new(character_params)
-    data.save
-    redirect_to characters_name_path
+    # data = TmpEyelet.new(character_params)
+    # data.save
+    # redirect_to characters_name_path
+    character = Character.new(character_params)
+    character.save
+    redirect_to new_scene_path
   end
 
   def name
@@ -25,9 +29,9 @@ class CharactersController < ApplicationController
   end
 
   def create
-    character = Character.new(character_name_params)
-    character.save
-    redirect_to new_scene_path
+    # character = Character.new(character_name_params)
+    # character.save
+    # redirect_to new_scene_path
   end
 
   

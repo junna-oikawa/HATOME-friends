@@ -8,6 +8,7 @@ document.getElementById('got-it').addEventListener(
     document.getElementById('got-it').style.display = 'none';
     document.getElementById('first').style.display = 'block';
     document.getElementById('guide').style.display = 'block';
+    document.getElementById('captionAnimate').style.display = 'block';
     document.getElementById("explain").innerHTML = '<span id="first-pose">はじめのポーズ</span>をきめてね！';
   },
   false
@@ -28,6 +29,7 @@ var stageDemo = new Konva.Stage({
   container: 'animation-demo',
   width: width,
   height: height,
+  listening: false,
 });
 
 var layerDemo = new Konva.Layer();
@@ -118,6 +120,7 @@ var stageEx = new Konva.Stage({
   container: 'char-to-explain',
   width: width,
   height: height,
+  listening: false,
 });
 
 var layerEx = new Konva.Layer();
