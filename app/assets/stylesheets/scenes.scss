@@ -50,6 +50,7 @@
     text-align: center;
     font-size: 30px;
     color: #666666;
+    padding-top: 20px;
 
     #first-pose {
       color: #e95b3b;
@@ -87,6 +88,7 @@
   height: calc((100vh - 492px) / 2);
   display: flex;
   justify-content: center;
+  align-items: center;
 
   .btn:hover {
     cursor: pointer;
@@ -97,6 +99,25 @@
   #ok,
   #redo {
     display: none;
+  }
+
+  .caption-animate {
+    display: none;
+    width: 200px;
+    margin-left: 15px;
+  }
+
+  .btn-and-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #first,
+    #second,
+    #ok,
+    #redo {
+      margin: 0 0;
+    }
   }
 
   #redo {
@@ -200,5 +221,14 @@
     height: 200px;
     background-color: white;
     margin: 20px;
+  }
+}
+
+.step {
+  font-size: 30px;
+  margin-bottom: 5px;
+
+  .current-step {
+    color: white;
   }
 }

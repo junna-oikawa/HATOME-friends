@@ -5,6 +5,7 @@ class ScenesController < ApplicationController
   end
 
   def new
+    Character.find(1).dup.save
     @characters = Character.all.reverse_order
   end
 

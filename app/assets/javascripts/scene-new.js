@@ -23,6 +23,7 @@
       let changeStrokeShapes = layer.find('.rect, .circle, .triangle');
       stages[counter].add(layer);
       setAddListener(stages[counter], 'char' + n);
+      console.log(json)
       counter++;
     }
     n++;

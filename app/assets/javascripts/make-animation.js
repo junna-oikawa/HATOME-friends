@@ -243,6 +243,7 @@ document.getElementById('first').addEventListener(
     tmpBackground.opacity(0.4);
     document.getElementById('first').style.display = 'none';
     document.getElementById('second').style.display = 'block';
+    document.getElementById("captionAnimate").innerHTML ='<p class="step">① ② <span class="current-step">③</span> ④</p><p> つぎはアニメーションの <br> かくにんをするよ！</p> ';
     changeCharPose();
     document.getElementById("explain").innerHTML = '<span id="second-pose">おわりのポーズ</span>をきめてね！';
     // demo用
@@ -272,6 +273,7 @@ document.getElementById('second').addEventListener(
     document.getElementById('redo').style.display = 'block';
     document.getElementById('guide').style.display = 'none';
     document.getElementById("explain").innerText = "かくにんしてみよう！";
+    document.getElementById("captionAnimate").innerHTML ='<p class="step">① ② ③ <span class="current-step">④</span></p><p>かんせい！</p> ';
   },
   false
 );
