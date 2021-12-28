@@ -4,6 +4,7 @@ class CharactersController < ApplicationController
   end
 
   def create_tmp_character
+    TmpCharacter.destroy_all
     data = TmpCharacter.new(character_params)
     data.save
     redirect_to characters_confirm_path

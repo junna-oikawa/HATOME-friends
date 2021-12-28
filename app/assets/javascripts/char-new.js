@@ -20,6 +20,9 @@
 
   var tr = new Konva.Transformer({
     ignoreStroke: true,
+    anchorSize: 20,
+    anchorCornerRadius: 10,
+    padding: 5,
   });
   layer.add(tr);
 

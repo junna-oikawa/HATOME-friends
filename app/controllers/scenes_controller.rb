@@ -5,7 +5,6 @@ class ScenesController < ApplicationController
   end
 
   def new
-    Character.find(1).dup.save
     @characters = Character.all.reverse_order
   end
 
@@ -29,6 +28,7 @@ class ScenesController < ApplicationController
   end
 
   def create_tmp
+    TmpScene.destroy_all
     data = TmpScene.new(scene_params)
     data.save
     redirect_to scenes_animate_path

@@ -94,7 +94,10 @@
   bgLayer.moveToBottom();
 
   //バウンディングボックス
-  var tr = new Konva.Transformer();
+  var tr = new Konva.Transformer({
+    anchorSize: 20,
+    anchorCornerRadius: 10,
+  });
   layer.add(tr);
 
   stage.on('click tap', function (e) {
