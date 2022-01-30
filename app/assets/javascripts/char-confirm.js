@@ -1,3 +1,7 @@
+var $document = $(document);
+var supportTouch = 'ontouchend' in document;
+var eve_click = supportTouch ? 'touchend' : 'click';
+  
 var jsonLoad;
 let layer;
 let stage;
@@ -135,8 +139,8 @@ function calc(polygon) {
   centY = 0;
   polygon[polygon.length] = polygon[0];
 
-  for(var j=0; j<height; j++) {
-    for(var i=0; i<width; i++) {
+  for(var j = 0; j < height; j++) {
+    for(var i = 0; i < width; i++) {
       if (cn(polygon, i, j) == true) {
         centX += i;
         centY += j;
@@ -184,7 +188,7 @@ layer.add(tr);
 tr.nodes([]);
 
 //操作
-layer.on('mousedown', function (e) {
+layer.on('mousedown touchstart', function (e) {
   tr.nodes([]);
   targetShape = e.target;
   if (targetShape.name() == 'faceParts') targetShape = e.target.getParent();
@@ -195,20 +199,12 @@ layer.on('mousedown', function (e) {
       selEyelet = targetShape;
       tr.nodes([selEyelet]);
       let shapesWithEye = selEyelet.getAttr('overlappingShapes');
-      
-      
       shapesWithEye.forEach(se => {
         var index = stage.findOne('#' + se).getAttr('eyelets').indexOf(selEyelet.id());
           let tmpEyelets = stage.findOne('#' + se).getAttr('eyelets');
           tmpEyelets.splice(index, 1);
         stage.findOne('#' + se).getAttr('eyelets', tmpEyelets);
       });
-      
-      break;
-    case 'makeEyelet':
-      // let moveEyelet = stage.findOne("#eyelet" + (eyeletCounter - 1));
-      // moveEyelet.x(stage.getPointerPosition().x);
-      // moveEyelet.y(stage.getPointerPosition().y);
       break;
     case 'moveShape':
       if (targetShape.getAttr('eyelets').length == 0) return;
@@ -221,10 +217,9 @@ layer.on('mousedown', function (e) {
   }
 });
 
-stage.on('mousemove', function () {
+stage.on('mousemove touchmove', function () {
   switch (mode) {
     case 'editEyelet':
-      
       break;
     case 'makeEyelet':
       let moveEyelet = stage.findOne("#eyelet" + (eyeletCounter - 1));
@@ -241,7 +236,7 @@ stage.on('mousemove', function () {
   }
 });
 
-stage.on('mouseup', function (e) {
+stage.on('mouseup touched', function (e) {
   switch (mode) {
     case 'editEyelet': {
       var preShapes = stage.getAllIntersections({ x: selEyelet.x(), y: selEyelet.y() });
@@ -291,7 +286,7 @@ stage.on('mouseup', function (e) {
 });
 
 document.getElementById('makeEyelet').addEventListener(
-  'click',
+  eve_click,
   function () {
     mode = 'makeEyelet';
     let smallRect = new Konva.Circle({
@@ -313,7 +308,7 @@ document.getElementById('makeEyelet').addEventListener(
 );
 
 document.getElementById('destroyEyelet').addEventListener(
-  'click',
+  eve_click,
   function () {
     mode = 'moveShape';
     tr.nodes([]);
@@ -446,7 +441,7 @@ function selectEyelet(shape, mousePos) {
 }
 
 document.getElementById('save').addEventListener(
-  'click',
+  eve_click,
   function () {
     layer.findOne('#characterGroup').getChildren().forEach(c => {
       c.draggable(false);

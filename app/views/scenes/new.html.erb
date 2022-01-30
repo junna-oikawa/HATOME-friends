@@ -83,6 +83,21 @@
   </div>
 </div>
 
+<div class="load-sound">
+  <audio id="up_sound" preload="auto">
+    <source src="<%= audio_path("up")%>" type="audio/wav">
+  </audio>
+  <audio id="down_sound" preload="auto">
+    <source src="<%= audio_path("down")%>" type="audio/wav">
+  </audio>
+  <audio id="appearance_sound" preload="auto">
+    <source src="<%= audio_path("appearance")%>" type="audio/wav">
+  </audio>
+  <audio id="paint_sound" preload="auto">
+    <source src="<%= audio_path("paint")%>" type="audio/wav">
+  </audio>
+</div>
+
 <div id="hidden">
   <% @characters.each do |char| %>
     <input type="hidden" id="char<%= char.id %>-data" value="<%= char.json_data %>">

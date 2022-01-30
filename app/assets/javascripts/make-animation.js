@@ -45,8 +45,7 @@ let children = [];
 
 let rotObj;
 //操作
-stage.on('mousedown', function (e) {
-  
+stage.on('mousedown touchstart', function (e) {
   targetShape = e.target;
   let depth = targetShape.getDepth() - 2; //stageとlayer分 characterGroupまでの階層
   let parent = targetShape;
@@ -54,9 +53,9 @@ stage.on('mousedown', function (e) {
     parent = parent.getParent();
   }
   if (targetShape.name() == 'faceParts') targetShape = e.target.getParent();
-  console.log(parent.findOne('#' + targetShape.getAttr('faceParent')));
+  //console.log(parent.findOne('#' + targetShape.getAttr('faceParent')));
   if (targetShape.id() == 'face') targetShape = parent.findOne('#'+targetShape.getAttr('faceParent'));
-  
+
   if (targetShape.getAttr('eyelets').length == 0) return;
   hasEyelet = true;
   mousedownPos = stage.getPointerPosition();
@@ -70,7 +69,7 @@ stage.on('mousedown', function (e) {
   }
 });
 
-stage.on('mousemove', function () {
+stage.on('mousemove touchmove', function () {
   if (isDragging == false) return;
   if (hasEyelet == false) return;
 
@@ -83,7 +82,7 @@ stage.on('mousemove', function () {
   }
 });
 
-stage.on('mouseup', function (e) {
+stage.on('mouseup touched', function (e) {
   isDragging = false;
   targetShape = null;
   targetGroup = null;
@@ -219,7 +218,7 @@ function selectEyelet(shape, mousePos) {
   rotShapes.forEach(r => {
     if (r.getAttr('face') == true) rotShapes.push(parent.findOne('#face'));
   });
-  console.log(parent)
+  //(parent)
 
 }
 
@@ -244,7 +243,7 @@ document.getElementById('first').addEventListener(
     document.getElementById('first').style.display = 'none';
     document.getElementById('second').style.display = 'block';
     document.getElementById("captionAnimate").innerHTML ='<p class="step">① ② <span class="current-step">③</span> ④</p><p> つぎはアニメーションの <br> かくにんをするよ！</p> ';
-    changeCharPose();
+    //changeCharPose();
     document.getElementById("explain").innerHTML = '<span id="second-pose">おわりのポーズ</span>をきめてね！';
     // demo用
     // let jsonForDemoFirst = characterGroup[0].toJSON();
@@ -271,7 +270,7 @@ document.getElementById('second').addEventListener(
     document.getElementById('second').style.display = 'none';
     document.getElementById('ok').style.display = 'block';
     document.getElementById('redo').style.display = 'block';
-    document.getElementById('guide').style.display = 'none';
+    // document.getElementById('guide').style.display = 'none';
     document.getElementById("explain").innerText = "かくにんしてみよう！";
     document.getElementById("captionAnimate").innerHTML ='<p class="step">① ② ③ <span class="current-step">④</span></p><p>かんせい！</p> ';
   },
@@ -323,10 +322,6 @@ function setRotateGroup(rotObj, target) {
     offsetY: axis.y,
   });
 
-  
-  
-  
-  
   let addDest; //gの追加先
   let addObj = []; //gに追加するオブジェクト
 
@@ -478,11 +473,11 @@ function setRotateGroup(rotObj, target) {
 
       break;
     case 'new':
-      axis = {x: useEyelet.getAbsolutePosition(targetParent).x, y:useEyelet.getAbsolutePosition(targetParent).y}
-      g.x(axis.x);
-      g.y(axis.y);
-      g.offsetX(axis.x);
-      g.offsetY(axis.y);
+      groupAxis = {x: useEyelet.getAbsolutePosition(targetParent).x, y:useEyelet.getAbsolutePosition(targetParent).y}
+      g.x(groupAxis.x);
+      g.y(groupAxis.y);
+      g.offsetX(groupAxis.x);
+      g.offsetY(groupAxis.y);
       addDest = targetParent;
       addObj = rotObj;
       add(addObj, g, addDest, rotObj, type);

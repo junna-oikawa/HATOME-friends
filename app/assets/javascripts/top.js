@@ -48,6 +48,7 @@
       }, layer);
       anim.start();
     }
+    
   }
 
   let letters = [];
@@ -206,17 +207,25 @@
     suBack.offsetY(suBack.height() / 2 - 174.5);
     title.offsetX(title.width() / 2);
 
-    haFront.on('click', function () {
+    haFront.on('click tap', function () {
       swing(haFront, haBack);
+      document.getElementById("appearance_sound").currentTime = 0;
+      document.getElementById("appearance_sound").play();
     })
-    meFront.on('click', function () {
+    meFront.on('click tap', function () {
       swing(meFront, meBack,);
+      document.getElementById("appearance_sound").currentTime = 0;
+      document.getElementById("appearance_sound").play();
     })
-    reFront.on('click', function () {
+    reFront.on('click tap', function () {
       swing(reFront, reBack);
+      document.getElementById("appearance_sound").currentTime = 0;
+      document.getElementById("appearance_sound").play();
     })
-    suFront.on('click', function () {
+    suFront.on('click tap', function () {
       swing(suFront, suBack);
+      document.getElementById("appearance_sound").currentTime = 0;
+      document.getElementById("appearance_sound").play();
     })
   }
 

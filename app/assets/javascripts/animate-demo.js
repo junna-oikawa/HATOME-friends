@@ -7,7 +7,7 @@ document.getElementById('got-it').addEventListener(
     document.getElementById('animation-demo').style.display = 'none';
     document.getElementById('got-it').style.display = 'none';
     document.getElementById('first').style.display = 'block';
-    document.getElementById('guide').style.display = 'block';
+    // document.getElementById('guide').style.display = 'block';
     document.getElementById('captionAnimate').style.display = 'block';
     document.getElementById("explain").innerHTML = '<span id="first-pose">はじめのポーズ</span>をきめてね！';
   },
@@ -113,32 +113,32 @@ function animate() {
 
 
 //説明キャラクターについて
-var width = window.innerWidth;
-var height = 400;
+// var width = window.innerWidth;
+// var height = 400;
 
-var stageEx = new Konva.Stage({
-  container: 'char-to-explain',
-  width: width,
-  height: height,
-  listening: false,
-});
+// var stageEx = new Konva.Stage({
+//   container: 'char-to-explain',
+//   width: width,
+//   height: height,
+//   listening: false,
+// });
 
-var layerEx = new Konva.Layer();
-stageEx.add(layerEx);
+// var layerEx = new Konva.Layer();
+// stageEx.add(layerEx);
 
-let exChar = Konva.Node.create(first_json);
-layerEx.add(exChar);
-exChar.scaleX(0.5);
-exChar.scaleY(0.5);
-exChar.x(-30);
+// let exChar = Konva.Node.create(first_json);
+// layerEx.add(exChar);
+// exChar.scaleX(0.5);
+// exChar.scaleY(0.5);
+// exChar.x(-30);
 
-// 2つ目に変更
-function changeCharPose() {
-  document.getElementById("guide-sentence").innerHTML = 'ぼくの<br><span id="second-pose">はじめのポーズ</span><br>はこれ！';
-  exChar.destroy();
-  exChar = Konva.Node.create(second_json);
-  layerEx.add(exChar);
-  exChar.scaleX(0.5);
-  exChar.scaleY(0.5);
-  exChar.x(-30);
-}
+// // 2つ目に変更
+// function changeCharPose() {
+//   // document.getElementById("guide-sentence").innerHTML = 'ぼくの<br><span id="second-pose">はじめのポーズ</span><br>はこれ！';
+//   exChar.destroy();
+//   exChar = Konva.Node.create(second_json);
+//   layerEx.add(exChar);
+//   exChar.scaleX(0.5);
+//   exChar.scaleY(0.5);
+//   exChar.x(-30);
+// }

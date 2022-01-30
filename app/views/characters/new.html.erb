@@ -51,9 +51,6 @@
       <div id="down" class="round-btn xform-btn">
         <%= image_tag 'btn10.png', :width => '90' %>
       </div>
-      <div id="visibility" class="round-btn xform-btn">
-        <%= image_tag 'btn11.png', :width => '90' %>
-      </div>
     </div>
   </div>
 
@@ -76,8 +73,24 @@
   </div>
 </div>
 
+<div class="load-sound">
+  <audio id="up_sound" preload="auto">
+    <source src="<%= audio_path("up")%>" type="audio/wav">
+  </audio>
+  <audio id="down_sound" preload="auto">
+    <source src="<%= audio_path("down")%>" type="audio/wav">
+  </audio>
+  <audio id="appearance_sound" preload="auto">
+    <source src="<%= audio_path("appearance")%>" type="audio/wav">
+  </audio>
+  <audio id="paint_sound" preload="auto">
+    <source src="<%= audio_path("paint")%>" type="audio/wav">
+  </audio>
+</div>
+
  <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
+ <%= javascript_include_tag "face-data.js" %>
  <%= javascript_include_tag "transform.js" %>
  <%= javascript_include_tag "char-new.js" %>
  <%= stylesheet_link_tag 'characters' %>

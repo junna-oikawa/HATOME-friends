@@ -1,4 +1,8 @@
 {
+  var $document = $(document);
+  var supportTouch = 'ontouchend' in document;
+  var eve_click = supportTouch ? 'touchend' : 'click';
+
   //左側のキャラクターたち
   let charContainer = document.getElementById("stageLeft");
   let childrenLength = charContainer.childElementCount;
@@ -23,7 +27,7 @@
       let changeStrokeShapes = layer.find('.rect, .circle, .triangle');
       stages[counter].add(layer);
       setAddListener(stages[counter], 'char' + n);
-      console.log(json)
+      //console.log(json)
       counter++;
     }
     n++;
@@ -32,7 +36,7 @@
   let charCounter = 0;
   function setAddListener(charStage, charContainerId) {
     document.getElementById(charContainerId).addEventListener(
-      'click',
+      eve_click,
       function () {
         let char = charStage.findOne('#characterGroup')
         let cloneChar = char.clone({
@@ -52,7 +56,7 @@
         tr.moveToTop();
         getTarget(targetChar, tr);
 
-        cloneChar.on('mousedown click tap', function (e) {
+        cloneChar.on('mousedown click tap touchstart', function (e) {
           e.target.name() == 'faceParts' ? console.log('face') : targetChar = e.target;
           if (targetChar.id() != ('characterGroup')) targetChar = targetChar.getParent();
           //targetChar.moveToTop();
@@ -60,6 +64,8 @@
           tr.moveToTop();
           getTarget(targetChar, tr);
         });
+        document.getElementById("appearance_sound").currentTime = 0;
+        document.getElementById("appearance_sound").play();
       }, false
     );
   }
@@ -108,7 +114,7 @@
 
   ////セーブ
   document.getElementById('save').addEventListener(
-    'click',
+    eve_click,
     function () {
       var json = stage.toJSON();
 
@@ -130,19 +136,21 @@
   );
 
   document.getElementById('destroyAll').addEventListener(
-    'click',
+    eve_click,
     function () {
       layer.find('#characterGroup').forEach(c => {
         c.destroy();
       });
       bgLayer.destroyChildren();
       tr.nodes([]);
+      document.getElementById("down_sound").currentTime = 0;
+      document.getElementById("down_sound").play();
     },
     false
   );
 
   document.getElementById('visibility').addEventListener(
-    'click',
+    eve_click,
     function () {
       let eyelets = stage.find('.eyelet');
       if (eyelets[0].visible() == true) {
@@ -178,8 +186,8 @@
   function makeContent(containerId, index) {
     var partialStage = new Konva.Stage({
       container: containerId,
-      width: 200,
-      height: 400 / 3,
+      width: 180,
+      height: 360 / 3,
       listening: false,
     });
 
@@ -193,18 +201,19 @@
         x: 0,
         y: 0,
         image: imageObj,
-        width: 200,
-        height: 400 / 3,
+        width: 180,
+        height: 360 / 3,
         name: 'back-image',
         id: 'bg' + index,
         'image-src': sources[index],
+        'sound-num': index,
       });
       partialLayer.add(bg);
     }
     imageObj.src = sources[index];
 
     document.getElementById(containerId).addEventListener(
-      'click',
+      eve_click,
       function () {
         bgLayer.destroyChildren();
         partialLayer.findOne('#bg' + index).clone({
@@ -212,6 +221,8 @@
           height: 400,
           listening: false,
         }).moveTo(bgLayer);
+        document.getElementById("paint_sound").currentTime = 0;
+        document.getElementById("paint_sound").play();
       }, false
     );
   }

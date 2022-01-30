@@ -1,7 +1,12 @@
 {
+  var $document = $(document);
+  var supportTouch = 'ontouchend' in document;
+  var eve_click = supportTouch ? 'touchend' : 'click';
+  //console.log(faceData.length);
   var width = 400;
   var height = 400;
   let sampleShapes = [];
+  let face;
 
   var stage = new Konva.Stage({
     container: 'stageCenter',
@@ -52,7 +57,7 @@
   }
 
   document.getElementById('save').addEventListener(
-    'click',
+    eve_click,
     function () {
       // scaleをwidth, heightへ変換
       resize();
@@ -96,12 +101,14 @@
   
 
   document.getElementById('destroyAll').addEventListener(
-    'click',
+    eve_click,
     function () {
       shapes.forEach(s => {
         s.destroy();
       });
       tr.nodes([]);
+      document.getElementById("down_sound").currentTime = 0;
+      document.getElementById("down_sound").play();
     },
     false
   );
@@ -116,6 +123,7 @@
 
   // 図形ボタン
   let shapesContainer = document.getElementById("stageLeft");
+  let faceNames = [...Array(faceData.length)].map((_, i) => "face-" + i);
   let shapeNames =
     ['rect', 'circle', 'triangle', 'face'];
 
@@ -126,6 +134,76 @@
     shapesContainer.appendChild(shape);
     makeShapeButton(s);
   });
+
+  for (var i = 0; i < faceData.length; i++){
+    let shape = document.createElement('div');
+    shape.id = faceNames[i];
+    shape.class = 'shape';
+    shapesContainer.appendChild(shape);
+    let partialStage = new Konva.Stage({
+      container: "face-" + i,
+      width: 120,
+      height: 120,
+      listening: false,
+    });
+
+    let partialLayer = new Konva.Layer();
+    partialStage.add(partialLayer);
+    let faceGroup;
+
+    faceGroup = new Konva.Group({
+      x: 60,
+      y: 60,
+      offsetX: 60,
+      offsetY: 60,
+      name: 'faceButton',
+    });
+
+    data = faceData[i];
+
+    for (var j = 0; j < data.length; j++){
+      let path;
+      if (data[j][1] == "none") {
+        path = new Konva.Path({
+          x: 0,
+          y: 0,
+          data: data[j][0],
+          name: 'faceParts',
+          strokeWidth: 4,
+          stroke: 'black',
+          lineJoin: 'round',
+          lineCap: 'round',
+        });
+      } else {
+        path = new Konva.Path({
+          x: 0,
+          y: 0,
+          data: data[j][0],
+          fill: data[j][1],
+          name: 'faceParts',
+          strokeWidth: 4,
+          stroke: 'black',
+          lineJoin: 'round',
+          lineCap: 'round',
+        });
+      }
+      faceGroup.add(path);
+    }
+
+    let bg = new Konva.Rect({
+      x: 20,
+      y: 20,
+      width: 80,
+      height: 80,
+      name: 'faceParts',
+    });
+    faceGroup.add(bg);
+
+    partialLayer.add(faceGroup);
+    setShapeBtnFunc(faceGroup, faceNames[i]);
+    //setShapeBtnFunc(shape, shapeName);
+    //if (shapeName != 'face') sampleShapes.push(shape);
+  }
 
   
   function makeShapeButton(shapeName) {
@@ -182,7 +260,7 @@
           y: 60,
           offsetX: 60,
           offsetY: 60,
-          name: 'shapeButton',
+          name: 'faceButton',
         });
 
         data = 
@@ -220,38 +298,46 @@
   function setShapeBtnFunc(shape, shapeName) {
     // let shape;
     document.getElementById(shapeName).addEventListener(
-      'click',
+      eve_click,
       function () {
-        let makeShape = shape.clone({
-          draggable: true,
-          name: shapeName,
-          strokeScaleEnabled: false,
-        }).moveTo(layer);
-        makeShape.moveToTop();
-
-        if (shapeName == 'face') {
-          makeShape.id('face');
-          makeShape.setAttr('faceParent', '');
-        } else {
-          makeShape.id('shape' + clickCount);
-          makeShape.setAttr('eyelets', []);
-          makeShape.setAttr('face', false);
+        if (shapeName.search(/face/) !== -1 && face != null) {
+          let faceParent = face.getParent();
+          face.destroy();
         }
+        //else {
+          let makeShape = shape.clone({
+            draggable: true,
+            name: shapeName,
+            strokeScaleEnabled: false,
+          }).moveTo(layer);
+          makeShape.moveToTop();
 
-        tr.nodes([makeShape]);
-        shapes.push(makeShape);
-        clickCount++;
-        tr.moveToTop();
-        selectedShape = makeShape;
-        startTween(makeShape);
-        getTarget(selectedShape, tr);
+          if (shapeName.search(/face/) !== -1) {
+            makeShape.id('face');
+            makeShape.setAttr('faceParent', '');
+            face = makeShape;
+          } else {
+            makeShape.id('shape' + clickCount);
+            makeShape.setAttr('eyelets', []);
+            makeShape.setAttr('face', false);
+          }
 
-        makeShape.on('mousedown click tap', function (e) {
-          e.target.name() == 'faceParts' ? selectedShape = e.target.getParent() : selectedShape = e.target;
-          tr.nodes([selectedShape]);
+          tr.nodes([makeShape]);
+          shapes.push(makeShape);
+          clickCount++;
           tr.moveToTop();
+          selectedShape = makeShape;
+          startTween(makeShape);
           getTarget(selectedShape, tr);
-        });
+
+          makeShape.on('mousedown click tap touchstart', function (e) {
+            e.target.name() == 'faceParts' ? selectedShape = e.target.getParent() : selectedShape = e.target;
+            tr.nodes([selectedShape]);
+            tr.moveToTop();
+            getTarget(selectedShape, tr);
+          });
+        //}
+        
       },
       false
     );
@@ -265,6 +351,8 @@
       duration: 1,
     });
     tween.play();
+    document.getElementById("appearance_sound").currentTime = 0;
+    document.getElementById("appearance_sound").play();
   }
 
   // 色
@@ -279,12 +367,14 @@
       colorContainer.appendChild(color);
       makeContent(c);
       document.getElementById(c).addEventListener(
-        'click',
+        eve_click,
         function () {
           if (selectedShape != null) selectedShape.fill('#' + c)
           sampleShapes.forEach(s => {
             s.fill('#' + c);
           })
+          document.getElementById("paint_sound").currentTime = 0;
+          document.getElementById("paint_sound").play();
         }, false
       );
     });
@@ -324,7 +414,7 @@
 
     var partialLayer = new Konva.Layer();
     partialStage.add(partialLayer);
-    console.log(partialLayer.isListening())
+    //console.log(partialLayer.isListening())
 
     dataWFill.forEach(d => {
       let path = new Konva.Path({

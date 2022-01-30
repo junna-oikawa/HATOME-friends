@@ -33,11 +33,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -80px;
+  margin-top: 20px;
 
   .btn-to-next {
     margin: 0 0;
     margin-right: 10px;
     flex-shrink: 1;
+    height: auto;
   }
 }
 
@@ -195,12 +198,22 @@
 }
 
 .sc-show-elt-btn {
-  margin: 0 auto;
+  margin: 0 50px;
   position: relative;
   top: 110px;
   line-height: 90px;
   padding-top: 5px;
   background-color: #e2b766;
+}
+
+.show-scene {
+  border: 20px groove #dab300;
+}
+
+.show-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // index

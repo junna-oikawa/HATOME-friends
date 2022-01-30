@@ -4,7 +4,7 @@
     <%= link_to scene_path(@pre_scene.id), class:"round-btn show-btn pre-btn" do %>
       <%= image_tag 'arrow.png', :width => '90' , style:"transform: rotate(-90deg);"%>
     <% end %>
-    <div id="scene-container">
+    <div id="scene-container" class="show-scene">
       <div class="scene">
       </div>
     </div>
@@ -12,11 +12,27 @@
       <%= image_tag 'arrow.png', :width => '90' , style:"transform: rotate(90deg);"%>
     <% end %>
   </div>
-  <div id="visibility" class="round-btn xform-btn sc-show-elt-btn">
-    <%= image_tag 'btn11.png', :width => '90' %>
+  <div class="show-btns">
+    <div id="visibility" class="round-btn xform-btn sc-show-elt-btn">
+      <%= image_tag 'btn11.png', :width => '90' %>
+    </div>
+    <div id="soundOn" class="round-btn xform-btn sc-show-elt-btn">
+      <%= image_tag 'onpu.png', :width => '90' %>
+    </div>
   </div>
 <div>
 
+
+<div class="load-sound">
+  <audio id="up_sound" preload="auto">
+    <source src="<%= audio_path("up")%>" type="audio/wav">
+  </audio>
+  <% for num in 1..15 do %>
+    <audio id="bs-<%= num %>" preload="auto">
+      <source src="<%= audio_path("bs-" + num.to_s)%>" type="audio/wav">
+    </audio>
+  <% end %>
+</div>
 
 
 <div id="hidden">

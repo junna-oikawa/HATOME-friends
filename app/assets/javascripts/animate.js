@@ -1,4 +1,8 @@
 {
+  var $document = $(document);
+  var supportTouch = 'ontouchend' in document;
+  var eve_click = supportTouch ? 'touchend' : 'click';
+
   let jsonLoad = document.getElementById('data').value
   let stage = Konva.Node.create(jsonLoad, 'scene-container');
   let layer = stage.findOne('#layer');
@@ -8,6 +12,7 @@
   var height = stage.getAttr('height');
 
   let bg = stage.findOne('.back-image');
+  let bsNumber = bg.getAttr('sound-num') + 1;
   let bgLayer = stage.findOne('#bgLayer');
   var imageObj = new Image();
   if (bg != undefined) {
@@ -22,7 +27,22 @@
       bgLayer.add(bg);
     };
     imageObj.src = bg.getAttr('image-src');
+    
   }
+
+  let isPlaying = false;
+  document.getElementById('soundOn').addEventListener(
+    eve_click,
+    function () {
+      if (!isPlaying) {
+        document.getElementById("bs-"+bsNumber).play();
+      } else {
+        document.getElementById("bs-"+bsNumber).pause();
+      }
+      isPlaying = !isPlaying;
+    },
+    false
+  );
 
   animate();
 
@@ -52,7 +72,7 @@
   }
 
   document.getElementById('visibility').addEventListener(
-    'click',
+    eve_click,
     function () {
       let eyelets = stage.find('.eyelet');
       if (eyelets[0].visible() == true) {

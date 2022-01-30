@@ -1,4 +1,8 @@
 {
+  var $document = $(document);
+  var supportTouch = 'ontouchend' in document;
+  var eve_click = supportTouch ? 'touchend' : 'click';
+
   let tar;
   let tarTr;
 
@@ -10,80 +14,98 @@
 
 
   document.getElementById('scaleUp').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.scaleX(tar.scaleX() + 0.1);
       tar.scaleY(tar.scaleY() + 0.1);
+      document.getElementById("up_sound").currentTime = 0;
+      document.getElementById("up_sound").play();
     },
     false
   );
 
   document.getElementById('scaleDown').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.scaleX(tar.scaleX() - 0.1);
       tar.scaleY(tar.scaleY() - 0.1);
+      document.getElementById("down_sound").currentTime = 0;
+      document.getElementById("down_sound").play();
     },
     false
   );
 
   document.getElementById('leftRot').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.rotate(-10);
+      document.getElementById("up_sound").currentTime = 0;
+      document.getElementById("up_sound").play();
     },
     false
   );
 
   document.getElementById('rightRot').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.rotate(10);
+      document.getElementById("down_sound").currentTime = 0;
+      document.getElementById("down_sound").play();
     },
     false
   );
 
   document.getElementById('destroy').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.destroy();
       tarTr.nodes([]);
+      document.getElementById("up_sound").currentTime = 0;
+      document.getElementById("up_sound").play();
     },
     false
   );
 
   document.getElementById('toTop').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.moveToTop();
       tarTr.moveToTop();
+      document.getElementById("up_sound").currentTime = 0;
+      document.getElementById("up_sound").play();
     },
     false
   );
 
   document.getElementById('toBottom').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.moveToBottom();
       tarTr.moveToTop();
+      document.getElementById("down_sound").currentTime = 0;
+      document.getElementById("down_sound").play();
     },
     false
   );
 
   document.getElementById('up').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.moveUp();
       tarTr.moveToTop();
+      document.getElementById("up_sound").currentTime = 0;
+      document.getElementById("up_sound").play();
     },
     false
   );
 
   document.getElementById('down').addEventListener(
-    'click',
+    eve_click,
     function () {
       tar.moveDown();
       tarTr.moveToTop();
+      document.getElementById("down_sound").currentTime = 0;
+      document.getElementById("down_sound").play();
     },
     false
   );
