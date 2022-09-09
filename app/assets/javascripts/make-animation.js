@@ -1,5 +1,5 @@
 let jsonLoad = document.getElementById('data').value
-let stage = Konva.Node.create(jsonLoad, 'scene-animate-container');
+let stage = Konva.Node.create(jsonLoad, 'sceneAnimateContainer');
 let layer = stage.findOne('#layer');
 let characterGroup = stage.find('#characterGroup');
 for (let i = 0; i < characterGroup.length; i++) {
@@ -104,8 +104,6 @@ function setInitData(paramRotObj) {
   }
   return array;
 }
-
-
 
 
 function calcAngle(mousePos) {
@@ -244,7 +242,7 @@ document.getElementById('first').addEventListener(
     document.getElementById('second').style.display = 'block';
     document.getElementById("captionAnimate").innerHTML ='<p class="step">① ② <span class="current-step">③</span> ④</p><p> つぎはアニメーションの <br> かくにんをするよ！</p> ';
     //changeCharPose();
-    document.getElementById("explain").innerHTML = '<span id="second-pose">おわりのポーズ</span>をきめてね！';
+    document.getElementById("explain").innerHTML = '<span id="secondPose">おわりのポーズ</span>をきめてね！';
     // demo用
     // let jsonForDemoFirst = characterGroup[0].toJSON();
     // console.log(jsonForDemoFirst);

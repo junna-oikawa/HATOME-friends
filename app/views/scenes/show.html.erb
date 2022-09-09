@@ -1,23 +1,23 @@
 
-<div class="main-content">
-  <div class="show-main">
-    <%= link_to scene_path(@pre_scene.id), class:"round-btn show-btn pre-btn" do %>
-      <%= image_tag 'arrow.png', :width => '90' , style:"transform: rotate(-90deg);"%>
+<div class="scene_show_main_content">
+  <div class="top">
+    <%= link_to scene_path(@pre_scene.id), class:"round_btn button pre_btn" do %>
+      <%= image_tag 'arrow.png' , style:"transform: rotate(-90deg);"%>
     <% end %>
-    <div id="scene-container" class="show-scene">
+    <div id="scene-container" class="canvas_container">
       <div class="scene">
       </div>
     </div>
-    <%= link_to scene_path(@next_scene.id), class:"round-btn show-btn next-btn" do %>
-      <%= image_tag 'arrow.png', :width => '90' , style:"transform: rotate(90deg);"%>
+    <%= link_to scene_path(@next_scene.id), class:"round_btn button next_btn" do %>
+      <%= image_tag 'arrow.png' , style:"transform: rotate(90deg);"%>
     <% end %>
   </div>
-  <div class="show-btns">
-    <div id="visibility" class="round-btn xform-btn sc-show-elt-btn">
-      <%= image_tag 'btn11.png', :width => '90' %>
+  <div class="bottom">
+    <div id="visibility" class="round_btn button sc_show_elt_btn">
+      <%= image_tag 'btn11.png' %>
     </div>
-    <div id="soundOn" class="round-btn xform-btn sc-show-elt-btn">
-      <%= image_tag 'onpu.png', :width => '90' %>
+    <div id="soundOn" class="round_btn button sc_show_elt_btn">
+      <%= image_tag 'onpu.png' %>
     </div>
   </div>
 <div>

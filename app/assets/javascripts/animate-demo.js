@@ -4,12 +4,12 @@ document.getElementById('got-it').addEventListener(
   'click',
   function () {
     anim.stop();
-    document.getElementById('animation-demo').style.display = 'none';
+    document.getElementById('animationDemo').style.display = 'none';
     document.getElementById('got-it').style.display = 'none';
     document.getElementById('first').style.display = 'block';
     // document.getElementById('guide').style.display = 'block';
     document.getElementById('captionAnimate').style.display = 'block';
-    document.getElementById("explain").innerHTML = '<span id="first-pose">はじめのポーズ</span>をきめてね！';
+    document.getElementById("explain").innerHTML = '<span id="firstPose">はじめのポーズ</span>をきめてね！';
   },
   false
 );
@@ -26,7 +26,7 @@ var width = window.innerWidth;
 var height = 400;
 
 var stageDemo = new Konva.Stage({
-  container: 'animation-demo',
+  container: 'animationDemo',
   width: width,
   height: height,
   listening: false,
@@ -134,7 +134,7 @@ function animate() {
 
 // // 2つ目に変更
 // function changeCharPose() {
-//   // document.getElementById("guide-sentence").innerHTML = 'ぼくの<br><span id="second-pose">はじめのポーズ</span><br>はこれ！';
+//   // document.getElementById("guide-sentence").innerHTML = 'ぼくの<br><span id="secondPose">はじめのポーズ</span><br>はこれ！';
 //   exChar.destroy();
 //   exChar = Konva.Node.create(second_json);
 //   layerEx.add(exChar);

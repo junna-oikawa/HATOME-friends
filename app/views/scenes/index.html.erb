@@ -1,9 +1,9 @@
 
-<div class="main-content scene-index-main">
-  <div id="index-scene-container">
+<div class="main_content index_main_content">
+  <div id="sceneContainer" class="scene_container">
     <% @scenes.each do |scene| %>
       <%= link_to scene_path(scene) do %>
-        <div id="scene<%= scene.id %>" class="scenes">
+        <div id="scene<%= scene.id %>" class="scene">
           <div id="scene<%= scene.id %>-stage"></div>
         </div>
       <% end %>
@@ -11,13 +11,11 @@
   </div>
 </div>
 
-
 <div id="hidden">
   <% @scenes.each do |scene| %>
     <input type="hidden" id="scene<%= scene.id %>-data" value="<%= scene.json_data %>">
   <% end %>
 </div>
-
 
 <script src="https://unpkg.com/konva@8.2.2/konva.min.js"></script>
 <%= javascript_include_tag "scene-index.js" %>

@@ -1,82 +1,84 @@
-<div class="main-content row">
-  <div class="col col-left">
-    <div class="stage-left-container">
-      <div id="stageLeftGoUp" class="round-btn xform-btn arrow-btn">
+<div class="main_content">
+  <div class="left">
+    <div class="top">
+      <div id="stageLeftGoUp" class="arrow_btn">
         <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(0deg);"%>
       </div>
-      <div id="stageLeft" class="stage-left">
+      <div id="stageLeft" class="canvases_wrapper">
         <% @characters.each do |char| %>
-          <div id="char<%= char.id %>" class="characters">
+          <div id="char<%= char.id %>" class="canvas">
             <div id="char<%= char.id %>-stage"></div>
           </div>
         <% end %>
       </div>
-      <div id="stageLeftGoDown" class="round-btn xform-btn arrow-btn">
+      <div id="stageLeftGoDown" class="arrow_btn">
         <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(180deg);"%>
       </div>
     </div>
-    <div class="btn-back-container">
-      <%= link_to new_character_path, class:"btn-back" do %>
+    <%= link_to new_character_path, class:"back_btn" do %>
+      <div class="button">
         <p>じぶんのキャラクターを<br>つくってみる！</p>
-      <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="middle">
+    <div class="buttons">
+      <div id="scaleUp" class="button">
+        <%= image_tag 'btn1.png' %>
+      </div>
+      <div id="scaleDown" class="button">
+        <%= image_tag 'btn2.png' %>
+      </div>
+      <div id="leftRot" class="button">
+        <%= image_tag 'btn3.png' %>
+      </div>
+      <div id="rightRot" class="button">
+        <%= image_tag 'btn4.png' %>
+      </div>
+      <div id="destroy" class="button">
+        <%= image_tag 'btn5.png' %>
+      </div>
+      <div id="destroyAll" class="button">
+        <%= image_tag 'btn6.png' %>
+      </div>
+    </div>
+    <div class="scene_canvas_wrapper">
+      <div class="canvas" id="stageCenter"></div>
+    </div>
+    <div class="buttons">
+      <div id="toTop" class="button">
+        <%= image_tag 'btn7.png' %>
+      </div>
+      <div id="toBottom" class="button">
+        <%= image_tag 'btn8.png' %>
+      </div>
+      <div id="up" class="button">
+        <%= image_tag 'btn9.png' %>
+      </div>
+      <div id="down" class="button">
+        <%= image_tag 'btn10.png' %>
+      </div>
+      <div id="visibility" class="button">
+        <%= image_tag 'btn11.png' %>
+      </div>
     </div>
   </div>
 
-  <div class="col col-center">
-    <div class="xform-btns">
-      <div id="scaleUp" class="round-btn xform-btn">
-        <%= image_tag 'btn1.png', :width => '90' %>
-      </div>
-      <div id="scaleDown" class="round-btn xform-btn">
-        <%= image_tag 'btn2.png', :width => '90' %>
-      </div>
-      <div id="leftRot" class="round-btn xform-btn">
-        <%= image_tag 'btn3.png', :width => '90' %>
-      </div>
-      <div id="rightRot" class="round-btn xform-btn">
-        <%= image_tag 'btn4.png', :width => '90' %>
-      </div>
-      <div id="destroy" class="round-btn xform-btn">
-        <%= image_tag 'btn5.png', :width => '90' %>
-      </div>
-      <div id="destroyAll" class="round-btn xform-btn">
-        <%= image_tag 'btn6.png', :width => '90' %>
-      </div>
-    </div>
-    <div class="scene-stage" id="stageCenter"></div>
-    <div class="xform-btns">
-      <div id="toTop" class="round-btn xform-btn">
-        <%= image_tag 'btn7.png', :width => '90' %>
-      </div>
-      <div id="toBottom" class="round-btn xform-btn">
-        <%= image_tag 'btn8.png', :width => '90' %>
-      </div>
-      <div id="up" class="round-btn xform-btn">
-        <%= image_tag 'btn9.png', :width => '90' %>
-      </div>
-      <div id="down" class="round-btn xform-btn">
-        <%= image_tag 'btn10.png', :width => '90' %>
-      </div>
-      <div id="visibility" class="round-btn xform-btn">
-        <%= image_tag 'btn11.png', :width => '90' %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col col-right">
-    <div class="stage-right-container">
-      <div id="stageRightGoUp" class="round-btn xform-btn arrow-btn">
+  <div class="right">
+    <div class="top">
+      <div id="stageRightGoUp" class="arrow_btn">
           <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(0deg);"%>
         </div>
-      <div id="stageRight" class="stage-right"></div>
-      <div id="stageRightGoDown" class="round-btn xform-btn arrow-btn">
+      <div id="stageRight" class="canvases_wrapper scene_canvases_wrapper"></div>
+      <div id="stageRightGoDown" class="arrow_btn">
         <%= image_tag 'arrow.png', :width => '30' , style:"transform: rotate(180deg);"%>
       </div>
     </div>
-    <div class="information">
-      <div id="save" class="round-btn btn-to-next">つぎへ</div>
-      <div class="caption-to-next">
-        <p class="step"><span class="current-step">①</span> ② ③ ④</p>
+    <div class="bottom">
+      <div id="save" class="button">つぎへ</div>
+      <div class="text">
+        <p class="step"><span class="current_step">①</span> ② ③ ④</p>
         <p>つぎはアニメーションの<br>はじめのポーズをきめるよ！</p>
       </div>
     </div>

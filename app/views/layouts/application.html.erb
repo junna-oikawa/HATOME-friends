@@ -19,14 +19,29 @@
   </head>
 
   <div class="container">
-    <div class="header">
-      <%= link_to root_path, id:'logo' do %>
+    <header>
+      <%= link_to root_path, class:'logo' do %>
         <%= image_tag 'logo.png', :width => '250' %>
       <% end %>
-      <%= link_to 'みんなのさくひん', scenes_path, class:'header-btn', id:'header-works-btn' %>
-      <%= link_to 'あたらしくつくる', new_scene_path, class:'header-btn', id:'header-new-btn' %>
-    </div>
-    
+      <%= link_to 'みんなのさくひん', scenes_path, class:'button' %>
+      <%= link_to 'あたらしくつくる', new_scene_path, class:'button new_button' %>
+    </header>
     <%= yield %>
+    <div class="error_message_wrapper">
+      <div class="error_message">
+        <p>
+          画面が小さいみたい！
+          <br />
+          タブレットかパソコンで遊んでね！
+        </p>
+        <p class="for_parent">
+          おうちの方へ
+          <br />
+          タブレット端末を横にして使用するか、
+          <br />
+          横1024px, 縦768px以上のディスプレイではとめふれんずをご利用ください。
+        </p>
+      </div>
+    </div>
   </div>
 </html>
