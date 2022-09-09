@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+//メディアクエリの呼び出し
+$breakpoints: (
+  'sp': 'screen and (max-width: 767px)',
+  'm': 'screen and (max-width: 1200px)',
+  'tablet': 'screen and (max-width: 1023px)',
+) !default;
+
+@mixin mq($breakpoint: tablet) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@function vw($pixel, $width: 1400) {
+  $value: $pixel / $width * 100vw;
+  @return $value;
+}

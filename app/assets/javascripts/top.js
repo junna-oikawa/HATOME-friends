@@ -1,9 +1,9 @@
 {
-  let width = window.innerWidth;
+  let width = 700;
   let height = 650;
 
   let stage = new Konva.Stage({
-    container: 'top-main-visual',
+    container: 'topMainVisual',
     width: width,
     height: height,
   });
@@ -261,6 +261,4 @@
   };
 
   loadImages(sources, buildStage);
-
-
 }

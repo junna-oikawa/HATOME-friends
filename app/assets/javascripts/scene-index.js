@@ -1,5 +1,5 @@
 {
-  let sceneContainer = document.getElementById("index-scene-container");
+  let sceneContainer = document.getElementById("sceneContainer");
   let childrenLength = sceneContainer.childElementCount;
   let counter = 0;
   var imageObj = [];
